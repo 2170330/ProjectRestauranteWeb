@@ -69,7 +69,7 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="">
+<footer class="footer">
     <div class="footer-site-1 col-lg-6">
         <p class="footer-titulo"> C.R.D </p>
         <p class="footer-descricao">TUDO E MAIS ALGUMA COISA</p>
