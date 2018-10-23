@@ -69,13 +69,20 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+<footer class="">
+    <div class="footer-site-1 col-lg-6">
+        <p class="footer-titulo"> C.R.D </p>
+        <p class="footer-descricao">TUDO E MAIS ALGUMA COISA</p>
+    </div>
+    <div class="footer-site-2 col-lg-6">
+        <p class="footer-informacao"> Av. Bernardino de Campos, 98 São Paulo, SP 12345-678</p>
+        <p class="footer-informacao"> Tel: (11) 3456-7890</p>
+        <p class="footer-informacao"> Aberto de 12:00 às 02:00</p>
+        <p class="footer-informacao"> Faça parte da nossa equipe.</p>
+        <p class="footer-informacao"> Entre em contato pelo email info@meusite.com</p>
     </div>
 </footer>
+
 
 <?php $this->endBody() ?>
 </body>
