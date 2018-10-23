@@ -24,45 +24,45 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="php" value="3" />
+          <entry key="php" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="171" />
-          <entry key="php" value="226" />
+          <entry key="css" value="195" />
+          <entry key="php" value="252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="171" />
-          <entry key="PHP" value="226" />
+          <entry key="CSS" value="195" />
+          <entry key="PHP" value="252" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/advanced/frontend/web/css/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+            <state relative-caret-position="232">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/advanced/frontend/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+            <state relative-caret-position="504">
+              <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -90,9 +90,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/advanced/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/web/css/site.css" />
-        <option value="$PROJECT_DIR$/advanced/frontend/views/site/index.php" />
       </list>
     </option>
   </component>
@@ -170,7 +170,7 @@
       <path value="$PROJECT_DIR$/advanced/vendor/phpdocumentor/reflection-common" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-85" />
     <option name="y" value="15" />
     <option name="width" value="1750" />
@@ -282,15 +282,15 @@
       <option name="presentableId" value="Default" />
       <updated>1540300899441</updated>
       <workItem from="1540300901617" duration="3421000" />
-      <workItem from="1540312784304" duration="1729000" />
+      <workItem from="1540312784304" duration="2596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5150000" />
+    <option name="totallyTimeSpent" value="6017000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
@@ -321,27 +321,30 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/web/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/about.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/advanced/frontend/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="504">
+          <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+        <state relative-caret-position="232">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/web/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
