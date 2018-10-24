@@ -247,43 +247,6 @@ a.desc:after {
     line-height: 0.1;
 }
 
-.inicio-3{
-    background-color: white;
-    text-align: center;
-}
-
-.titulo-3{
-    color: #262626;
-    font-size: 650%;
-    margin-top: 10%;
-    line-height: 0.9;
-    font-family: Brush Script MT;
-}
-
-.paragrafo-3{
-    color: grey;
-}
-
-.email-3{
-    background-color: #e6e6e6;
-    border: gray;
-    color: gray;
-    padding: 8px 80px;
-    font-size: 16px;
-    margin-top: 7%;
-}
-
-.botao-email-3{
-    background-color: #c68c53;
-    border: none;
-    color: white;
-    padding: 8px 25px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 12%;
-}
-
 .map{
     width:100%;
     height:350px;
