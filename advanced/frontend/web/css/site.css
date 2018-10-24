@@ -13,7 +13,8 @@ html,
 
 .footer {
     background-color: #e6e6e6;
-    padding-top: 5%;
+    padding-top: 4%;
+    padding-bottom: 2%;
 }
 
 .inicio {
@@ -230,7 +231,7 @@ a.desc:after {
 .inicio-2-2{
     background-image: url("../img/mistura_comida.jpg");
     background-size: cover;
-    padding-bottom: 46.2%;
+    padding-bottom: 28.6%;
 }
 
 .titulo-2-1{
@@ -293,7 +294,7 @@ a.desc:after {
 }
 
 .footer-titulo{
-    font-size: 500%;
+    font-size: 850%;
     font-variant: small-caps;
     font-family: Brush Script MT;
     line-height: 0.9;

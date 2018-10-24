@@ -89,8 +89,9 @@ $this->title = 'C.D.R';
 
 
     </div>
-
-    <img class="inicio-2-2 col-lg-6">
+    <div class="inicio-2-2 col-lg-6">
+        <img class="inicio-2-2">
+    </div>
 </div>
 
 <div class="inicio-3">
@@ -106,4 +107,3 @@ $this->title = 'C.D.R';
 </div>
 
 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2348.875403049507!2d-8.82088734495151!3d39.7354353225667!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcfaf619f4450fa76!2sPolit%C3%A9cnico+de+Leiria+%7C+ESTG+-+Escola+Superior+de+Tecnologia+e+Gest%C3%A3o_Edif%C3%ADcio+D!5e0!3m2!1spt-PT!2spt!4v1540287971315" frameborder="0" allowfullscreen></iframe>
-
