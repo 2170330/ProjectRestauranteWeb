@@ -35,7 +35,9 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-timer" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/phpunit-mock-objects" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/comparator" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/diff" />
@@ -51,6 +53,7 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/browser-kit" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/dom-crawler" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/finder" />
