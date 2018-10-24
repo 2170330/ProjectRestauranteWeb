@@ -163,7 +163,7 @@ a.desc:after {
     color: white;
     font-size: 1100%;
     font-variant: small-caps;
-    font-family: Brush Script MT;
+    font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
 .descricao{
@@ -189,7 +189,7 @@ a.desc:after {
     color: #262626;
     font-size: 550%;
     font-variant: small-caps;
-    font-family: Brush Script MT;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .paragrafo-1{
@@ -239,7 +239,7 @@ a.desc:after {
     font-size: 680%;
     padding: 70px 22% 20px;
     line-height: 1.0;
-    font-family: Brush Script MT;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .titulo-2-1-horario{
@@ -259,7 +259,7 @@ a.desc:after {
 .footer-titulo{
     font-size: 850%;
     font-variant: small-caps;
-    font-family: Brush Script MT;
+    font-family: Brush Script MT, Brush Script Std, cursive;
     line-height: 0.9;
 }
 
