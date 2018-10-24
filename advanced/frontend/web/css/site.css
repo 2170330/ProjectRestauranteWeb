@@ -273,3 +273,29 @@ a.desc:after {
 
 }
 
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Menu*/
+
+.titulo-menu{
+    color: #c68c53;
+    font-size: 200%;
+    text-align: center;
+    padding-top: 4%;
+}
+
+.line{
+    font-size: 200%;
+    color: #c68c53;
+    text-align: center;
+    line-height: 0.2;
+    padding-bottom: 4%;
+}
+
+.site-menu-2{
+    position: relative;
+}
+
+.site-menu-2-image{
+    width: 400px;
+    height: 300px;
+}
