@@ -4,79 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@mipmap/ic_launcher"
     android:orientation="vertical"
-    tools:context=".MesaActivity">
+    tools:context=".StartActivity">
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="225dp" />
+        android:layout_height="131dp" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/NumMesa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/NumMesa"
-            android:textAlignment="center"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="30sp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
+        android:text="@string/c_d_r"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="50sp" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="168dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <EditText
-            android:id="@+id/eTNumMesa"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@android:color/darker_gray"
-            android:ems="10"
-            android:hint="@string/Numero"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:selectAllOnFocus="false"
-            android:singleLine="false"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            tools:targetApi="o" />
-
-        <Space
-            android:layout_width="168dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="19dp" />
+        android:layout_height="92dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,15 +36,72 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btnInserir"
-            style="@android:style/Widget.Holo.Light.Button.Inset"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnIniciar"
+            android:layout_width="56dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:text="@string/Inserir"
-            tools:text="Inserir" />
+            android:background="@color/design_default_color_primary"
+            android:text="@string/iniciar"
+            android:textSize="18sp" />
 
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnIniciarSessao"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_primary"
+            android:text="@string/iniciar_sessao"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnRegistar"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_primary"
+            android:text="@string/registar"
+            android:textSize="18sp" />
 
         <Space
             android:layout_width="wrap_content"
