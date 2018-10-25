@@ -276,6 +276,35 @@ a.desc:after {
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*Menu*/
 
+.site-menu-bar{
+    background-color: #c68c53;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 70%;
+
+}
+
+.site-menu-bar-li a{
+    display: block;
+    color: #fdf7f7;
+    padding: 7%;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #ac7339;
+    color: #fdf7f7;
+}
+
+.site-menu{
+    max-width: 100%;
+}
+
+.site-menu-1{
+    padding-top: 10%;
+}
+
 .titulo-menu{
     color: #c68c53;
     font-size: 200%;
@@ -291,11 +320,55 @@ a.desc:after {
     padding-bottom: 4%;
 }
 
+.site-menu-1{
+    text-align: center;
+    position: fixed;
+    float:left;
+}
+
 .site-menu-2{
-    position: relative;
+    float:right;
 }
 
 .site-menu-2-image{
-    width: 400px;
-    height: 300px;
+    width: 232px;
+    height: 232px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-menu-2-titulo{
+    font-size: 170%;
+    color: #cc9966;
+    text-align: center;
+    padding: 10% 17% 0;
+    font-family: Courier New, monospace;
+}
+
+.line-grey{
+    font-size: 200%;
+    color: #a6a6a6;
+    text-align: center;
+    line-height: 0.2;
+    padding-bottom: 4%;
+}
+
+.site-menu-2-paragrafo{
+    font-size: 130%;
+    color: #b3b3b3;
+    text-align: center;
+    line-height: 1.8;
+    padding: 3% 17% 3%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.site-menu-2-preco{
+    font-size: 170%;
+    color: grey;
+    text-align: center;
+    line-height: 1.8;
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 30%;
 }
