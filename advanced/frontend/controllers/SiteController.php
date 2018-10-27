@@ -148,6 +148,11 @@ class SiteController extends Controller
         return $this->render('menu');
     }
 
+    public function actionBlog()
+    {
+        return $this->render('blog');
+    }
+
     public function actionEncomendas()
     {
         return $this->render('encomendas');

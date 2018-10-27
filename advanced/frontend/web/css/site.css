@@ -1,4 +1,4 @@
-html,
+ html,
 
 .wrap {
     min-height: 100%;
@@ -371,4 +371,57 @@ li a:hover {
     line-height: 1.8;
     font-family: "Times New Roman", Times, serif;
     padding-bottom: 30%;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Login*/
+
+.site-login{
+    background-image: url("../img/login-background.jpg");
+    background-size: cover;
+}
+
+ .parent:hover .site-login,
+ .parent:focus .site-login {
+     transform: scale(1.2);
+ }
+
+.login-iniciar{
+    font-size: 300%;
+    color: #c68c53;
+    text-align: center;
+    padding-top: 12%;
+}
+
+.form-login{
+    width: 38%;
+    margin: 0 auto;
+    color: #c68c53;
+    padding: 1% 0 5%;
+}
+
+.forgot-password{
+    color:#999;
+    margin:1em 0;
+}
+
+.login{
+    padding: 10% 0 5%;
+    text-align: center;
+}
+.login-button{
+    background-color: #c68c53;
+    color: white;
+    font-size: 16px;
+    border: #ac7339;
+    padding: 2%;
+    border-radius: 5%;
+    width: 50%;
+}
+
+.login-button:hover{
+    background-color: #ac7339;
+    color: white;
 }
