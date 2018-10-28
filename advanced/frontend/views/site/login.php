@@ -15,24 +15,24 @@ $this->params['breadcrumbs'][] = $this->title;
     <p class="line"> _____</p>
 
     <div class="row">
-            <div class="form-login ">
-                <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+        <div class="form-login">
+            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                    <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-                    <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'password')->passwordInput() ?>
 
-                    <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
-                    <div class="forgot-password">
-                        If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                    </div>
+                <div class="forgot-password">
+                    Esqueceu-se da sua palavra-passe? <?= Html::a('repõe aqui', ['site/request-password-reset']) ?>.
+                </div>
 
-                    <div class="login">
-                        <?= Html::submitButton('Login', ['class' => 'login-button', 'name' => 'login-button']) ?>
-                    </div>
+                <div class="login">
+                    <?= Html::submitButton('Login', ['class' => 'login-button', 'name' => 'login-button']) ?>
+                </div>
 
-                <?php ActiveForm::end(); ?>
-            </div>
+            <?php ActiveForm::end(); ?>
+        </div>
     </div>
 </div>

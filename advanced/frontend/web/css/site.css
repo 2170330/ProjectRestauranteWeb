@@ -376,7 +376,7 @@ li a:hover {
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/*Login*/
+/*Login e Registo*/
 
 .site-login{
     background-image: url("../img/login-background.jpg");
@@ -408,7 +408,7 @@ li a:hover {
 }
 
 .login{
-    padding: 10% 0 5%;
+    padding: 10% 0 2%;
     text-align: center;
 }
 .login-button{
@@ -425,3 +425,29 @@ li a:hover {
     background-color: #ac7339;
     color: white;
 }
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /*Contacto*/
+
+ .contato{
+     font-size: 300%;
+     color: #c68c53;
+     text-align: center;
+     padding-top: 2%;
+ }
+
+ .map-contato{
+     width: 60%;
+     height: 350px;
+ }
+
+ .map-contato-div{
+     text-align: center;
+     padding-top: 2%;
+ }
+
+ .form-contato{
+     width: 38%;
+     margin: 0 auto;
+     color: #c68c53;
+ }
