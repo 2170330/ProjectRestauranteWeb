@@ -17,14 +17,6 @@
     padding-bottom: 2%;
 }
 
-.inicio {
-    text-align: center;
-    margin-top: 50px;
-    background-image: url("../img/background.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .not-set {
     color: #c55;
     font-style: italic;
@@ -113,7 +105,23 @@ a.desc:after {
     outline: none;
 }
 
-.btn-reservar{
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /*Inicio*/
+
+ .date-pickers{
+     width: 50%;
+ }
+
+ .inicio {
+     text-align: center;
+     margin-top: 50px;
+     background-image: url("../img/background.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+ }
+
+
+ .btn-reservar{
     background-color: #c68c53;
     border: none;
     color: white;
@@ -450,4 +458,81 @@ li a:hover {
      width: 38%;
      margin: 0 auto;
      color: #c68c53;
+ }
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /* Request Password*/
+
+ .request-password-titulo{
+     font-size: 300%;
+     color: #c68c53;
+     padding-top: 3%;
+ }
+ .site-request-password-reset{
+     text-align: center;
+ }
+
+ .form-reset{
+     width: 38%;
+     margin: 0 auto;
+     color: #c68c53;
+ }
+
+ .request-password-descricao{
+     color: #a6a6a6;
+     padding-bottom: 2%;
+ }
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /* Comments */
+
+ .comentarios{
+     font-size: 300%;
+     color: #c68c53;
+     padding-top: 2%;
+     text-align: center;
+ }
+
+ .star{
+     transform: translate(-50%, -50%);
+     direction: rtl;
+     padding-top: 5%;
+     display: inline-block;
+     width: 100%;
+
+ }
+
+ i{
+     display: inline-block;
+     text-align: center;
+ }
+ .star i{
+     font-size: 100px;
+     color: grey;
+     cursor: pointer;
+     transition: 0.3s all;
+ }
+
+ .star i:hover{
+     color: #ffdb4d;
+ }
+
+ .star1:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star2:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star3:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star4:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star5:hover ~ i{
+     color: #ffdb4d;
  }
