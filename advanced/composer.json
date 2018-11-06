@@ -17,14 +17,20 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+<<<<<<< HEAD
+        "bizley/migration": "~2.3.0"
+=======
+        "rmrevin/yii2-fontawesome": "2.10.*"
+>>>>>>> 91f108b040f9ae674111e94d5f51154aa6e22355
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0",
         "yiisoft/yii2-faker": "~2.0.0",
         "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1"
+        "codeception/verify": "~0.3.1",
+        "kartik-v/yii2-widget-datetimepicker": "*"
     },
     "config": {
         "process-timeout": 1800,
