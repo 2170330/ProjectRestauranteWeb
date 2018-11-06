@@ -13,4 +13,9 @@ return [
             ],
         ],
     ],
+	'controllerMap' => [
+		'migration' => [
+			'class' => 'bizley\migration\controllers\MigrationController',
+		],
+	],
 ];

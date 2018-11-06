@@ -65,7 +65,6 @@ $this->title = 'C.D.R';
 
     <p class="titulo-1">Misturamos & Sacudimos </p> <br>
 
-    <p class="space-image"> \ </p>
 
     <p class="paragrafo-1"> Sou um parágrafo. Clique aqui para adicionar o seu próprio texto e editar. Sou um ótimo espaço para você contar sua história para que seus usuários saibam um pouco mais sobre você.</p>
 
@@ -78,10 +77,6 @@ $this->title = 'C.D.R';
     <div class="inicio-2-1 col-lg-6">
         <p class="titulo-2-1"> Desafio da Mistura</p>
         <p class="titulo-2-1-horario"> TODA TERÇA À NOITE</p>
-
-        <br><br><br>
-
-        <p class="space-image"> \ </p>
 
         <br><br><br>
 
