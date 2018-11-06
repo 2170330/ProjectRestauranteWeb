@@ -1,5 +1,5 @@
 <?php
-
+use kartik\datetime\DateTimePicker;
 /* @var $this yii\web\View */
 
 $this->title = 'C.D.R';
@@ -20,19 +20,35 @@ $this->title = 'C.D.R';
 
     <p class="descricao">TUDO E MAIS ALGUMA COISA</p>
 
+
+    <link class="person" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+    <i class="fa fa-child"></i>
+
     <p class="descricao">Reservas</p>
-
-    <!-- <input data-provide="datepicker" class="datepicker"> -->
-
     <br><br>
 
-    <div class="reservas">
-        <input class="date-picker btn-reservar-date col-spaced" type="date">
+    <div class="reservas row">
 
-        <select class="btn-reservar-white col-spaced">
-            <option value="pessoa1">1 pessoa</option>
+        <div class="btn-reservar-datepicker col-spaced col-lg-4">
+            <?php
+            echo DateTimePicker::widget([
+                'name' => 'datetime_10',
+                'options' => ['placeholder' => 'Seleciona a hora de reserva ...', 'class' => 'datepickerCSS'],
+                'convertFormat' => true,
+                'pluginOptions' => [
+                    'format' => 'yyyy-dd-mm HH:MM:ss',
+                    'todayHighlight' => true,
+                    'minDate' => '-1969/12/31',
+                ]
+            ]);
+            ?>
+        </div>
+
+        <select class="btn-reservar-npessoas col-spaced col-lg-4">
+            <option value="pessoa1" data-content="<i class='fa fa-child'></i> ola"></option>
             <option value="pessoa2">2 pessoas</option>
             <option value="pessoa3">3 pessoas</option>
             <option value="pessoa4">4 pessoas</option>
@@ -40,14 +56,7 @@ $this->title = 'C.D.R';
             <option value="pessoa6">6 pessoas</option>
         </select>
 
-        <select class="btn-reservar-white col-spaced">
-            <option value="00:00">00:00</option>
-            <option value="00:15">00:15</option>
-            <option value="00:30">00:30</option>
-            <option value="00:45">00:45</option>
-        </select>
-
-        <a class="btn-reservar col-spaced" href="http://www.yiiframework.com">Reserve já</a>
+        <a class="btn-reservar col-spaced col-lg-4" href="http://www.yiiframework.com">Reserve já</a>
 
         <br><br><br><br><br>
     </div>

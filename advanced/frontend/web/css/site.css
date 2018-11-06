@@ -108,8 +108,11 @@ a.desc:after {
  /*--------------------------------------------------------------------------------------------------------------------*/
  /*Inicio*/
 
- .date-pickers{
-     width: 50%;
+ .datepickerCSS{
+     border-radius: 0;
+     border: 1px solid black;
+     height: 43px;
+     cursor: pointer;
  }
 
  .inicio {
@@ -120,6 +123,9 @@ a.desc:after {
      background-attachment: fixed;
  }
 
+ .person{
+     width: 100%;
+ }
 
  .btn-reservar{
     background-color: #c68c53;
@@ -137,23 +143,19 @@ a.desc:after {
     color: white;
 }
 
-.btn-reservar-white{
+.btn-reservar-npessoas{
     background-color: white;
     border: 1px solid black;
     color: gray;
     padding: 11px 80px;
     display: inline-block;
     font-size: 16px;
-
+    width: 25%;
 }
 
-.btn-reservar-date{
-    background-color: white;
-    border: 1px solid black;
-    color: gray;
-    padding: 9px 48px;
-    display: inline-block;
-    font-size: 16px;
+.btn-reservar-datepicker{
+    width: 30%;
+    height: 30%;
 }
 
 .col-spaced{
@@ -206,6 +208,10 @@ a.desc:after {
     line-height: 1.8;
     padding: 70px 25% 20px;
 
+}
+
+.reservas{
+    text-align: center;
 }
 
 .btn-reservar{
