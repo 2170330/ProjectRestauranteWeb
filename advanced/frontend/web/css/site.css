@@ -1,4 +1,4 @@
-html,
+ html,
 
 .wrap {
     min-height: 100%;
@@ -15,14 +15,6 @@ html,
     background-color: #e6e6e6;
     padding-top: 4%;
     padding-bottom: 2%;
-}
-
-.inicio {
-    text-align: center;
-    margin-top: 50px;
-    background-image: url("../img/background.jpg");
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .not-set {
@@ -113,7 +105,29 @@ a.desc:after {
     outline: none;
 }
 
-.btn-reservar{
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /*Inicio*/
+
+ .datepickerCSS{
+     border-radius: 0;
+     border: 1px solid black;
+     height: 43px;
+     cursor: pointer;
+ }
+
+ .inicio {
+     text-align: center;
+     margin-top: 50px;
+     background-image: url("../img/background.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+ }
+
+ .person{
+     width: 100%;
+ }
+
+ .btn-reservar{
     background-color: #c68c53;
     border: none;
     color: white;
@@ -129,23 +143,19 @@ a.desc:after {
     color: white;
 }
 
-.btn-reservar-white{
+.btn-reservar-npessoas{
     background-color: white;
     border: 1px solid black;
     color: gray;
     padding: 11px 80px;
     display: inline-block;
     font-size: 16px;
-
+    width: 25%;
 }
 
-.btn-reservar-date{
-    background-color: white;
-    border: 1px solid black;
-    color: gray;
-    padding: 9px 48px;
-    display: inline-block;
-    font-size: 16px;
+.btn-reservar-datepicker{
+    width: 30%;
+    height: 30%;
 }
 
 .col-spaced{
@@ -198,6 +208,10 @@ a.desc:after {
     line-height: 1.8;
     padding: 70px 25% 20px;
 
+}
+
+.reservas{
+    text-align: center;
 }
 
 .btn-reservar{
@@ -273,3 +287,258 @@ a.desc:after {
 
 }
 
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Menu*/
+
+.site-menu-bar{
+    background-color: #c68c53;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 70%;
+
+}
+
+.site-menu-bar-li a{
+    display: block;
+    color: #fdf7f7;
+    padding: 7%;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #ac7339;
+    color: #fdf7f7;
+}
+
+.site-menu{
+    max-width: 100%;
+}
+
+.site-menu-1{
+    padding-top: 10%;
+}
+
+.titulo-menu{
+    color: #c68c53;
+    font-size: 200%;
+    text-align: center;
+    padding-top: 4%;
+}
+
+.line{
+    font-size: 200%;
+    color: #c68c53;
+    text-align: center;
+    line-height: 0.2;
+    padding-bottom: 4%;
+}
+
+.site-menu-1{
+    text-align: center;
+    position: fixed;
+    float:left;
+}
+
+.site-menu-2{
+    float:right;
+}
+
+.site-menu-2-image{
+    width: 232px;
+    height: 232px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-menu-2-titulo{
+    font-size: 170%;
+    color: #cc9966;
+    text-align: center;
+    padding: 10% 17% 0;
+    font-family: Courier New, monospace;
+}
+
+.line-grey{
+    font-size: 200%;
+    color: #a6a6a6;
+    text-align: center;
+    line-height: 0.2;
+    padding-bottom: 4%;
+}
+
+.site-menu-2-paragrafo{
+    font-size: 130%;
+    color: #b3b3b3;
+    text-align: center;
+    line-height: 1.8;
+    padding: 3% 17% 3%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.site-menu-2-preco{
+    font-size: 170%;
+    color: grey;
+    text-align: center;
+    line-height: 1.8;
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 30%;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Login e Registo*/
+
+.site-login{
+    background-image: url("../img/login-background.jpg");
+    background-size: cover;
+}
+
+ .parent:hover .site-login,
+ .parent:focus .site-login {
+     transform: scale(1.2);
+ }
+
+.login-iniciar{
+    font-size: 300%;
+    color: #c68c53;
+    text-align: center;
+    padding-top: 12%;
+}
+
+.form-login{
+    width: 38%;
+    margin: 0 auto;
+    color: #c68c53;
+    padding: 1% 0 5%;
+}
+
+.forgot-password{
+    color:#999;
+    margin:1em 0;
+}
+
+.login{
+    padding: 10% 0 2%;
+    text-align: center;
+}
+.login-button{
+    background-color: #c68c53;
+    color: white;
+    font-size: 16px;
+    border: #ac7339;
+    padding: 2%;
+    border-radius: 5%;
+    width: 50%;
+}
+
+.login-button:hover{
+    background-color: #ac7339;
+    color: white;
+}
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /*Contacto*/
+
+ .contato{
+     font-size: 300%;
+     color: #c68c53;
+     text-align: center;
+     padding-top: 2%;
+ }
+
+ .map-contato{
+     width: 60%;
+     height: 350px;
+ }
+
+ .map-contato-div{
+     text-align: center;
+     padding-top: 2%;
+ }
+
+ .form-contato{
+     width: 38%;
+     margin: 0 auto;
+     color: #c68c53;
+ }
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /* Request Password*/
+
+ .request-password-titulo{
+     font-size: 300%;
+     color: #c68c53;
+     padding-top: 3%;
+ }
+ .site-request-password-reset{
+     text-align: center;
+ }
+
+ .form-reset{
+     width: 38%;
+     margin: 0 auto;
+     color: #c68c53;
+ }
+
+ .request-password-descricao{
+     color: #a6a6a6;
+     padding-bottom: 2%;
+ }
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /* Comments */
+
+ .comentarios{
+     font-size: 300%;
+     color: #c68c53;
+     padding-top: 2%;
+     text-align: center;
+ }
+
+ .star{
+     transform: translate(-50%, -50%);
+     direction: rtl;
+     padding-top: 5%;
+     display: inline-block;
+     width: 100%;
+
+ }
+
+ i{
+     display: inline-block;
+     text-align: center;
+ }
+ .star i{
+     font-size: 100px;
+     color: grey;
+     cursor: pointer;
+     transition: 0.3s all;
+ }
+
+ .star i:hover{
+     color: #ffdb4d;
+ }
+
+ .star1:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star2:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star3:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star4:hover ~ i{
+     color: #ffdb4d;
+ }
+
+ .star5:hover ~ i{
+     color: #ffdb4d;
+ }

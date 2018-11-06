@@ -69,6 +69,10 @@
       <path value="$PROJECT_DIR$/advanced/vendor/psr/log" />
       <path value="$PROJECT_DIR$/advanced/vendor/phpunit/phpunit-mock-objects" />
       <path value="$PROJECT_DIR$/advanced/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/advanced/vendor/rmrevin/yii2-fontawesome" />
+      <path value="$PROJECT_DIR$/advanced/vendor/bower-asset/fontawesome" />
+      <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
+      <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/yii2-widget-datetimepicker" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

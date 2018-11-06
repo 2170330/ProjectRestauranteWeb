@@ -9,7 +9,7 @@ public class MesaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mesa);
+        setContentView(R.);
 
         /*ActionBar actionBar = getSupportActionBar();
         actionBar.hide();*/
