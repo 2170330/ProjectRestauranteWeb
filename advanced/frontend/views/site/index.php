@@ -1,5 +1,7 @@
 <?php
 use kartik\datetime\DateTimePicker;
+use yii\bootstrap\Html;
+
 /* @var $this yii\web\View */
 
 $this->title = 'C.D.R';
@@ -7,11 +9,13 @@ $this->title = 'C.D.R';
 
 <head>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
 </head>
 
 <div class="inicio">
     <div class="informacao">
-        <p> <Av class=""></Av> Bernardino de Campos, 98 - São Paulo, SP 12345-678    |    Aberto de 18:00 às 02:00  </p>
+        <p> Bernardino de Campos, 98 - São Paulo, SP 12345-678 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Aberto de 12:00 às 02:00  </p>
     </div>
 
     <br><br><br><br><br><br><br><br><br>
@@ -24,8 +28,6 @@ $this->title = 'C.D.R';
     <link class="person" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <i class="fa fa-child"></i>
 
     <p class="descricao">Reservas</p>
     <br><br>
@@ -48,7 +50,8 @@ $this->title = 'C.D.R';
         </div>
 
         <select class="btn-reservar-npessoas col-spaced col-lg-4">
-            <option value="pessoa1" data-content="<i class='fa fa-child'></i> ola"></option>
+            <option value="" disabled selected hidden>&#xf1ae; Número de pessoas</option>
+            <option value="pessoa1">1 pessoa</option>
             <option value="pessoa2">2 pessoas</option>
             <option value="pessoa3">3 pessoas</option>
             <option value="pessoa4">4 pessoas</option>
@@ -56,13 +59,13 @@ $this->title = 'C.D.R';
             <option value="pessoa6">6 pessoas</option>
         </select>
 
+
         <a class="btn-reservar col-spaced col-lg-4" href="http://www.yiiframework.com">Reserve já</a>
 
         <br><br><br><br><br>
     </div>
 
 </div>
-
 
 <div class="inicio-1">
     <br><br><br><br><br><br>

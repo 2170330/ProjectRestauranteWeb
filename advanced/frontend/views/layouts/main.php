@@ -32,12 +32,12 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top header-border',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Menu', 'url' => ['/site/menu']],
+        ['label' => 'Home', 'url' => ['/site/index'], 'class' => 'header-items-1'],
+        ['label' => 'Menu', 'url' => ['/site/menu'], 'class' => 'header-items-1'],
         ['label' => 'Encomendas', 'url' => ['/site/encomendas']],
         ['label' => 'Blog', 'url' => ['/site/blog']],
         ['label' => 'Contato', 'url' => ['/site/contact']],

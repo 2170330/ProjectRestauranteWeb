@@ -105,6 +105,25 @@ a.desc:after {
     outline: none;
 }
 
+i.fa{
+     font-size: 200%;
+     color: black;
+  }
+
+
+ /*--------------------------------------------------------------------------------------------------------------------*/
+ /*Header*/
+
+ .header-border{
+     background-color: white;
+     border-color: white;
+ }
+
+ .header-items-1{
+     color: black;
+ }
+
+
  /*--------------------------------------------------------------------------------------------------------------------*/
  /*Inicio*/
 
@@ -167,6 +186,7 @@ a.desc:after {
     background-color: #c68c53;
     padding-top: 10px;
     padding-bottom: 1px;
+    color: #404040;
 }
 
 .titulo{
