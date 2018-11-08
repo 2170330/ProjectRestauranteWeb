@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <resources>
 
     <!-- Base application theme. -->
@@ -21,25 +21,3 @@
         <item name="colorButtonNormal" >@color/ButtonGrayPrimary</item>
     </style>
 </resources>
-=======
-<resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-
-
-    </style>
-    <style name="ButtonGreen" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">@color/ButtonGreenAccent</item>
-        <item name="colorButtonNormal" >@color/ButtonGreenPrimary</item>
-    </style>
-    <style name="ButtonGray" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">@color/ButtonGrayAccent</item>
-        <item name="colorButtonNormal" >@color/ButtonGrayPrimary</item>
-    </style>
-</resources>
->>>>>>> ba7b66e4b25c3e1fedfe7dcca4f02f5811505159
