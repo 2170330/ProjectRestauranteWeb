@@ -65,6 +65,7 @@ a.desc:after {
 .grid-view .filters input,
 .grid-view .filters select {
     min-width: 50px;
+
 }
 
 .hint-block {
@@ -114,18 +115,28 @@ select{
     font-family: fontAwesome;
 }
 
-
  /*--------------------------------------------------------------------------------------------------------------------*/
  /*Header*/
 
  .header-border{
      background-color: white;
      border-color: white;
+
  }
 
- .header-items-1{
+ /* muda as cores dos items da navbar do header */
+ .nav.navbar-nav li a {
      color: black;
  }
+
+ .nav.navbar-nav li a::selection {
+     background-color: white;
+ }
+ .nav.navbar-nav li a:hover {
+     color: #cccccc;
+     transition-duration: 0.5s;
+ }
+
 
 
  /*--------------------------------------------------------------------------------------------------------------------*/

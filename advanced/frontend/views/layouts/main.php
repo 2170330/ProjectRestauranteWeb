@@ -26,7 +26,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap ">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
@@ -36,8 +36,10 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index'], 'class' => 'header-items-1'],
-        ['label' => 'Menu', 'url' => ['/site/menu'], 'class' => 'header-items-1'],
+        ['label' => 'Home', 'url' => ['/site/index'], 'options' => [
+            'class' => 'header-items',
+        ],],
+        ['label' => 'Menu', 'url' => ['/site/menu']],
         ['label' => 'Encomendas', 'url' => ['/site/encomendas']],
         ['label' => 'Blog', 'url' => ['/site/blog']],
         ['label' => 'Contato', 'url' => ['/site/contact']],
