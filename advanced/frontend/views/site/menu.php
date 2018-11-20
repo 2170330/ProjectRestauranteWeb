@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
             target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top},
+                    scrollBot: target.offset().top},
                     'slow');
                 e.preventDefault();
             }

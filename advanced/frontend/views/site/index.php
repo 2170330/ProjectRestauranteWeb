@@ -15,12 +15,12 @@ $this->title = 'C.D.R';
 
 <div class="inicio">
     <div class="informacao">
-        <p> Bernardino de Campos, 98 - São Paulo, SP 12345-678 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Aberto de 12:00 às 02:00  </p>
+        <p> Bernardino de Campos, 98 - São Paulo, SP 12345-678 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Aberto de 12:00 às 3:00 e das 19:00 às 22:00 </p>
     </div>
 
     <br><br><br><br><br><br><br><br><br>
 
-    <p class="titulo">C.D.R</p>
+    <h1 class="titulo">C.D.R.</h1>
 
     <p class="descricao">TUDO E MAIS ALGUMA COISA</p>
 
@@ -70,11 +70,10 @@ $this->title = 'C.D.R';
 <div class="inicio-1">
     <br><br><br><br><br><br>
 
-    <p class="titulo-1">Misturamos & Sacudimos </p> <br>
+    <h1 class="titulo-1"> OS NOSSOS MENUS</h1> <br>
 
 
-    <p class="paragrafo-1"> Sou um parágrafo. Clique aqui para adicionar o seu próprio texto e editar. Sou um ótimo espaço para você contar sua história para que seus usuários saibam um pouco mais sobre você.</p>
-
+    <p class="paragrafo-1"> Todos os menus aqui são elaborados coma precisão de agradar todos os clientes, diversificando todas as nossas ementas e costumizar o seu prato à sua escolha. </p>
     <a class="btn-ver-menu" href="http://www.yiiframework.com">Veja o nosso menu!</a>
 
     <br><br><br><br><br><br><br><br><br><br>
@@ -82,12 +81,14 @@ $this->title = 'C.D.R';
 
 <div class="inicio-2 row">
     <div class="inicio-2-1 col-lg-6">
-        <p class="titulo-2-1"> Desafio da Mistura</p>
-        <p class="titulo-2-1-horario"> TODA TERÇA À NOITE</p>
+        <h1 class="titulo-2-1"> Jazz </h1>
+        <h1 class="titulo-2-1">&</h1>
+        <h1 class="titulo-2-1"> Blues</h1>
+        <p class="titulo-2-1-horario">TODAS AS NOITES ÀS SEXTAS</p>
 
         <br><br><br>
 
-        <p class="paragrafo-2-1"> Sou um parágrafo. Clique aqui para adicionar o seu próprio texto e editar. Sou um ótimo espaço para você contar sua história para que seus usuários saibam mais sobre você. </p>
+        <p class="paragrafo-2-1"> Vários tipos de concertos Jazz & Blues para animar a noite.</p>
 
 
     </div>

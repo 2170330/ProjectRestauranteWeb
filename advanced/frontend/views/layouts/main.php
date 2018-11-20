@@ -36,17 +36,19 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index'], 'options' => [
-            'class' => 'header-items',
-        ],],
-        ['label' => 'Menu', 'url' => ['/site/menu']],
-        ['label' => 'Encomendas', 'url' => ['/site/encomendas']],
-        ['label' => 'Blog', 'url' => ['/site/blog']],
-        ['label' => 'Contato', 'url' => ['/site/contact']],
+        ['label' => 'HOME', 'url' => ['/site/index']],
+        ['label' => 'MENU', 'url' => ['/site/menu']],
+        ['label' => 'ENCOMENDAS', 'url' => ['/site/encomendas']],
+        ['label' => 'COMENTARIOS', 'url' => ['/site/blog']],
+        ['label' => 'CONTATO', 'url' => ['/site/contact']],
+        '<i class="fa fa-facebook header-icon header-facebook"></i>',
+        '<i class="fa fa-twitter header-icon header-twitter" ></i>',
+        '<i class="fa fa-whatsapp header-icon header-whatsapp"></i>',
+        '<i class="fa fa-instagram header-icon header-instagram"></i>',
+
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label'=> 'LOGIN', 'url' => ['/site/contact']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
