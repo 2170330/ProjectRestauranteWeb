@@ -1,0 +1,19 @@
+.request-password-titulo{
+    font-size: 300%;
+    color: #c68c53;
+    padding-top: 3%;
+}
+.site-request-password-reset{
+    text-align: center;
+}
+
+.form-reset{
+    width: 38%;
+    margin: 0 auto;
+    color: #c68c53;
+}
+
+.request-password-descricao{
+    color: #a6a6a6;
+    padding-bottom: 2%;
+}

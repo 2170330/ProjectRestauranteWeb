@@ -1,0 +1,197 @@
+.datepickerCSS{
+    border-radius: 0;
+    border: 1px solid black;
+    height: 43px;
+    cursor: pointer;
+}
+
+.inicio {
+    text-align: center;
+    margin-top: 50px;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.person{
+    width: 100%;
+}
+
+.btn-reservar{
+    background-color: #c68c53;
+    border: none;
+    color: white;
+    padding: 11px 80px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+.btn-reservar:hover{
+    background-color: #ac7339;
+    color: white;
+}
+
+.btn-reservar-npessoas{
+    background-color: white;
+    border: 1px solid black;
+    color: gray;
+    padding: 11px 80px;
+    display: inline-block;
+    font-size: 16px;
+    width: 25%;
+    cursor: pointer;
+}
+
+.btn-reservar-datepicker{
+    width: 30%;
+    height: 30%;
+}
+
+.col-spaced{
+    margin-left: 15px;
+}
+
+.informacao{
+    text-align: center;
+    background-color: #D69869;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    color: #404040;
+}
+
+.titulo{
+    color: white;
+    font-size: 1100%;
+    font-variant: small-caps;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.descricao{
+    color: white;
+    font-size: 170%;
+}
+
+.space-image{
+    font-size: 220%;
+}
+
+.space{
+    color: white;
+}
+
+.inicio-1{
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.titulo-1{
+    color: #262626;
+    font-size: 550%;
+    font-variant: small-caps;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.paragrafo-1{
+    color: grey;
+    text-align: center;
+    line-height: 1.8;
+    padding: 40px 25% 50px;
+
+}
+
+.reservas{
+    text-align: center;
+}
+
+.btn-reservar {
+    background-color: #D69869;
+    border: none;
+    color: white;
+    padding: 11px 80px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-reservar:hover{
+    background-color: #ce844b;
+    text-decoration: none;
+}
+
+.btn-ver-menu{
+    background-color: #D69869;
+    border: none;
+    color: white;
+    padding: 0.7% 2%;
+    text-align: center;
+    display: inline-block;
+    font-size: 95%;
+}
+
+.btn-ver-menu:hover {
+    color: white;
+    background-color: #ce844b;
+    text-decoration: none;
+
+}
+
+.inicio-2-1{
+    background-color: #D69869;
+    text-align: center;
+    padding-bottom: 8.5%;
+}
+
+.titulo-2-1{
+    color: white;
+    font-size: 680%;
+    padding: 25px 50px 0px;
+    line-height: 0.5;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.titulo-2-1-horario{
+    color: #262626;
+    line-height: 0.1;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+.paragrafo-2-1{
+    color: white;
+    font-size: 19px;
+}
+
+.inicio-2-2{
+    background-image: url("../img/jazz&blues.jpg");
+    background-size: cover;
+    padding-bottom: 25.13%;
+}
+
+.map{
+    width:100%;
+    height:350px;
+}
+
+.footer-site-1{
+    text-align: center;
+}
+
+.footer-titulo{
+    font-size: 850%;
+    font-variant: small-caps;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    line-height: 0.9;
+}
+
+.footer-descricao{
+    color: #262626;
+    font-size: 80%;
+}
+
+.footer-site-2{
+    text-align: center;
+
+}

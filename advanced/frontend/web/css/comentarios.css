@@ -1,0 +1,59 @@
+i.fa{
+    font-size: 200%;
+    color: black;
+}
+
+select{
+    font-family: fontAwesome;
+}
+
+.comentarios{
+    font-size: 300%;
+    color: #D69869;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.star{
+    transform: translate(-50%, -50%);
+    direction: rtl;
+    padding-top: 5%;
+    display: inline-block;
+    width: 100%;
+
+}
+
+i{
+    display: inline-block;
+    text-align: center;
+}
+.star i{
+    font-size: 100px;
+    color: grey;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.star i:hover{
+    color: #ffdb4d;
+}
+
+.star1:hover ~ i{
+    color: #ffdb4d;
+}
+
+.star2:hover ~ i{
+    color: #ffdb4d;
+}
+
+.star3:hover ~ i{
+    color: #ffdb4d;
+}
+
+.star4:hover ~ i{
+    color: #ffdb4d;
+}
+
+.star5:hover ~ i{
+    color: #ffdb4d;
+}

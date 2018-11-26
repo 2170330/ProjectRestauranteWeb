@@ -45,10 +45,12 @@ AppAsset::register($this);
         '<i class="fa fa-twitter header-icon header-twitter" ></i>',
         '<i class="fa fa-whatsapp header-icon header-whatsapp"></i>',
         '<i class="fa fa-instagram header-icon header-instagram"></i>',
-
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label'=> 'LOGIN', 'url' => ['/site/contact']];
+        $menuItems[] = [
+                'label'=> 'LOGIN', 'url' => ['/site/login'],
+                'options' => ['class' => 'navbar-nav navbar-left'],
+        ];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

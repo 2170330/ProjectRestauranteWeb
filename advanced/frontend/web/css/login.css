@@ -1,0 +1,54 @@
+.site-login{
+    background-image: url("../img/login-background.jpg");
+    background-size: cover;
+}
+
+.parent:hover .site-login,
+.parent:focus .site-login {
+    transform: scale(1.2);
+}
+
+.login-iniciar{
+    font-size: 300%;
+    color: #D69869;
+    text-align: center;
+    padding-top: 12%;
+}
+
+.form-login{
+    width: 38%;
+    margin: 0 auto;
+    color: #D69869;
+    padding: 1% 0 5%;
+}
+
+.forgot-password{
+    color:#999;
+    margin:1em 0;
+}
+
+.registar{
+    color:#999;
+    text-align: center;
+
+}
+
+
+.login{
+    padding: 10% 0 2%;
+    text-align: center;
+}
+.login-button{
+    background-color: #D69869;
+    color: white;
+    font-size: 16px;
+    border: #ac7339;
+    padding: 2%;
+    border-radius: 5%;
+    width: 50%;
+}
+
+.login-button:hover{
+    background-color: #ce844b;
+    color: white;
+}

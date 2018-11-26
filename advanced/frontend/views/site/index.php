@@ -84,7 +84,7 @@ $this->title = 'C.D.R';
         <h1 class="titulo-2-1"> Jazz </h1>
         <h1 class="titulo-2-1">&</h1>
         <h1 class="titulo-2-1"> Blues</h1>
-        <p class="titulo-2-1-horario">TODAS AS NOITES ÀS SEXTAS</p>
+        <p class="titulo-2-1-horario">TODAS SEXTA À NOITE</p>
 
         <br><br><br>
 

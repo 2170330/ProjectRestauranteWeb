@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1 class="request-password-titulo"> Repôr Password</h1>
     <p class="line"> _____</p>
 
-    <p class="request-password-descricao">Please fill out your email. A link to reset password will be sent there.</p>
+    <p class="request-password-descricao">Por favor, preenche a caixa com o seu email. Um link para resetar a password irá ser enviado para aqui. </p>
 
     <div class="request-password-center row">
         <div class="form-reset">
