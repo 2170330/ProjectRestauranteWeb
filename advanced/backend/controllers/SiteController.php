@@ -30,6 +30,11 @@ class SiteController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'actions' => ['testes'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
                 ],
             ],
             'verbs' => [
@@ -62,6 +67,12 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+
+    public function actionBebida()
+    {
+        return $this->render('bebida');
+    }
+
 
     /**
      * Login action.
