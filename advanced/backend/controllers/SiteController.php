@@ -26,15 +26,16 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['testes'],
+                        'actions' => ['index'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => ['admin'],
                     ],
+
                 ],
             ],
             'verbs' => [
@@ -68,11 +69,6 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function actionBebida()
-    {
-        return $this->render('bebida');
-    }
-
 
     /**
      * Login action.
@@ -86,9 +82,13 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post()) && $model->login() && key(Yii::$app->authManager->getRolesByUser(Yii::$app->user->getId())) == 'admin') {
             return $this->goBack();
-        } else {
+        }
+        elseif ($model->load(Yii::$app->request->post()) && $model->login()){
+            Yii::$app->user->logout();
+            return $this->goBack();
+        }else{
             $model->password = '';
 
             return $this->render('login', [

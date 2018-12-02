@@ -1,0 +1,15 @@
+.voltar-button{
+    font-size: 30px;
+    color: #D69869;
+
+}
+
+.voltar-button:hover{
+    color: #ac7339;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.views-padding{
+    padding-top: 4%;
+}

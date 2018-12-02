@@ -1,0 +1,92 @@
+#sidebar{
+    position: fixed;
+    width: 200px;
+    height: 92.2%;
+    background-color: #151719;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    z-index: 1;
+    transition: all 250ms ease;
+}
+
+#sidebar.active{
+    left: -200px;
+}
+
+#sidebar ul li{
+    color: white;
+    list-style: none;
+    padding: 15px 3px;
+    border-bottom: 2px solid white;
+    font-size: 18px;
+    margin: 0 0 0 -15px;
+}
+
+.sidebar-titulo{
+    text-align: center;
+    color: white;
+    font-size: 480%;
+    font-variant: small-caps;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    padding-bottom: 20px;
+}
+
+.sidebar-menu{
+    display: block;
+
+    cursor: pointer;
+ }
+
+
+.sidebar-menu:hover{
+    background-color: #3a4045;
+}
+
+a {
+    color: inherit;
+}
+
+ul{
+    padding-left: 15px;
+}
+
+.sidebar-submenu {
+    display: none;
+    margin: 0 0 0 10px;
+
+}
+
+#sidebar .nav-fall li:hover .sidebar-submenu {
+    display: block;
+}
+
+.nav-fall a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-fall a:hover{
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------- */
+
+#sidebar .toogle-btn{
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+#sidebar .toogle-btn span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    top: 20px;
+    background: #151719;
+    margin: 2px 0 3px 10px;
+}

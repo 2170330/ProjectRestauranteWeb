@@ -3,12 +3,11 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Bebida;
-use app\models\BebidaClass;
+use yii\filters\AccessControl;
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
+use backend\models\Bebida;
+use backend\models\BebidaSearch;
 use yii\filters\VerbFilter;
-
 /**
  * BebidaController implements the CRUD actions for Bebida model.
  */
@@ -20,6 +19,17 @@ class BebidaController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['index', 'create', 'update', 'view', 'delete'],
+                        'allow' => true,
+                        'roles' => ['admin'],
+                    ],
+
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -35,7 +45,8 @@ class BebidaController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new BebidaClass();
+        var_dump("teste");
+        $searchModel = new BebidaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

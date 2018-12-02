@@ -1,16 +1,16 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Bebida;
+use backend\models\Bebida;
 
 /**
- * BebidaClass represents the model behind the search form of `app\models\Bebida`.
+ * BebidaSearch represents the model behind the search form of `backend\models\Bebida`.
  */
-class BebidaClass extends Bebida
+class BebidaSearch extends Bebida
 {
     /**
      * {@inheritdoc}
