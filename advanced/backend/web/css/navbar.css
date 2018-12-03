@@ -70,23 +70,3 @@ ul{
     color: #bfbfbf;
     text-decoration: none;
 }
-
-
-/* ------------------------------------------------------------- */
-
-#sidebar .toogle-btn{
-    position: absolute;
-    left: 230px;
-    top: 20px;
-    padding-top: 50px;
-    cursor: pointer;
-}
-
-#sidebar .toogle-btn span{
-    display: block;
-    width: 30px;
-    height: 5px;
-    top: 20px;
-    background: #151719;
-    margin: 2px 0 3px 10px;
-}

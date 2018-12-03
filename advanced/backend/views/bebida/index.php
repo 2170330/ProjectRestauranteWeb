@@ -16,11 +16,6 @@ $this->title = 'Bebidas';
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <div id="sidebar">
-        <div class="toogle-btn" onclick="toogleSidebar()">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-        </div>
         <h1 class="sidebar-titulo"> C.R.D.</h1>
         <ul class="nav-fall">
             <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>

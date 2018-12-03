@@ -14,11 +14,6 @@ $this->title = 'C.D.R.';
 
 <div id="site-index">
     <div id="sidebar">
-        <div class="toogle-btn" onclick="toogleSidebar()">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-        </div>
         <h1 class="sidebar-titulo"> C.R.D.</h1>
         <ul class="nav-fall">
             <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>
