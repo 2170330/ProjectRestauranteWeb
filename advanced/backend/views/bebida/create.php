@@ -1,18 +1,19 @@
 <?php
 
-/* @var $this yii\web\View */
-
-use yii\helpers\Url;
 use yii\helpers\Html;
 
-$this->title = 'C.D.R.';
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Bebida */
+
+$this->title = 'Criar Bebida';
+
 ?>
+<div class="bebida-create">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/v4-shims.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/v4-shims.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-<div id="site-index">
     <div id="sidebar">
         <div class="toogle-btn" onclick="toogleSidebar()">
             <span> </span>
@@ -35,4 +36,17 @@ $this->title = 'C.D.R.';
             <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>
         </ul>
     </div>
+
+    <div class="bebida-form">
+        <h1 class="bebida-titulo"><?= Html::encode($this->title) ?></h1>
+
+        <i>  <?= Html::a('', ['/bebida/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
+
+        <div class="bebida-cores">
+            <?= $this->render('_form', [
+                'model' => $model,
+            ]) ?>
+        </div>
+    </div>
+
 </div>

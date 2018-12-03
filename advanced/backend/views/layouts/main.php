@@ -11,6 +11,7 @@ use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '../web/img/logotipo.png']);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -25,18 +26,22 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+    <div class="wrap">
 
-<div class="wrap">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top header-border   ',
         ],
     ]);
+    ?>
+
+    <?php
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'HOME', 'url' => ['site/index']],
+        ['label' => 'BEBIDAS', 'url' => ['bebida/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -68,7 +73,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

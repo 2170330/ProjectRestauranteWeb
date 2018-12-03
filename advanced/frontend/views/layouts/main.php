@@ -11,6 +11,7 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '../web/img/logotipo.png']);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
