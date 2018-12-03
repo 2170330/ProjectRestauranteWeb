@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bizley/migration" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/fontawesome" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-widget-datetimepicker" />
