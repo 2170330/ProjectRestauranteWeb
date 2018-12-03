@@ -73,6 +73,7 @@
       <path value="$PROJECT_DIR$/advanced/vendor/bower-asset/fontawesome" />
       <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
       <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/yii2-widget-datetimepicker" />
+      <path value="$PROJECT_DIR$/advanced/vendor/bizley/migration" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />
