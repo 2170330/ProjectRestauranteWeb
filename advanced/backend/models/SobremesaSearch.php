@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Bebida;
+use app\models\Sobremesa;
 
 /**
- * BebidaSearch represents the model behind the search form of `app\models\Bebida`.
+ * SobremesaSearch represents the model behind the search form of `app\models\Sobremesa`.
  */
-class BebidaSearch extends Bebida
+class SobremesaSearch extends Sobremesa
 {
     /**
      * {@inheritdoc}
@@ -18,8 +18,8 @@ class BebidaSearch extends Bebida
     public function rules()
     {
         return [
-            [['id', 'id_tipo_bebida'], 'integer'],
-            [['descricao', 'imagem'], 'safe'],
+            [['id'], 'integer'],
+            [['descricao'], 'safe'],
             [['preco'], 'number'],
         ];
     }
@@ -42,7 +42,7 @@ class BebidaSearch extends Bebida
      */
     public function search($params)
     {
-        $query = Bebida::find();
+        $query = Sobremesa::find();
 
         // add conditions that should always apply here
 
@@ -62,11 +62,9 @@ class BebidaSearch extends Bebida
         $query->andFilterWhere([
             'id' => $this->id,
             'preco' => $this->preco,
-            'id_tipo_bebida' => $this->id_tipo_bebida,
         ]);
 
-        $query->andFilterWhere(['like', 'descricao', $this->descricao])
-            ->andFilterWhere(['like', 'imagem', $this->imagem]);
+        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

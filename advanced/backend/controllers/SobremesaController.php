@@ -3,17 +3,17 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Bebida;
-use app\models\BebidaSearch;
+use app\models\Sobremesa;
+use app\models\SobremesaSearch;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * BebidaController implements the CRUD actions for Bebida model.
+ * SobremesaController implements the CRUD actions for Sobremesa model.
  */
-class BebidaController extends Controller
+class SobremesaController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -43,12 +43,12 @@ class BebidaController extends Controller
     }
 
     /**
-     * Lists all Bebida models.
+     * Lists all Sobremesa models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new BebidaSearch();
+        $searchModel = new SobremesaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -58,7 +58,7 @@ class BebidaController extends Controller
     }
 
     /**
-     * Displays a single Bebida model.
+     * Displays a single Sobremesa model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -71,13 +71,13 @@ class BebidaController extends Controller
     }
 
     /**
-     * Creates a new Bebida model.
+     * Creates a new Sobremesa model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Bebida();
+        $model = new Sobremesa();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -89,7 +89,7 @@ class BebidaController extends Controller
     }
 
     /**
-     * Updates an existing Bebida model.
+     * Updates an existing Sobremesa model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -109,7 +109,7 @@ class BebidaController extends Controller
     }
 
     /**
-     * Deletes an existing Bebida model.
+     * Deletes an existing Sobremesa model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -123,15 +123,15 @@ class BebidaController extends Controller
     }
 
     /**
-     * Finds the Bebida model based on its primary key value.
+     * Finds the Sobremesa model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Bebida the loaded model
+     * @return Sobremesa the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Bebida::findOne($id)) !== null) {
+        if (($model = Sobremesa::findOne($id)) !== null) {
             return $model;
         }
 

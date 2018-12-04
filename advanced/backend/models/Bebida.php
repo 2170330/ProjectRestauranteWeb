@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\models;
+namespace app\models;
 
 use Yii;
 
@@ -10,8 +10,11 @@ use Yii;
  * @property int $id
  * @property string $descricao
  * @property string $preco
+ * @property string $imagem
+ * @property int $id_tipo_bebida
  *
  * @property Itens[] $itens
+ * @property TipoBebida $tipoBebida
  */
 class Bebida extends \yii\db\ActiveRecord
 {
@@ -29,9 +32,12 @@ class Bebida extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'preco'], 'required'],
+            [['descricao', 'preco', 'imagem', 'id_tipo_bebida'], 'required'],
             [['preco'], 'number'],
+            [['id_tipo_bebida'], 'integer'],
             [['descricao'], 'string', 'max' => 100],
+            [['imagem'], 'string', 'max' => 255],
+            [['id_tipo_bebida'], 'unique'],
         ];
     }
 
@@ -44,6 +50,8 @@ class Bebida extends \yii\db\ActiveRecord
             'id' => 'ID',
             'descricao' => 'Descricao',
             'preco' => 'Preco',
+            'imagem' => 'Imagem',
+            'id_tipo_bebida' => 'Id Tipo Bebida',
         ];
     }
 
@@ -53,5 +61,13 @@ class Bebida extends \yii\db\ActiveRecord
     public function getItens()
     {
         return $this->hasMany(Itens::className(), ['id_bebida' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTipoBebida()
+    {
+        return $this->hasOne(TipoBebida::className(), ['id' => 'id_tipo_bebida']);
     }
 }
