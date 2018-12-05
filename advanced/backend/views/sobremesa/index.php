@@ -8,7 +8,6 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Sobremesas';
-
 ?>
 
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
