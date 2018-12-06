@@ -17,22 +17,27 @@ $this->title = 'Pratos';
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Prato', ['create'], ['class' => 'backend-button']) ?>
+        <?= Html::a('Criar Prato', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <div class="backend-cores">
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
+            //'filterModel' => $searchModel,
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
-
                 'id',
                 'descricao',
                 'preco',
-                'tipoPrato.descricao',
+                [
+                    'header' => 'Tipo',
+                    'attribute' => 'tipoPrato.descricao',
+                ],
                 'imagem',
-                'diaSemana.descricao',
+                [
+                    'header' => 'Prato do dia',
+                    'attribute' => 'diaSemana.descricao',
+                ],
                 ['class' => 'yii\grid\ActionColumn'],
             ],
         ]); ?>

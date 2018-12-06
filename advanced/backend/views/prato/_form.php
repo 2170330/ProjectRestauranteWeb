@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\DiasSemana;
+use backend\models\TipoPrato;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Prato */
@@ -16,14 +19,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'preco')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'id_tipo_prato')->textInput() ?>
+    <?= $form->field($model, 'id_tipo_prato')->dropDownList(
+        ArrayHelper::map(TipoPrato::find()->all(), 'id', 'descricao')
+    )->label('Tipo de Prato') ?>
 
     <?= $form->field($model, 'imagem')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'id_dia_semana')->textInput() ?>
+    <?= $form->field($model, 'id_dia_semana')->dropDownList(
+            ArrayHelper::map(DiasSemana::find()->all(), 'id', 'descricao'),
+            ['prompt' => '']
+    )->label('Dia de Semana')  ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'backend-criar']) ?>
+        <?= Html::submitButton('Criar', ['class' => 'backend-criar']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -17,11 +17,11 @@ $this->title = $model->id;
     <i> <?= Html::a('', ['/prato/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'backend-criar    ']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar    ']) ?>
+        <?= Html::a('Apagar', ['delete', 'id' => $model->id], [
             'class' => 'backend-apagar',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Tem a certeza que deseja apagar o prato?',
                 'method' => 'post',
             ],
         ]) ?>

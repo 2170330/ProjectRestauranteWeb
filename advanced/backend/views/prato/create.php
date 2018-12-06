@@ -7,8 +7,6 @@ use yii\helpers\Html;
 /* @var $model backend\models\Prato */
 
 $this->title = 'Create Prato';
-$this->params['breadcrumbs'][] = ['label' => 'Pratos', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
 

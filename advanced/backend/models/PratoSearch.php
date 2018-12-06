@@ -18,8 +18,8 @@ class PratoSearch extends Prato
     public function rules()
     {
         return [
-            [['id', 'id_tipo_prato', 'id_dia_semana'], 'integer'],
-            [['descricao', 'imagem'], 'safe'],
+            [['id',], 'integer'],
+            [['descricao', 'imagem', 'tipoPrato', 'diaSemanaa'], 'safe'],
             [['preco'], 'number'],
         ];
     }
@@ -64,13 +64,11 @@ class PratoSearch extends Prato
         $query->andFilterWhere([
             'id' => $this->id,
             'preco' => $this->preco,
-            'id_tipo_prato' => $this->id_tipo_prato,
-            'id_dia_semana' => $this->id_dia_semana,
         ]);
 
         $query->andFilterWhere(['like', 'descricao', $this->descricao])
-            ->andFilterWhere(['like', 'imagem', $this->imagem]);
-
+            ->andFilterWhere(['like', 'imagem', $this->imagem])
+            ->andFilterWhere(['like', 'tipoPrato.descricao', $this->tipoPrato]);
         return $dataProvider;
     }
 }
