@@ -9,12 +9,12 @@ use yii\helpers\Html;
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <div id="sidebar">
-    <h1 class="sidebar-titulo"> C.R.D.</h1>
+    <h1 class="sidebar-titulo"> C.D.R.</h1>
     <ul class="nav-fall">
         <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>
         <li class="sidebar-menu"> <i class="fas fa-utensils"></i> Pratos
             <ul class="sidebar-submenu">
-                <li><a href=""><i class="fas fa-drumstick-bite"></i> Carne</a></li>
+                <li><i class="fas fa-drumstick-bite"></i> </a> <?= Html::a('Carne', ['/prato/index'], ['class'=>'']) ?> </li>
                 <li><a href=""><i class="fas fa-fish"></i> Peixe</a></li>
                 <li><a href=""><i class="fas fa-cannabis"></i> Vegetariano</a></li>
                 <li><a href=""><i class="fas fa-apple-alt"></i> Vegan</a></li>
