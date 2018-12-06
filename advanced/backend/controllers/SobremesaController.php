@@ -32,7 +32,6 @@ class SobremesaController extends Controller
 
                 ],
             ],
-
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

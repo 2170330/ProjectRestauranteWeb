@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152257_create_table_sobremesa extends Migration
+class m181205_221232_create_table_menu extends Migration
 {
     public function up()
     {
@@ -11,17 +11,18 @@ class m181204_152257_create_table_sobremesa extends Migration
             $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%sobremesa}}', [
+        $this->createTable('{{%menu}}', [
             'id' => $this->primaryKey(),
-            'descricao' => $this->string()->notNull(),
-            'preco' => $this->decimal()->notNull(),
+            'id_itens' => $this->integer()->notNull(),
             'imagem' => $this->string()->notNull(),
         ], $tableOptions);
 
+        $this->createIndex('id_itens', '{{%menu}}', 'id_itens');
+        $this->addForeignKey('menu_ibfk_1', '{{%menu}}', 'id_itens', '{{%itens}}', 'id', 'RESTRICT', 'RESTRICT');
     }
 
     public function down()
     {
-        $this->dropTable('{{%sobremesa}}');
+        $this->dropTable('{{%menu}}');
     }
 }

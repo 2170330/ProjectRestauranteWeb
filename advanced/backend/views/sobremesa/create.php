@@ -10,16 +10,14 @@ $this->title = 'Create Sobremesa';
 
 ?>
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
-<div class="sobremesa-create">
-        <div class="backend-form">
-            <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
+<div class="sobremesa-create, backend-form">
 
-        <i>  <?= Html::a('', ['/sobremesa/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
+    <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
 
-        <div class="backend-cores">
-            <?= $this->render('_form', [
-                'model' => $model,
-            ]) ?>
-        </div>
-    </div>
+    <i>  <?= Html::a('', ['/bebida/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
+
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+
 </div>

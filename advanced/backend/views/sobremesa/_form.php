@@ -8,13 +8,15 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="backend-form">
+<div class="sobremesa-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'descricao')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'preco')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'imagem')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'backend-criar']) ?>

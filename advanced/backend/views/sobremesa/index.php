@@ -8,32 +8,32 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Sobremesas';
+
 ?>
-
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
-<div class="sobremesa-index">
-    <div class="backend-form">
-        <div class="backend-titulo"><h1><?= Html::encode($this->title) ?></h1></div>
-            <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<div class="sobremesa-index, backend-form">
 
-        <p>
-            <?= Html::a('Create Sobremesa', ['create'], ['class' => 'backend-button']) ?>
-        </p>
-        <div class="backend-cores">
-            <?= GridView::widget([
-                'id' => 'sobremesa-gridviews',
-                'dataProvider' => $dataProvider,
-                'filterModel' => $searchModel,
-                'columns' => [
-                    ['class' => 'yii\grid\SerialColumn'],
+    <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-                    'id',
-                    'descricao',
-                    'preco',
+    <p>
+        <?= Html::a('Create Sobremesa', ['create'], ['class' => 'backend-button']) ?>
+    </p>
 
-                    ['class' => 'yii\grid\ActionColumn'],
-                ],
-            ]); ?>
-        </div>
+    <div class="backend-cores">
+        <?= GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'columns' => [
+                ['class' => 'yii\grid\SerialColumn'],
+
+                'id',
+                'descricao',
+                'preco',
+                'imagem',
+
+                ['class' => 'yii\grid\ActionColumn'],
+            ],
+        ]); ?>
     </div>
 </div>
