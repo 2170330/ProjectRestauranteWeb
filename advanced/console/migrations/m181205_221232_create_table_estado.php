@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152256_create_table_dias_semana extends Migration
+class m181205_221232_create_table_estado extends Migration
 {
     public function up()
     {
@@ -11,7 +11,7 @@ class m181204_152256_create_table_dias_semana extends Migration
             $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%dias_semana}}', [
+        $this->createTable('{{%estado}}', [
             'id' => $this->primaryKey(),
             'descricao' => $this->string()->notNull(),
         ], $tableOptions);
@@ -20,6 +20,6 @@ class m181204_152256_create_table_dias_semana extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%dias_semana}}');
+        $this->dropTable('{{%estado}}');
     }
 }

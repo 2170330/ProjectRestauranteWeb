@@ -32,7 +32,6 @@ class BebidaController extends Controller
 
                 ],
             ],
-
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

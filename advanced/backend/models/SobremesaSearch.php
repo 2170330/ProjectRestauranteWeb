@@ -19,7 +19,7 @@ class SobremesaSearch extends Sobremesa
     {
         return [
             [['id'], 'integer'],
-            [['descricao'], 'safe'],
+            [['descricao', 'imagem'], 'safe'],
             [['preco'], 'number'],
         ];
     }
@@ -64,7 +64,8 @@ class SobremesaSearch extends Sobremesa
             'preco' => $this->preco,
         ]);
 
-        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
+        $query->andFilterWhere(['like', 'descricao', $this->descricao])
+            ->andFilterWhere(['like', 'imagem', $this->imagem]);
 
         return $dataProvider;
     }

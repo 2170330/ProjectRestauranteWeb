@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152256_create_table_bebida extends Migration
+class m181205_221231_create_table_bebida extends Migration
 {
     public function up()
     {
@@ -20,6 +20,7 @@ class m181204_152256_create_table_bebida extends Migration
         ], $tableOptions);
 
         $this->createIndex('id_tipo_bebida', '{{%bebida}}', 'id_tipo_bebida', true);
+        $this->addForeignKey('bebida_ibfk_1', '{{%bebida}}', 'id_tipo_bebida', '{{%tipo_bebida}}', 'id', 'RESTRICT', 'RESTRICT');
     }
 
     public function down()

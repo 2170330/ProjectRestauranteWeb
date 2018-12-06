@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152256_create_table_fatura extends Migration
+class m181205_221232_create_table_fatura extends Migration
 {
     public function up()
     {

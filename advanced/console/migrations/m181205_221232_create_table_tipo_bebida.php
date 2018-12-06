@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152256_create_table_ingredientes extends Migration
+class m181205_221232_create_table_tipo_bebida extends Migration
 {
     public function up()
     {
@@ -11,7 +11,7 @@ class m181204_152256_create_table_ingredientes extends Migration
             $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%ingredientes}}', [
+        $this->createTable('{{%tipo_bebida}}', [
             'id' => $this->primaryKey(),
             'descricao' => $this->string()->notNull(),
         ], $tableOptions);
@@ -20,6 +20,6 @@ class m181204_152256_create_table_ingredientes extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%ingredientes}}');
+        $this->dropTable('{{%tipo_bebida}}');
     }
 }

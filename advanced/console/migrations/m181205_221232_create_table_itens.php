@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152256_create_table_itens extends Migration
+class m181205_221232_create_table_itens extends Migration
 {
     public function up()
     {
@@ -19,8 +19,8 @@ class m181204_152256_create_table_itens extends Migration
         ], $tableOptions);
 
         $this->createIndex('id_bebida', '{{%itens}}', 'id_bebida');
-        $this->createIndex('id_prato', '{{%itens}}', 'id_prato');
         $this->createIndex('id_sobremesa', '{{%itens}}', 'id_sobremesa');
+        $this->createIndex('id_prato', '{{%itens}}', 'id_prato');
         $this->addForeignKey('itens_ibfk_1', '{{%itens}}', 'id_prato', '{{%prato}}', 'id', 'RESTRICT', 'RESTRICT');
         $this->addForeignKey('itens_ibfk_2', '{{%itens}}', 'id_bebida', '{{%bebida}}', 'id', 'RESTRICT', 'RESTRICT');
         $this->addForeignKey('itens_ibfk_3', '{{%itens}}', 'id_sobremesa', '{{%sobremesa}}', 'id', 'RESTRICT', 'RESTRICT');

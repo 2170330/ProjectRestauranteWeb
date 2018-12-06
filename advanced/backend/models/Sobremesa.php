@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property string $descricao
  * @property string $preco
+ * @property string $imagem
  *
  * @property Itens[] $itens
  */
@@ -29,9 +30,10 @@ class Sobremesa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'preco'], 'required'],
+            [['descricao', 'preco', 'imagem'], 'required'],
             [['preco'], 'number'],
             [['descricao'], 'string', 'max' => 100],
+            [['imagem'], 'string', 'max' => 255],
         ];
     }
 
@@ -44,6 +46,7 @@ class Sobremesa extends \yii\db\ActiveRecord
             'id' => 'ID',
             'descricao' => 'Descricao',
             'preco' => 'Preco',
+            'imagem' => 'Imagem',
         ];
     }
 

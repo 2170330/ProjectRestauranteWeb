@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m181204_152257_create_table_tipo_bebida extends Migration
+class m181205_221232_create_table_tipo_prato extends Migration
 {
     public function up()
     {
@@ -11,16 +11,15 @@ class m181204_152257_create_table_tipo_bebida extends Migration
             $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%tipo_bebida}}', [
+        $this->createTable('{{%tipo_prato}}', [
             'id' => $this->primaryKey(),
             'descricao' => $this->string()->notNull(),
         ], $tableOptions);
 
-        $this->addForeignKey('tipo_bebida_ibfk_1', '{{%tipo_bebida}}', 'id', '{{%bebida}}', 'id_tipo_bebida', 'RESTRICT', 'RESTRICT');
     }
 
     public function down()
     {
-        $this->dropTable('{{%tipo_bebida}}');
+        $this->dropTable('{{%tipo_prato}}');
     }
 }
