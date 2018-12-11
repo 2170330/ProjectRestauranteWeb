@@ -6,6 +6,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Prato;
 use app\models\PratoSearch;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -38,7 +39,9 @@ class PratoController extends Controller
     public function actionIndex()
     {
         $searchModel = new PratoSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = new ActiveDataProvider([
+            'query' => Prato::find(),
+        ]);
 
         return $this->render('index', [
             'searchModel' => $searchModel,

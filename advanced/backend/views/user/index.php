@@ -16,7 +16,7 @@ $this->title = 'Users';
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Utilizador', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <div class="backend-cores">

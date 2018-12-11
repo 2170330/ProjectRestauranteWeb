@@ -64,6 +64,7 @@ class PratoSearch extends Prato
         $query->andFilterWhere([
             'id' => $this->id,
             'preco' => $this->preco,
+            'tipo' => 1,
         ]);
 
         $query->andFilterWhere(['like', 'descricao', $this->descricao])

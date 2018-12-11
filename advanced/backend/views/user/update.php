@@ -8,9 +8,13 @@ use yii\helpers\Html;
 $this->title = 'Update User: ' . $model->username;
 
 ?>
-<div class="user-update">
+<?= $this->render('@backend/views/layouts/submenu.php'); ?>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="user-update backend-form">
+
+    <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
+
+    <i> <?= Html::a('', ['/user/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <?= $this->render('_form', [
         'model' => $model,

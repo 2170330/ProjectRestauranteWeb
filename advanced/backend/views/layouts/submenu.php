@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use backend\models\Prato;
 
+$pratos = Prato::find()->all();
 ?>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -15,10 +17,10 @@ use yii\helpers\Html;
         <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>
         <li class="sidebar-menu"> <i class="fas fa-utensils"></i> Pratos
             <ul class="sidebar-submenu">
-                <li><i class="fas fa-drumstick-bite"></i> </a> <?= Html::a('Carne', ['/prato/index'], ['class'=>'']) ?> </li>
-                <li><a href=""><i class="fas fa-fish"></i> Peixe</a></li>
-                <li><a href=""><i class="fas fa-cannabis"></i> Vegetariano</a></li>
-                <li><a href=""><i class="fas fa-apple-alt"></i> Vegan</a></li>
+                <li><i class="fas fa-drumstick-bite"></i> </a> <?= Html::a('Carne', ['/prato/index', 'id' => 1], ['class'=>'']) ?> </li>
+                <li><a href=""><i class="fas fa-fish"></i> </a> <?= Html::a('Peixe', ['/prato/index', 'id' => 2], ['class'=>'']) ?> </li>
+                <li><a href=""><i class="fas fa-cannabis"></i> </a> <?= Html::a('Vegetariano', ['/prato/index', 'id' => 3], ['class'=>'']) ?> </li>
+                <li><a href=""><i class="fas fa-apple-alt"></i> </a> <?= Html::a('Vegan', ['/prato/index', 'id' => 4], ['class'=>'']) ?> </li>
             </ul>
         </li>
         <li class="sidebar-menu"> <i class="fas fa-wine-glass-alt"></i> Bebibas

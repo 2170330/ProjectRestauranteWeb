@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'nif')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Criar', ['class' => 'backend-criar']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
