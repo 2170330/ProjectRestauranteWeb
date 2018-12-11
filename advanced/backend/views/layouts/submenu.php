@@ -11,6 +11,7 @@ use yii\helpers\Html;
 <div id="sidebar">
     <h1 class="sidebar-titulo"> C.D.R.</h1>
     <ul class="nav-fall">
+        <li class="sidebar-menu"> <i class="fas fa-users"></i> <?= Html::a('Utilizadores', ['/user/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>
         <li class="sidebar-menu"> <i class="fas fa-utensils"></i> Pratos
             <ul class="sidebar-submenu">
@@ -20,7 +21,12 @@ use yii\helpers\Html;
                 <li><a href=""><i class="fas fa-apple-alt"></i> Vegan</a></li>
             </ul>
         </li>
-        <li class="sidebar-menu"> <i class="fas fa-wine-glass-alt"></i> <?= Html::a('Bebidas', ['/bebida/index'], ['class'=>'']) ?>
+        <li class="sidebar-menu"> <i class="fas fa-wine-glass-alt"></i> Bebibas
+            <ul class="sidebar-submenu">
+                <li><a href=""><i class="fas fa-glass-martini"></i> </a> <?= Html::a('Sumos', ['/bebida/index'], ['class'=>'']) ?> </li>
+                <li><a href=""><i class="fas fa-wine-bottle"></i> Vinhos </a></li>
+                <li><a href=""> <i class="fas fa-beer"></i> Outros </a></li>
+            </ul>
         <li class="sidebar-menu"> <i class="fas fa-cookie"></i> <?= Html::a('Sobremesas', ['/sobremesa/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>
     </ul>

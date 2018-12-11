@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\TipoBebida;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Bebida */
@@ -19,6 +22,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'imagem')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'id_tipo_bebida')->textInput() ?>
+
+    <?= $form->field($model, 'id_tipo_bebida')->dropDownList(ArrayHelper::map(TipoBebida::find()->all(), 'id', 'descricao')) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'backend-criar']) ?>
