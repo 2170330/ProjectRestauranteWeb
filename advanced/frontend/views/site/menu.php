@@ -3,6 +3,10 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use backend\models\Prato;
+//use backend\models\Bebida;
+//use backend\models\Sobremesa;
+use backend\controllers\PratoController;
 
 $this->title = 'Menu';
 $this->params['breadcrumbs'][] = $this->title;
@@ -11,6 +15,16 @@ $this->params['breadcrumbs'][] = $this->title;
     parent::__construct();
     $this->load->helper('url');
 }*/
+?>
+
+<?php
+$this->params['breadcrumbs']=array('prato',);
+?>
+
+<?php
+$pratos = Prato::find()->all();
+//$bebidas = Bebida::find()->all();
+//$sobremesas = Sobremesa::find()->all();
 ?>
 
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -41,6 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <li class="site-menu-bar-li"><a href="#sobremesas">Sobremesas</a></li>
         </ul>
     </div>
+
     <div class="site-menu-2 col-lg-9">
         <p id="menu" class="titulo-menu"> Menus </p>
         <p class="line"> _____</p>
@@ -69,177 +84,100 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
 
-
-    <div class="site-menu-2 col-lg-9">
+    <div class="site-menu-2 clearfix col-lg-9">
         <p id="carne" class="titulo-menu"> Carne </p>
         <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
+        <?php
+            $count = 1;
+            foreach ($pratos as $prato):
+                if ($prato->id_tipo_prato == 1) { ?>
+                    <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
+                    <div class="site-menu-2-1 col-lg-4">
+                        <img class="site-menu-2-image"
+                             src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                        <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
+                        <p class="line-grey"> ____________</p>
+                        <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
+                        <p class="site-menu-2-preco"> <?= $prato->preco ?> €</p>
+                    </div>
+                    <?= ($count % 3 == 0) ? '</div>' : ''; ?>
+                    <?php $count++;
+                } ?>
+        <?php endforeach; ?>
     </div>
 
 
 
-    <div class="site-menu-2 col-lg-9">
+    <div class="site-menu-2 clearfix col-lg-9">
         <p id="peixe" class="titulo-menu"> Peixe </p>
         <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
+        <?php
+        $count = 1;
+        foreach ($pratos as $prato):
+            if ($prato->id_tipo_prato == 2) { ?>
+                <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
+                <div class="site-menu-2-1 col-lg-4">
+                    <img class="site-menu-2-image"
+                         src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                    <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
+                    <p class="line-grey"> ____________</p>
+                    <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
+                    <p class="site-menu-2-preco"> <?= $prato->preco ?> €</p>
+                </div>
+                <?= ($count % 3 == 0) ? '</div>' : ''; ?>
+                <?php $count++;
+            } ?>
+        <?php endforeach; ?>
     </div>
 
 
+    <?php /*
 
-    <div class="site-menu-2 col-lg-9">
+    <div class="site-menu-2 clearfix col-lg-9">
         <p id="vegetariano" class="titulo-menu"> Vegetariano </p>
         <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
+        <?php
+        $count = 1;
+        foreach ($pratos as $prato):
+            if ($prato->id_tipo_prato == 3) { ?>
+                <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
+                <div class="site-menu-2-1 col-lg-4">
+                    <img class="site-menu-2-image"
+                         src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                    <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
+                    <p class="line-grey"> ____________</p>
+                    <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
+                    <p class="site-menu-2-preco"> <?= $prato->preco ?> €</p>
+                </div>
+                <?= ($count % 3 == 0) ? '</div>' : ''; ?>
+                <?php $count++;
+            } ?>
+        <?php endforeach; ?>
     </div>
 
 
 
-    <div id="vegan" class="site-menu-2 col-lg-9">
-        <p class="titulo-menu"> Vegan </p>
+    <div class="site-menu-2 clearfix col-lg-9">
+        <p id="vegan" class="titulo-menu"> Vegan </p>
         <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
+        <?php
+        $count = 1;
+        foreach ($pratos as $prato):
+            if ($prato->id_tipo_prato == 4) { ?>
+                <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
+                <div class="site-menu-2-1 col-lg-4">
+                    <img class="site-menu-2-image"
+                         src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                    <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
+                    <p class="line-grey"> ____________</p>
+                    <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
+                    <p class="site-menu-2-preco"> <?= $prato->preco ?> €</p>
+                </div>
+                <?= ($count % 3 == 0) ? '</div>' : ''; ?>
+                <?php $count++;
+            } ?>
+        <?php endforeach; ?>
     </div>
 
+*/  ?>
 
-
-    <div class="site-menu-2 col-lg-9">
-        <p id="bebidas" class="titulo-menu"> Bebidas </p>
-        <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
-    </div>
-
-
-
-    <div class="site-menu-2 col-lg-9">
-        <p id="sobremesas" class="titulo-menu"> Sobremesas </p>
-        <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
-    </div>
-
-</div>

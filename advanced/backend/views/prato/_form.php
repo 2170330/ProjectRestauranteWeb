@@ -13,7 +13,7 @@ use backend\models\TipoPrato;
 
 <div class="prato-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'descricao')->textInput(['maxlength' => true]) ?>
 
@@ -23,7 +23,7 @@ use backend\models\TipoPrato;
         ArrayHelper::map(TipoPrato::find()->all(), 'id', 'descricao')
     )->label('Tipo de Prato') ?>
 
-    <?= $form->field($model, 'imagem')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'imagem')->fileInput() ?>
 
     <?= $form->field($model, 'id_dia_semana')->dropDownList(
             ArrayHelper::map(DiasSemana::find()->all(), 'id', 'descricao'),

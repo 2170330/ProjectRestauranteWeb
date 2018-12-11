@@ -2,12 +2,14 @@
 
 namespace backend\controllers;
 
+
 use Yii;
 use backend\models\Prato;
 use app\models\PratoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * PratoController implements the CRUD actions for Prato model.
@@ -66,8 +68,17 @@ class PratoController extends Controller
     {
         $model = new Prato();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            //recebe a instância da imagem
+            $img = UploadedFile::getInstance($model, 'imagem');
+
+            //recebe o nome da imagem
+            $model->imagem = $img->baseName.'.'.$img->extension;
+
+            if ($model->save()){
+                $img->saveAs('img/carne/'.$model->imagem);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('create', [
@@ -86,8 +97,17 @@ class PratoController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            //recebe a instância da imagem
+            $img = UploadedFile::getInstance($model, 'imagem');
+
+            //recebe o nome da imagem
+            $model->imagem = $img->baseName.'.'.$img->extension;
+
+            if ($model->save()){
+                $img->saveAs('img/carne/'.$model->imagem);
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
@@ -123,5 +143,16 @@ class PratoController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionMenu()
+    {
+        $pratos = Prato::find()->all();
+
+
+
+        return $this->render('menu', [
+            'prato'=>$pratos,
+        ]);
     }
 }
