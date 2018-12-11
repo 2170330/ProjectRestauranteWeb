@@ -40,7 +40,7 @@ class TipoBebida extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'descricao' => 'Descricao',
+            'descricao' => 'Tipo Bebida',
         ];
     }
 

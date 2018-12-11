@@ -41,7 +41,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '../we
     <?php
     $menuItems = [
         ['label' => 'HOME', 'url' => ['site/index']],
-        ['label' => 'BEBIDAS', 'url' => ['bebida/index']],
+        ['label' => 'GESTÃO', 'url' => ['user/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

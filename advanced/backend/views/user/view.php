@@ -4,16 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Bebida */
+/* @var $model app\models\User */
 
-$this->title = $model->descricao;
+$this->title = $model->id;
 ?>
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
-<div class="bebida-view, backend-form">
+<div class="user-view, backend-form">
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
-
-    <i><?= Html::a('', ['/bebida/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -31,10 +29,17 @@ $this->title = $model->descricao;
             'model' => $model,
             'attributes' => [
                 'id',
-                'descricao',
-                'preco',
-                'imagem',
-                'tipoBebida.descricao'
+                'username',
+                'auth_key',
+                'password_hash',
+                'password_reset_token',
+                'email:email',
+                'status',
+                'created_at',
+                'updated_at',
+                'nome',
+                'morada',
+                'nif',
             ],
         ]) ?>
     </div>
