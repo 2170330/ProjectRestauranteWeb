@@ -7,6 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Prato */
 
 $this->title = $model->id;
+
 ?>
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
 
@@ -14,7 +15,7 @@ $this->title = $model->id;
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
 
-    <i> <?= Html::a('', ['/prato/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
+    <i> <?= Html::a('', ['/prato/index', 'id' => 0], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <p>
         <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar    ']) ?>

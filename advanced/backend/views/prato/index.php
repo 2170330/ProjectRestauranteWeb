@@ -17,10 +17,14 @@ $pratos = Prato::find()->all();
 
 $tipo_id = $_GET['id'];
 
-$query = Prato::find()->where(['id_tipo_prato' => $tipo_id]);
-$provider = new ActiveDataProvider([
-    'query' => $query]);
+if ($tipo_id != 0) {
+    $query = Prato::find()->where(['id_tipo_prato' => $tipo_id]);
+    $dataProvider = new ActiveDataProvider([
+        'query' => $query]);
+}
+
 ?>
+
 
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
 <div class="prato-index backend-form">
@@ -34,7 +38,7 @@ $provider = new ActiveDataProvider([
 
     <div class="backend-cores">
         <?= GridView::widget([
-            'dataProvider' => $provider,
+            'dataProvider' => $dataProvider,
             //'filterModel' => $searchModel,
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],

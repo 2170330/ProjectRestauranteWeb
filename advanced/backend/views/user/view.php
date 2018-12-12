@@ -13,6 +13,8 @@ $this->title = $model->id;
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
 
+    <i> <?= Html::a('', ['/user/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
+
     <p>
         <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar']) ?>
         <?= Html::a('Apagar', ['delete', 'id' => $model->id], [

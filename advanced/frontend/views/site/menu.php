@@ -94,7 +94,7 @@ $pratos = Prato::find()->all();
                     <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
                     <div class="site-menu-2-1 col-lg-4">
                         <img class="site-menu-2-image"
-                             src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                             src="<?php echo Yii::getAlias('@pratoImgUrlCarne') . '/' . $prato->imagem; ?>">
                         <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
                         <p class="line-grey"> ____________</p>
                         <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
@@ -118,7 +118,7 @@ $pratos = Prato::find()->all();
                 <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
                 <div class="site-menu-2-1 col-lg-4">
                     <img class="site-menu-2-image"
-                         src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                         src="<?php echo Yii::getAlias('@pratoImgUrlPeixe') . '/' . $prato->imagem; ?>">
                     <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
                     <p class="line-grey"> ____________</p>
                     <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
@@ -130,9 +130,6 @@ $pratos = Prato::find()->all();
         <?php endforeach; ?>
     </div>
 
-
-    <?php /*
-
     <div class="site-menu-2 clearfix col-lg-9">
         <p id="vegetariano" class="titulo-menu"> Vegetariano </p>
         <p class="line"> _____</p>
@@ -143,7 +140,7 @@ $pratos = Prato::find()->all();
                 <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
                 <div class="site-menu-2-1 col-lg-4">
                     <img class="site-menu-2-image"
-                         src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                         src="<?php echo Yii::getAlias('@pratoImgUrlVegetariano') . '/' . $prato->imagem; ?>">
                     <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
                     <p class="line-grey"> ____________</p>
                     <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
@@ -167,7 +164,7 @@ $pratos = Prato::find()->all();
                 <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
                 <div class="site-menu-2-1 col-lg-4">
                     <img class="site-menu-2-image"
-                         src="<?php echo Yii::getAlias('@pratoImgUrl') . '/' . $prato->imagem; ?>">
+                         src="<?php echo Yii::getAlias('@pratoImgUrlVegan') . '/' . $prato->imagem; ?>">
                     <h1 class="site-menu-2-titulo"> <?= $prato->descricao ?> </h1>
                     <p class="line-grey"> ____________</p>
                     <!-- <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p> -->
@@ -178,6 +175,4 @@ $pratos = Prato::find()->all();
             } ?>
         <?php endforeach; ?>
     </div>
-
-*/  ?>
 

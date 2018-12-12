@@ -14,7 +14,7 @@ $this->title = 'Update Prato: ' . $model->id;
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
 
-    <i> <?= Html::a('', ['/prato/index'], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
+    <i> <?= Html::a('', ['/prato/index', 'id' => 0], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <?= $this->render('_form', [
         'model' => $model,
