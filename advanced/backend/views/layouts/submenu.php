@@ -13,7 +13,7 @@ $pratos = Prato::find()->all();
 <div id="sidebar">
     <h1 class="sidebar-titulo"> C.D.R.</h1>
     <ul class="nav-fall">
-        <li class="sidebar-menu"> <i class="fas fa-users"></i> <?= Html::a('Utilizadores', ['/user/index'], ['class'=>'']) ?>
+        <li class="sidebar-menu"> <i class="fas fa-users"></i> <?= Html::a('Utilizador', ['/utilizador/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>
         <li class="sidebar-menu"> <i class="fas fa-utensils"></i> <?= Html::a('Pratos', ['/prato/index', 'id' => 0], ['class'=>'']) ?>
             <ul class="sidebar-submenu">
@@ -33,3 +33,4 @@ $pratos = Prato::find()->all();
         <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>
     </ul>
 </div>
+

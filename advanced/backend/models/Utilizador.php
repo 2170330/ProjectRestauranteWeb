@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -26,7 +26,7 @@ use Yii;
  * @property Mensagem[] $mensagems
  * @property Reserva[] $reservas
  */
-class User extends \yii\db\ActiveRecord
+class Utilizador extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -62,8 +62,13 @@ class User extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'username' => 'Username',
+            'auth_key' => 'Auth Key',
+            'password_hash' => 'Password Hash',
+            'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'status' => 'Status',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
             'nome' => 'Nome',
             'morada' => 'Morada',
             'nif' => 'Nif',
