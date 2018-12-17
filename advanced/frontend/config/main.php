@@ -14,8 +14,15 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-frontend',
+            //'csrfParam' => '_csrf-frontend'
+
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'Km1b7NlL-xtVxYKBXSb0NIdMuEmnWgoQ',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+                ],
         ],
+
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -42,9 +49,14 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'user'
+                ],
+
             ],
         ],
-        
+
     ],
     'params' => $params,
 ];
