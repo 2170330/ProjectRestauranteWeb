@@ -85,6 +85,7 @@ class UtilizadorController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $model->setAttribute('password_hash', null);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

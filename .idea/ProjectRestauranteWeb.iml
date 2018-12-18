@@ -6,7 +6,9 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/fontawesome" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-widget-datetimepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/rmrevin/yii2-fontawesome" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/contracts" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
