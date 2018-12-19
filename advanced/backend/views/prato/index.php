@@ -25,8 +25,8 @@ if ($tipo_id != 0) {
 
 ?>
 
-<?= $this->render('@backend/views/layouts/submenu.php'); ?>
 
+<?= $this->render('@backend/views/layouts/submenu.php'); ?>
 <div class="prato-index backend-form">
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>

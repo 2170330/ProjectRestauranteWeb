@@ -18,7 +18,7 @@ $this->title = $model->id;
     <i> <?= Html::a('', ['/prato/index', 'id' => 0], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <p>
-        <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar']) ?>
+        <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar    ']) ?>
         <?= Html::a('Apagar', ['delete', 'id' => $model->id], [
             'class' => 'backend-apagar',
             'data' => [
