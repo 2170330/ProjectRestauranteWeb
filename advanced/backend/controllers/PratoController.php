@@ -79,7 +79,11 @@ class PratoController extends Controller
             $model->imagem = $img->baseName.'.'.$img->extension;
 
             if ($model->save()){
-                $img->saveAs('img/carne/'.$model->imagem);
+                if($model->id_tipo_prato == 1) $img->saveAs('img/carne/'.$model->imagem);
+                elseif ($model->id_tipo_prato == 2) $img->saveAs('img/peixe/'.$model->imagem);
+                elseif ($model->id_tipo_prato == 3) $img->saveAs('img/vegetariano/'.$model->imagem);
+                else $img->saveAs('img/vegan/'.$model->imagem);
+
                 return $this->redirect(['view', 'id' => $model->id]);
             }
         }

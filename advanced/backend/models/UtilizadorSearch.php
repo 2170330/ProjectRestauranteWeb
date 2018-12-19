@@ -7,7 +7,7 @@ use yii\data\ActiveDataProvider;
 use backend\models\Utilizador;
 
 /**
- * UtilizadorSearch represents the model behind the search form of `backend\models\Utilizador`.
+ * UtilizadorSearch represents the model behind the search form of `backend\models\Module`.
  */
 class UtilizadorSearch extends Utilizador
 {
@@ -41,6 +41,7 @@ class UtilizadorSearch extends Utilizador
     public function search($params)
     {
         $query = Utilizador::find();
+
 
         // add conditions that should always apply here
 
