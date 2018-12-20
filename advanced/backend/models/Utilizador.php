@@ -36,7 +36,6 @@ class Utilizador extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
-    public $password;
 
 
     /**
@@ -76,19 +75,17 @@ class Utilizador extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['username','email', 'nome', 'morada', 'nif', 'status', 'password'], 'required'],
-            [['created_at', 'updated_at'], 'integer'],
-            [['username', 'password_reset_token', 'email', 'nome', 'morada', 'password_hash'], 'string', 'max' => 255],
+            [['username','email', 'nome', 'morada', 'nif', 'status'], 'required'],
+            [['created_at', 'updated_at', 'nif'], 'integer'],
+            [['username', 'password_reset_token', 'email', 'nome', 'morada'], 'string', 'max' => 255],
+            [['password_hash'], 'string', 'max' => 32],
             [['auth_key'], 'string', 'max' => 32],
             [['username'], 'unique'],
             [['email'], 'unique'],
-            [['nif'], 'unique'],
-            [['nif'], 'integer', 'min' => 9],
             [['password_reset_token'], 'unique'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
             ['password_hash', 'required', 'on' => 'insert'],
-            ['password', 'string', 'min' => 6],
         ];
     }
 
@@ -216,23 +213,27 @@ class Utilizador extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'id' => Yii::t('app', 'ID'),
+            'status' => Yii::t('app', 'Status Active'),
+        ];
+    }
+
     public function beforeSave($insert) {
         if ($insert) {
-            $this->password_hash = Yii::$app->security->generatePasswordHash($this->password);
+            $this->setPassword($this->password_hash);
             $this->generateAuthKey();
             $this->generatePasswordResetToken();
         } else {
-            $this->setPassword($this->password);
+            if (!empty($this->password_hash)) {
+                $this->setPassword($this->password_hash);
+            } else {
+                $this->password_hash = (string) $this->getOldAttribute('password_hash');
+            }
         }
-
         return parent::beforeSave($insert);
-    }
-
-    public function afterSave($insert, $changedAttributes)
-    {
-
-
-        return parent::afterSave($insert, $changedAttributes);
     }
 
 
@@ -245,6 +246,5 @@ class Utilizador extends ActiveRecord implements IdentityInterface
     public function setPassword($password)
     {
         $this->password_hash = Yii::$app->security->generatePasswordHash($password);
-        //$this->password_hash = $password;
     }
 }
