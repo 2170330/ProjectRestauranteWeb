@@ -67,6 +67,7 @@ class UtilizadorController extends Controller
         $model = new Utilizador();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -125,4 +126,6 @@ class UtilizadorController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+
 }
