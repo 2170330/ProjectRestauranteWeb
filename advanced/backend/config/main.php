@@ -11,10 +11,18 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'api' => [
+            'class' => 'backend\modules\api\Module',
+        ],
+    ],
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-backend',
+            //'csrfParam' => '_csrf-backend',
+            'cookieValidationKey' => 'Km1b7NlL-xtVxYKBXSb0NIdMuEmnWgoQ',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -37,14 +45,25 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            //'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api/utilizador',
+                    'pluralize' => false,
+
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api/sobremesa',
+                    'pluralize' => false,
+                ],
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
