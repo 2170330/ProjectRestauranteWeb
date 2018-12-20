@@ -1,22 +1,19 @@
 <?php
 namespace common\models;
 
-use backend\models\Utilizador;
 use Yii;
 use yii\base\Model;
-use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
 
 /**
  * Login form
  */
-class LoginForm extends ActiveRecord
+class LoginForm extends Model
 {
     public $username;
     public $password;
     public $rememberMe = true;
 
-    private $_utilizador;
+    private $_user;
 
 
     /**
@@ -45,7 +42,6 @@ class LoginForm extends ActiveRecord
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
-
             if (!$user || !$user->validatePassword($this->password)) {
                 $this->addError($attribute, 'Incorrect username or password.');
             }
@@ -60,8 +56,7 @@ class LoginForm extends ActiveRecord
     public function login()
     {
         if ($this->validate()) {
-            $user = $this->getUser();
-            return Yii::$app->user->login($user);
+            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         }
         
         return false;
@@ -70,14 +65,14 @@ class LoginForm extends ActiveRecord
     /**
      * Finds user by [[username]]
      *
-     * @return Utilizador|null
+     * @return User|null
      */
     protected function getUser()
     {
-        if ($this->_utilizador === null) {
-            $this->_utilizador = Utilizador::findByUsername($this->username);
-    }
+        if ($this->_user === null) {
+            $this->_user = User::findByUsername($this->username);
+        }
 
-        return $this->_utilizador;
+        return $this->_user;
     }
 }

@@ -10,16 +10,15 @@ use yii\widgets\ActiveForm;
 
 <div class="utilizador-form">
 
-    <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+    <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'password')->passwordInput(['value' => ''])->label('Password') ?>
+    <?= $form->field($model, 'password_hash')->passwordInput(['placeholder' => Yii::t('app', 'Password'), 'value' => ''])->label('') ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList(
-            array(['10' => 'Ativado', '0' => 'Desativado'])) ?>
+    <?= $form->field($model, 'status')->textInput() ?>
 
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 
@@ -28,7 +27,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'nif')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Criar', ['class' => 'backend-criar']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -7,18 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\UtilizadorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Utilizadores';
+$this->title = 'Utilizadors';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="utilizador-index">
 
-<?= $this->render('@backend/views/layouts/submenu.php'); ?>
-
-<div class="utilizador-index backend-form">
-
-    <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Criar Utilizador', ['create'], ['class' => 'backend-button']) ?>
+        <?= Html::a('Create Utilizador', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
