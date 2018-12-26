@@ -1,6 +1,6 @@
 .site-login{
-    background-image: url("../img/login-background.jpg");
-    background-size: cover;
+    background: url("../img/login-background.jpg") no-repeat;
+    background-size: 100%;
 }
 
 .parent:hover .site-login,
@@ -20,6 +20,7 @@
     margin: 0 auto;
     color: #D69869;
     padding: 1% 0 5%;
+    background-size: 100%;
 }
 
 .forgot-password{
@@ -33,11 +34,11 @@
 
 }
 
-
 .login{
-    padding: 10% 0 2%;
+    padding: 5% 0 2%;
     text-align: center;
 }
+
 .login-button{
     background-color: #D69869;
     color: white;
@@ -51,4 +52,11 @@
 .login-button:hover{
     background-color: #ce844b;
     color: white;
+}
+
+.login-line{
+    font-size: 200%;
+    color: #D69869;
+    text-align: center;
+    line-height: 0.2;
 }

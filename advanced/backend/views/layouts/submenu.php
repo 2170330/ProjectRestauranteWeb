@@ -14,7 +14,7 @@ $pratos = Prato::find()->all();
     <h1 class="sidebar-titulo"> C.D.R.</h1>
     <ul class="nav-fall">
         <li class="sidebar-menu"> <i class="fas fa-users"></i> <?= Html::a('Utilizador', ['/utilizador/index'], ['class'=>'']) ?>
-        <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <a href="">Menus</a>
+        <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <?= Html::a('Menus', ['/menu/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="fas fa-utensils"></i> <?= Html::a('Pratos', ['/prato/index', 'id' => 0], ['class'=>'']) ?>
             <ul class="sidebar-submenu">
                 <li><i class="fas fa-drumstick-bite"></i> <?= Html::a('Carne', ['/prato/index', 'id' => 1], ['class'=>'']) ?> </li>
@@ -23,11 +23,11 @@ $pratos = Prato::find()->all();
                 <li><i class="fas fa-apple-alt"></i> <?= Html::a('Vegan', ['/prato/index', 'id' => 4], ['class'=>'']) ?> </li>
             </ul>
         </li>
-        <li class="sidebar-menu"> <i class="fas fa-wine-glass-alt"></i> Bebibas
+            <li class="sidebar-menu"> <i class="fas fa-wine-glass-alt"></i> <?= Html::a('Bebidas', ['/bebida/index', 'id' => 0], ['class'=>'']) ?>
             <ul class="sidebar-submenu">
-                <li><a href=""><i class="fas fa-glass-martini"></i> </a> <?= Html::a('Sumos', ['/bebida/index'], ['class'=>'']) ?> </li>
-                <li><a href=""><i class="fas fa-wine-bottle"></i> Vinhos </a></li>
-                <li><a href=""> <i class="fas fa-beer"></i> Outros </a></li>
+                <li><a href=""><i class="fas fa-glass-martini"></i> </a> <?= Html::a('Sumos', ['/bebida/index', 'id' => 1], ['class'=>'']) ?> </li>
+                <li><a href=""><i class="fas fa-wine-bottle"></i> </a> <?= Html::a('Vinhos', ['/bebida/index', 'id' => 2], ['class'=>'']) ?> </li>
+                <li><a href=""> <i class="fas fa-beer"></i> </a> <?= Html::a('Outros', ['/bebida/index', 'id' => 3], ['class'=>'']) ?> </li>
             </ul>
         <li class="sidebar-menu"> <i class="fas fa-cookie"></i> <?= Html::a('Sobremesas', ['/sobremesa/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>

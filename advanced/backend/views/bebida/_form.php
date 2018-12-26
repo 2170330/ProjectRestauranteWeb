@@ -2,12 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use backend\models\TipoBebida;
 use yii\helpers\ArrayHelper;
-use app\models\TipoBebida;
-
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Bebida */
+/* @var $model backend\models\Bebida */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -19,14 +18,14 @@ use app\models\TipoBebida;
 
     <?= $form->field($model, 'preco')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'imagem')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'imagem')->fileInput() ?>
 
-    <?= $form->field($model, 'id_tipo_bebida')->textInput() ?>
-
-    <?= $form->field($model, 'id_tipo_bebida')->dropDownList(ArrayHelper::map(TipoBebida::find()->all(), 'id', 'descricao')) ?>
+    <?= $form->field($model, 'id_tipo_bebida')->dropDownList(
+        ArrayHelper::map(TipoBebida::find()->all(), 'id', 'descricao')
+    )->label('Tipo de Bebida') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'backend-criar']) ?>
+        <?= Html::submitButton('Criar', ['class' => 'backend-criar']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -40,7 +40,17 @@ $this->title = $model->id;
                 'password_hash',
                 'password_reset_token',
                 'email:email',
-                'status',
+                [
+                    'label'=>'status',
+                    'value' => function ($data) {
+                        if($data->status === 10){
+                            $data->status = "Ativado";
+                        } else {
+                            $data->status = "Desativado";
+                        }
+                        return $data->status; // $data['name'] for array data, e.g. using SqlDataProvider.
+                    },
+                ],
                 'created_at',
                 'updated_at',
                 'nome',

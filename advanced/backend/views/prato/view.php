@@ -34,10 +34,17 @@ $this->title = $model->id;
             'attributes' => [
                 'id',
                 'descricao',
+                [
+                    'label' => 'Tipo',
+                    'attribute' => 'tipoPrato.descricao',
+
+                ],
                 'preco',
-                'id_tipo_prato',
                 'imagem',
-                'id_dia_semana',
+                [
+                    'label' => 'Prato do dia',
+                    'attribute' => 'diaSemana.descricao',
+                ],
             ],
         ]) ?>
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -15,6 +15,7 @@ use Yii;
  *
  * @property TipoBebida $tipoBebida
  * @property Itens[] $itens
+ * @property Menu $menu
  */
 class Bebida extends \yii\db\ActiveRecord
 {
@@ -37,7 +38,6 @@ class Bebida extends \yii\db\ActiveRecord
             [['id_tipo_bebida'], 'integer'],
             [['descricao'], 'string', 'max' => 100],
             [['imagem'], 'string', 'max' => 255],
-            [['id_tipo_bebida'], 'unique'],
             [['id_tipo_bebida'], 'exist', 'skipOnError' => true, 'targetClass' => TipoBebida::className(), 'targetAttribute' => ['id_tipo_bebida' => 'id']],
         ];
     }
@@ -52,7 +52,7 @@ class Bebida extends \yii\db\ActiveRecord
             'descricao' => 'Descricao',
             'preco' => 'Preco',
             'imagem' => 'Imagem',
-            'id_tipo_bebida' => 'Tipo Bebida',
+            'id_tipo_bebida' => 'Id Tipo Bebida',
         ];
     }
 
@@ -70,5 +70,34 @@ class Bebida extends \yii\db\ActiveRecord
     public function getItens()
     {
         return $this->hasMany(Itens::className(), ['id_bebida' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMenu()
+    {
+        return $this->hasOne(Menu::className(), ['id_bebida' => 'id']);
+    }
+
+    public function delete()
+    {
+
+        if ($this->id_tipo_bebida == 1) {
+            if (file_exists('img/sumos/' . $this->imagem)) {
+                unlink('img/sumos/' . $this->imagem);
+            }
+        }
+        else if ($this->id_tipo_bebida == 2) {
+            if (file_exists('img/vinhos/' . $this->imagem)) {
+                unlink('img/vinhos/' . $this->imagem);
+            }
+        }
+        else{
+            if (file_exists('img/outros/' . $this->imagem)) {
+                unlink('img/outros/' . $this->imagem);
+            }
+        }
+        return parent::delete();
     }
 }

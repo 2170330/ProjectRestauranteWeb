@@ -12,17 +12,23 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
     <h1 class="login-iniciar"> Registar </h1>
-    <p class="line"> _____</p>
+    <p class="login-line"> _____</p>
 
     <div class="row">
         <div class="form-login">
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-                <?= $form->field($model, 'email') ?>
+                <?= $form->field($model, 'password')->passwordInput(['value' => ''])->label('Password') ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+
+                <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
+
+                <?= $form->field($model, 'morada')->textInput(['maxlength' => true]) ?>
+
+                <?= $form->field($model, 'nif')->textInput() ?>
 
                 <div class="login">
                     <?= Html::submitButton('Signup', ['class' => 'login-button', 'name' => 'signup-button']) ?>

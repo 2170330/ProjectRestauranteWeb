@@ -1,6 +1,8 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\ComentarioForm;
+use frontend\models\MensagemForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -133,6 +135,14 @@ class SiteController extends Controller
         }
     }
 
+    public function actionMensagem(){
+        $model = new MensagemForm();
+
+        return $this->render('mensagem', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Displays about page.
      *
@@ -147,12 +157,6 @@ class SiteController extends Controller
     {
         return $this->render('menu');
     }
-
-    public function actionBlog()
-    {
-        return $this->render('blog');
-    }
-
     public function actionEncomendas()
     {
         return $this->render('encomendas');

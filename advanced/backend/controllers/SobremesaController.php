@@ -3,12 +3,13 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Sobremesa;
-use app\models\SobremesaSearch;
+use backend\models\Sobremesa;
+use backend\models\SobremesaSearch;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * SobremesaController implements the CRUD actions for Sobremesa model.
@@ -78,8 +79,18 @@ class SobremesaController extends Controller
     {
         $model = new Sobremesa();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            //recebe a instância da imagem
+            $img = UploadedFile::getInstance($model, 'imagem');
+
+            //recebe o nome da imagem
+            $model->imagem = $img->baseName.'.'.$img->extension;
+
+            if ($model->save()){
+                $img->saveAs('img/sobremesa/' . $model->imagem);
+
+                return $this->redirect(['view', 'id' => $model->id]);
+             }
         }
 
         return $this->render('create', [
@@ -98,8 +109,18 @@ class SobremesaController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            //recebe a instância da imagem
+            $img = UploadedFile::getInstance($model, 'imagem');
+
+            //recebe o nome da imagem
+            $model->imagem = $img->baseName.'.'.$img->extension;
+
+            if ($model->save()){
+                $img->saveAs('img/sobremesa/' . $model->imagem);
+
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [

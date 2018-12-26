@@ -15,12 +15,15 @@ $this->title = 'Pratos';
 $pratos = Prato::find()->all();
 
 
-$tipo_id = $_GET['id'];
+if(isset($_GET['id'])) {
 
-if ($tipo_id != 0) {
-    $query = Prato::find()->where(['id_tipo_prato' => $tipo_id]);
-    $dataProvider = new ActiveDataProvider([
-        'query' => $query]);
+    $tipo_id = $_GET['id'];
+
+    if ($tipo_id != 0) {
+        $query = Prato::find()->where(['id_tipo_prato' => $tipo_id]);
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query]);
+    }
 }
 
 ?>
@@ -44,12 +47,12 @@ if ($tipo_id != 0) {
                 ['class' => 'yii\grid\SerialColumn'],
                 'id',
                 'descricao',
-                'preco',
                 [
                     'header' => 'Tipo',
                     'attribute' => 'tipoPrato.descricao',
 
                 ],
+                'preco',
                 'imagem',
                 [
                     'header' => 'Prato do dia',
@@ -60,6 +63,4 @@ if ($tipo_id != 0) {
         ]); ?>
     </div>
 </div>
-
-<?php echo $tipo_id; ?>
 

@@ -41,15 +41,14 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '../we
     <?php
     $menuItems = [
         ['label' => 'HOME', 'url' => ['site/index']],
-        ['label' => 'GESTÃO', 'url' => ['user/index']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'LOGIN', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'LOGOUT (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()

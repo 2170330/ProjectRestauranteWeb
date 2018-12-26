@@ -27,6 +27,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nif')->textInput() ?>
 
+    <?= $form->field($model, 'admin')->checkbox(['checked'=>true])  ?>
+
     <div class="form-group">
         <?= Html::submitButton('Criar', ['class' => 'backend-criar']) ?>
     </div>

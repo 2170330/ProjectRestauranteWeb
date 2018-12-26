@@ -17,7 +17,7 @@ $this->title = 'Sobremesas';
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Sobremesa', ['create'], ['class' => 'backend-button']) ?>
+        <?= Html::a('Criar Sobremesa', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <div class="backend-cores">

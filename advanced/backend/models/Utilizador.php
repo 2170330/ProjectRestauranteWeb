@@ -37,7 +37,7 @@ class Utilizador extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
     public $password;
-
+    public $admin;
 
     /**
      * {@inheritdoc}
@@ -76,19 +76,31 @@ class Utilizador extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['username','email', 'nome', 'morada', 'nif', 'status', 'password'], 'required'],
+            [['username','email', 'nome', 'morada', 'nif', 'status', 'password'], 'required', 'message' => 'É preciso preencher este campo'],
             [['created_at', 'updated_at'], 'integer'],
-            [['username', 'password_reset_token', 'email', 'nome', 'morada', 'password_hash'], 'string', 'max' => 255],
-            [['auth_key'], 'string', 'max' => 32],
-            [['username'], 'unique'],
-            [['email'], 'unique'],
-            [['nif'], 'unique'],
-            [['nif'], 'integer', 'min' => 9],
-            [['password_reset_token'], 'unique'],
+            [['username', 'password_reset_token', 'email', 'nome', 'morada', 'password_hash'], 'string', 'max' => 255, 'message' => 'Não pode ter mais de 255 carateres'],
+            ['auth_key', 'string', 'max' => 32, 'message' => 'Não pode ter mais de 32 carateres'],
+
+            ['username', 'trim'],
+            ['username', 'unique', 'message' => 'Este username já foi utilizado'],
+
+            ['email', 'unique', 'message' => 'Este email já foi utilizado'],
+            ['email', 'email', 'message' => 'Este email não é válido'],
+            ['email', 'trim'],
+
+            ['nif', 'integer', 'length' => ['min' => 9, 'max' => 9], 'message' => 'O nif tem de conter exatamente 9 carateres'],
+            ['nif', 'unique', 'message' => 'Este nif já foi utilizado'],
+
+            ['password_reset_token', 'unique'],
+
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+
             ['password_hash', 'required', 'on' => 'insert'],
-            ['password', 'string', 'min' => 6],
+
+            ['password', 'string', 'min' => 6, 'message' => 'O nif tem de conter pelo menos 6 carateres'],
+
+            ['admin', 'boolean'],
         ];
     }
 
@@ -230,11 +242,45 @@ class Utilizador extends ActiveRecord implements IdentityInterface
 
     public function afterSave($insert, $changedAttributes)
     {
+        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
 
+        if ($insert) {
+            if ($this->admin == 1) {
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('admin');
+                $auth->assign($authorRole, $this->getId());
+            }
+            else{
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('author');
+                $auth->assign($authorRole, $this->getId());
+            }
+        }
+        else {
+            if ($this->admin == 1) {
+                $model->delete();
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('admin');
+                $auth->assign($authorRole, $this->id);
+            } else {
+                $model->delete();
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('author');
+                $auth->assign($authorRole, $this->id);
+            }
+        }
 
         return parent::afterSave($insert, $changedAttributes);
     }
 
+    public function delete()
+    {
+        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
+        if ($model != null) {
+            $model->delete();
+        }
+        return parent::delete();
+    }
 
     /**
      * Generates password hash from password and sets it to the model
