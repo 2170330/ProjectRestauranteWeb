@@ -55,11 +55,31 @@ return [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'api/utilizador',
                     'pluralize' => false,
-
+                    'extraPatterns' => [
+                        'GET total' => 'total', // 'total' é 'actionTotal'
+                        'GET ativos' => 'ativos', // 'ativos' é 'actionAtivos'
+                        'GET set/{id}' => 'set', // 'set' é 'actionSet'
+                        'POST novo' => 'novo', // 'novo' é 'actionNovo'
+                    ],
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api/prato',
+                    'pluralize' => false,
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api/bebida',
+                    'pluralize' => false,
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'api/sobremesa',
+                    'pluralize' => false,
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api/menu',
                     'pluralize' => false,
                 ],
             ],

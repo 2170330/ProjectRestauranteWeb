@@ -1,0 +1,31 @@
+.index{
+
+    float: right;
+}
+
+.index-titulo{
+    font-size: 480%;
+    font-variant: small-caps;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.index-sub-titulo{
+    font-size: 300%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.border-index{
+    padding-bottom: 10%;
+}
+
+.index-button{
+    font-size: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+.row{
+
+}

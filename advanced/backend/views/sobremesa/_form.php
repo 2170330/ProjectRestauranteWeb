@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'imagem')->fileInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'backend-criar']) ?>
+        <?= Html::submitButton('Criar', ['class' => 'backend-criar']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

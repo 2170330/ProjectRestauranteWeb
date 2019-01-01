@@ -11,7 +11,7 @@ $pratos = Prato::find()->all();
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <div id="sidebar">
-    <h1 class="sidebar-titulo"> C.D.R.</h1>
+    <h1 class="sidebar-titulo"> <?= Html::a(' C.D.R.', ['/site/index'], ['class'=>'']) ?></h1>
     <ul class="nav-fall">
         <li class="sidebar-menu"> <i class="fas fa-users"></i> <?= Html::a('Utilizador', ['/utilizador/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="far fa-calendar-minus"></i> <?= Html::a('Menus', ['/menu/index'], ['class'=>'']) ?>

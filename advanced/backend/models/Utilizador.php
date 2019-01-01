@@ -88,7 +88,7 @@ class Utilizador extends ActiveRecord implements IdentityInterface
             ['email', 'email', 'message' => 'Este email não é válido'],
             ['email', 'trim'],
 
-            ['nif', 'integer', 'length' => ['min' => 9, 'max' => 9], 'message' => 'O nif tem de conter exatamente 9 carateres'],
+            ['nif', 'integer', 'message' => 'O nif tem de conter exatamente 9 carateres'],
             ['nif', 'unique', 'message' => 'Este nif já foi utilizado'],
 
             ['password_reset_token', 'unique'],

@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\User;
 use frontend\models\ComentarioForm;
 use frontend\models\MensagemForm;
 use Yii;
@@ -120,6 +121,7 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
@@ -137,8 +139,17 @@ class SiteController extends Controller
 
     public function actionMensagem(){
         $model = new MensagemForm();
+        $user = Yii::$app->user->getId();
 
-        return $this->render('mensagem', [
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user == $model->id_user) {
+                if($model->save())
+                return $this->redirect(['index', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('_form', [
             'model' => $model,
         ]);
     }

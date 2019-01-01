@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
         'css/backend.css',
         'css/CDR.css',
         'css/login.css',
+        'css/index.css',
     ];
     public $js = [
         'js/sidebar.js'
