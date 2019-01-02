@@ -59,28 +59,62 @@ return [
                         'GET total' => 'total', // 'total' é 'actionTotal'
                         'GET ativos' => 'ativos', // 'ativos' é 'actionAtivos'
                         'GET set/{id}' => 'set', // 'set' é 'actionSet'
-                        'POST novo' => 'novo', // 'novo' é 'actionNovo'
+                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
                     ],
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'api/prato',
                     'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET total' => 'total', // 'total' é 'actionTotal
+                        'GET tipo/{id}' => 'tipo', // 'tipo' é 'actionTipo'
+                        'GET semana/{id}' => 'semana', // 'semana' é 'actionSemana'
+                        'GET set/{id}' => 'set', // 'set' é 'actionSet'
+                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                    ],
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'api/bebida',
                     'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET total' => 'total', // 'total' é 'actionTotal
+                        'GET tipo/{id}' => 'tipo', // 'tipo' é 'actionTipo'
+                        'GET set/{id}' => 'set', // 'set' é 'actionSet'
+                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                    ],
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'api/sobremesa',
                     'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET total' => 'total', // 'total' é 'actionTotal
+                        'GET barato' => 'barato', // 'barato' é 'actionBarato
+                        'GET set/{id}' => 'set', // 'set' é 'actionSet'
+                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                    ],
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'api/menu',
                     'pluralize' => false,
+                    'extraPatterns' => [
+                        'GET total' => 'total', // 'total' é 'actionTotal
+                        'GET set/{id}' => 'set', // 'set' é 'actionSet'
+                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                    ],
                 ],
             ],
         ],
