@@ -1,0 +1,33 @@
+
+<resources>
+    <string name="app_name">ProjectAndroidRestaurante</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Palavra-passe </string>
+    <string name="action_sign_in">Iniciar Sessão</string>
+    <string name="action_sign_in_short">Iniciar Sessão</string>
+    <string name="error_invalid_email">Este email é inválido!</string>
+    <string name="error_invalid_password">Esta palavra-passe é demasiado curta!</string>
+    <string name="error_incorrect_password">Palavra-passe incorrecta!</string>
+    <string name="error_field_required">Campo obrigatório</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="tvSNumMesa">Nº Mesa</string>
+    <string name="BtnInserir">Inserir</string>
+    <string name="ivImgALUser">img</string>
+    <string name="ivEmailAL">imgEmail</string>
+
+    <string-array name="numbers">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+    </string-array>
+    
+    <string name="MenuPrincipalActivityBar">C.D.R.</string>
+
+</resources>
