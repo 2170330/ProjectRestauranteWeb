@@ -12,6 +12,9 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $nome;
+    public $morada;
+    public $nif;
 
 
     /**
@@ -20,19 +23,23 @@ class SignupForm extends Model
     public function rules()
     {
         return [
-            ['username', 'trim'],
-            ['username', 'required'],
+            [['username', 'email', 'password', 'nome', 'morada', 'nif'], 'required'],
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Este utilizador já foi utilizado.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            [['username', 'email', 'nome', 'morada'], 'string', 'max' => 255],
+
+            ['username', 'trim'],
+            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Este utilizador já foi utilizado.'],
 
             ['email', 'trim'],
-            ['email', 'required'],
             ['email', 'email'],
-            ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Este email já foi utilizado.'],
-
-            ['password', 'required'],
+            
             ['password', 'string', 'min' => 6],
+
+            ['nif', 'integer', 'min' => 9, 'message' => 'O nif tem de conter exatamente 9 carateres'],
+            ['nif', 'unique', 'message' => 'Este nif já foi utilizado'],
+            
+            ['nome', 'string'],
         ];
     }
 
@@ -43,22 +50,27 @@ class SignupForm extends Model
      */
     public function signup()
     {
-        if ($this->validate()) {
-            $user = new User();
-            $user->username = $this->username;
-            $user->email = $this->email;
-            $user->setPassword($this->password);
-            $user->generateAuthKey();
-            $user->save(false);
+        /*if (!$this->validate()) {
+        }*/
 
-            // the following three lines were added:
-            $auth = \Yii::$app->authManager;
-            $authorRole = $auth->getRole('author');
-            $auth->assign($authorRole, $user->getId());
+        $user = new User();
+        $user->username = $this->username;
+        $user->email = $this->email;
+        $user->setPassword($this->password);
+        $user->generateAuthKey();
+        $user->generatePasswordResetToken();
+        $user->nome = $this->nome;
+        $user->morada = $this->morada;
+        $user->nif = $this->nif;
+        $user->save(false);
 
-            return $user;
-        }
+        // the following three lines were added:
+        $auth = \Yii::$app->authManager;
+        $authorRole = $auth->getRole('author');
+        $auth->assign($authorRole, $user->getId());
 
-        return null;
+        return $user;
+
+        //return null;
     }
 }

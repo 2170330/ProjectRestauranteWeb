@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -29,7 +29,7 @@ class TipoBebida extends \yii\db\ActiveRecord
     {
         return [
             [['descricao'], 'required'],
-            [['descricao'], 'string', 'max' => 50],
+            [['descricao'], 'string', 'max' => 100],
         ];
     }
 
@@ -40,7 +40,7 @@ class TipoBebida extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'descricao' => 'Tipo Bebida',
+            'descricao' => 'Descricao',
         ];
     }
 

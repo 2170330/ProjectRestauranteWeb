@@ -36,7 +36,8 @@ class Utilizador extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
-
+    public $password;
+    public $admin;
 
     /**
      * {@inheritdoc}
@@ -75,17 +76,31 @@ class Utilizador extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['username','email', 'nome', 'morada', 'nif', 'status'], 'required'],
-            [['created_at', 'updated_at', 'nif'], 'integer'],
-            [['username', 'password_reset_token', 'email', 'nome', 'morada'], 'string', 'max' => 255],
-            [['password_hash'], 'string', 'max' => 32],
-            [['auth_key'], 'string', 'max' => 32],
-            [['username'], 'unique'],
-            [['email'], 'unique'],
-            [['password_reset_token'], 'unique'],
+            [['username','email', 'nome', 'morada', 'nif', 'status', 'password'], 'required', 'message' => 'É preciso preencher este campo'],
+            [['created_at', 'updated_at'], 'integer'],
+            [['username', 'password_reset_token', 'email', 'nome', 'morada', 'password_hash'], 'string', 'max' => 255, 'message' => 'Não pode ter mais de 255 carateres'],
+            ['auth_key', 'string', 'max' => 32, 'message' => 'Não pode ter mais de 32 carateres'],
+
+            ['username', 'trim'],
+            ['username', 'unique', 'message' => 'Este username já foi utilizado'],
+
+            ['email', 'unique', 'message' => 'Este email já foi utilizado'],
+            ['email', 'email', 'message' => 'Este email não é válido'],
+            ['email', 'trim'],
+
+            ['nif', 'integer', 'message' => 'O nif tem de conter exatamente 9 carateres'],
+            ['nif', 'unique', 'message' => 'Este nif já foi utilizado'],
+
+            ['password_reset_token', 'unique'],
+
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+
             ['password_hash', 'required', 'on' => 'insert'],
+
+            ['password', 'string', 'min' => 6, 'message' => 'O nif tem de conter pelo menos 6 carateres'],
+
+            ['admin', 'boolean'],
         ];
     }
 
@@ -213,29 +228,59 @@ class Utilizador extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-    public function attributeLabels()
-    {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'status' => Yii::t('app', 'Status Active'),
-        ];
-    }
-
     public function beforeSave($insert) {
         if ($insert) {
-            $this->setPassword($this->password_hash);
+            $this->password_hash = Yii::$app->security->generatePasswordHash($this->password);
             $this->generateAuthKey();
             $this->generatePasswordResetToken();
         } else {
-            if (!empty($this->password_hash)) {
-                $this->setPassword($this->password_hash);
-            } else {
-                $this->password_hash = (string) $this->getOldAttribute('password_hash');
-            }
+            $this->setPassword($this->password);
         }
+
         return parent::beforeSave($insert);
     }
 
+    public function afterSave($insert, $changedAttributes)
+    {
+        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
+
+        if ($insert) {
+            if ($this->admin == 1) {
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('admin');
+                $auth->assign($authorRole, $this->getId());
+            }
+            else{
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('author');
+                $auth->assign($authorRole, $this->getId());
+            }
+        }
+        else {
+            if ($this->admin == 1) {
+                $model->delete();
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('admin');
+                $auth->assign($authorRole, $this->id);
+            } else {
+                $model->delete();
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('author');
+                $auth->assign($authorRole, $this->id);
+            }
+        }
+
+        return parent::afterSave($insert, $changedAttributes);
+    }
+
+    public function delete()
+    {
+        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
+        if ($model != null) {
+            $model->delete();
+        }
+        return parent::delete();
+    }
 
     /**
      * Generates password hash from password and sets it to the model
@@ -246,5 +291,6 @@ class Utilizador extends ActiveRecord implements IdentityInterface
     public function setPassword($password)
     {
         $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        //$this->password_hash = $password;
     }
 }

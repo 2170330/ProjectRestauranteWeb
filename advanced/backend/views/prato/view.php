@@ -18,7 +18,7 @@ $this->title = $model->id;
     <i> <?= Html::a('', ['/prato/index', 'id' => 0], ['class'=>'fas fa-arrow-left  voltar-button']) ?> </i>
 
     <p>
-        <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar    ']) ?>
+        <?= Html::a('Atualizar', ['update', 'id' => $model->id], ['class' => 'backend-criar']) ?>
         <?= Html::a('Apagar', ['delete', 'id' => $model->id], [
             'class' => 'backend-apagar',
             'data' => [
@@ -28,16 +28,23 @@ $this->title = $model->id;
         ]) ?>
     </p>
 
-    <div class="    views-padding">
+    <div class="views-padding">
         <?= DetailView::widget([
             'model' => $model,
             'attributes' => [
                 'id',
                 'descricao',
+                [
+                    'label' => 'Tipo',
+                    'attribute' => 'tipoPrato.descricao',
+
+                ],
                 'preco',
-                'id_tipo_prato',
                 'imagem',
-                'id_dia_semana',
+                [
+                    'label' => 'Prato do dia',
+                    'attribute' => 'diaSemana.descricao',
+                ],
             ],
         ]) ?>
     </div>

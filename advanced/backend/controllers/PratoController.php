@@ -78,8 +78,19 @@ class PratoController extends Controller
             //recebe o nome da imagem
             $model->imagem = $img->baseName.'.'.$img->extension;
 
-            if ($model->save()){
-                $img->saveAs('img/carne/'.$model->imagem);
+                if ($model->save()){
+                    if ($model->tipoPrato->descricao == "Carne") {
+                        $img->saveAs('img/carne/' . $model->imagem);
+                    }
+                    elseif ($model->tipoPrato->descricao  == "Peixe") {
+                        $img->saveAs('img/peixe/' . $model->imagem);
+                    }
+                    elseif ($model->tipoPrato->descricao  == "Vegetariano") {
+                        $img->saveAs('img/vegetariano/' . $model->imagem);
+                    }
+                    else{
+                        $img->saveAs('img/vegan/' . $model->imagem);
+                    }
                 return $this->redirect(['view', 'id' => $model->id]);
             }
         }
@@ -108,7 +119,18 @@ class PratoController extends Controller
             $model->imagem = $img->baseName.'.'.$img->extension;
 
             if ($model->save()){
-                $img->saveAs('img/carne/'.$model->imagem);
+                if ($model->tipoPrato->descricao == "Carne") {
+                    $img->saveAs('img/carne/' . $model->imagem);
+                }
+                elseif ($model->tipoPrato->descricao  == "Peixe") {
+                    $img->saveAs('img/peixe/' . $model->imagem);
+                }
+                elseif ($model->tipoPrato->descricao  == "Vegetariano") {
+                    $img->saveAs('img/vegetariano/' . $model->imagem);
+                }
+                else{
+                    $img->saveAs('img/vegan/' . $model->imagem);
+                }
                 return $this->redirect(['view', 'id' => $model->id]);
             }
         }

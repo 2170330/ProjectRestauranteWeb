@@ -3,36 +3,24 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Bebida;
-use app\models\BebidaSearch;
-use yii\filters\AccessControl;
+use backend\models\Bebida;
+use backend\models\BebidaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * BebidaController implements the CRUD actions for Bebida model.
  */
 class BebidaController extends Controller
 {
-
     /**
      * {@inheritdoc}
      */
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index', 'create', 'update', 'view', 'delete'],
-                        'allow' => true,
-                        'roles' => ['admin'],
-                    ],
-
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -79,10 +67,26 @@ class BebidaController extends Controller
     {
         $model = new Bebida();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
+        if ($model->load(Yii::$app->request->post())) {
+            //recebe a instância da imagem
+            $img = UploadedFile::getInstance($model, 'imagem');
 
+            //recebe o nome da imagem
+            $model->imagem = $img->baseName.'.'.$img->extension;
+
+            if ($model->save()){
+                if ($model->tipoBebida->descricao == "Sumos") {
+                    $img->saveAs('img/sumos/' . $model->imagem);
+                }
+                elseif ($model->tipoBebida->descricao  == "Vinhos") {
+                    $img->saveAs('img/vinhos/' . $model->imagem);
+                }
+                else{
+                    $img->saveAs('img/outros/' . $model->imagem);
+                }
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
         return $this->render('create', [
             'model' => $model,
         ]);
@@ -99,8 +103,25 @@ class BebidaController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            //recebe a instância da imagem
+            $img = UploadedFile::getInstance($model, 'imagem');
+
+            //recebe o nome da imagem
+            $model->imagem = $img->baseName.'.'.$img->extension;
+
+            if ($model->save()){
+                if ($model->tipoBebida->descricao == "Sumos") {
+                    $img->saveAs('img/sumos/' . $model->imagem);
+                }
+                elseif ($model->tipoBebida->descricao  == "Vinhos") {
+                    $img->saveAs('img/vinhos/' . $model->imagem);
+                }
+                else{
+                    $img->saveAs('img/outros/' . $model->imagem);
+                }
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [

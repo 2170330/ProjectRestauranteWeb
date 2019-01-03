@@ -26,8 +26,8 @@ use backend\models\TipoPrato;
     <?= $form->field($model, 'imagem')->fileInput() ?>
 
     <?= $form->field($model, 'id_dia_semana')->dropDownList(
-            ArrayHelper::map(DiasSemana::find()->all(), 'id', 'descricao'),
-            ['prompt' => '']
+        ArrayHelper::map(DiasSemana::find()->all(), 'id', 'descricao'),
+        ['prompt' => '']
     )->label('Dia de Semana')  ?>
 
     <div class="form-group">

@@ -1,6 +1,9 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\User;
+use frontend\models\ComentarioForm;
+use frontend\models\MensagemForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -118,6 +121,7 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
@@ -131,6 +135,23 @@ class SiteController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+    public function actionMensagem(){
+        $model = new MensagemForm();
+        $user = Yii::$app->user->getId();
+
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user == $model->id_user) {
+                if($model->save())
+                return $this->redirect(['index', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('_form', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -147,12 +168,6 @@ class SiteController extends Controller
     {
         return $this->render('menu');
     }
-
-    public function actionBlog()
-    {
-        return $this->render('blog');
-    }
-
     public function actionEncomendas()
     {
         return $this->render('encomendas');

@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">ProjectAndroidRestaurante</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Iniciar Sessão</string>
+    <string name="action_sign_in_short">Iniciar Sessão</string>
+    <string name="error_invalid_email">Este email é inválido!</string>
+    <string name="error_invalid_password">Esta palavra-passe é demasiado curta!</string>
+    <string name="error_incorrect_password">Palavra-passe incorrecta!</string>
+    <string name="error_field_required">Campo obrigatório</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="tvSNumMesa">Nº Mesa</string>
+    <string name="BtnInserir">Inserir</string>
+    <string name="ivImgALUser">img</string>
+    <string name="ivEmailAL">imgEmail</string>
+
+    <string-array name="numbers">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+    </string-array>
+
+    <string name="MenuPrincipalActivityBar"></string>
+    <string name="ivImgPass">imgPass</string>
+    <string name="tvAL">Não tem conta?</string>
+    <string name="etRegister">Registe aqui!</string>
+    <string name="tvTitulo">C.D.R.</string>
+    <string name="btnIniciar">Iniciar</string>
+    <string name="btnLogin">Iniciar Sessão</string>
+    <string name="tvConta">Não tem conta?</string>
+    <string name="etRegiste">Registe aqui!</string>
+    <string name="imgUser">imgUser</string>
+    <string name="nameUser">nameUser</string>
+    <string name="name">Nome</string>
+    <string name="Calendar">Calendário</string>
+    <string name="Data">Selecionar Data</string>
+    <string name="email">correio-eletrónico</string>
+    <string name="emailEx">exemplo@exemplo.com</string>
+    <string name="Password">pass</string>
+    <string name="etPassword">Palavra-passe</string>
+    <string name="confPass">confPass</string>
+    <string name="ConfPasword">Confirmar palavra-passe</string>
+    <string name="btnRegistar">Registar</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer">dawerright</string>
+    <string name="drawable">drawableRight</string>
+    <string name="todo">TODO</string>
+
+    <!-- Side Bar Menu -->
+    <string name="title_activity_side_bar_menu">SideBarMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+    <string name="nav_header_title">C.D.R.</string>
+    <string name="nav_header_subtitle">www.c_d_r.pt</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- Side bar Menus Drawer menu labels -->
+    <string name="nav_homr">Página Inicial</string>
+    <string name="nav_conta">Conta</string>
+    <string name="nav_menus">Menus</string>
+    <string name="nav_pratos">Pratos</string>
+    <string name="nav_bebidas">Bebidas</string>
+    <string name="nav_subremensas">Subremensas</string>
+    <string name="nav_comentarios">Comentários</string>
+    <string name="nav_logout">Terminar Sessão</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Página Inicial</item>
+        <item>Conta</item>
+        <item>Menus</item>
+        <item>Pratos</item>
+        <item>Bebidas</item>
+        <item>Subremensas</item>
+        <item>Comentários</item>
+        <item>Terminar Sessão</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

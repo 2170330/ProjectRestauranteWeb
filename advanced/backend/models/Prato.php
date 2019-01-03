@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "prato".
@@ -35,7 +36,7 @@ class Prato extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'preco', 'imagem'], 'required'],
+            [['descricao', 'preco', 'imagem'], 'required', 'message' => 'É preciso preencher este campo'],
             [['preco'], 'number'],
             [['id_tipo_prato', 'id_dia_semana'], 'integer'],
             [['descricao'], 'string', 'max' => 100],
@@ -59,6 +60,32 @@ class Prato extends \yii\db\ActiveRecord
             'id_dia_semana' => 'Id Dia Semana',
         ];
     }
+
+   public function delete()
+   {
+
+       if ($this->id_tipo_prato == 1) {
+           if (file_exists('img/carne/' . $this->imagem)) {
+               unlink('img/carne/' . $this->imagem);
+           }
+       }
+       else if ($this->id_tipo_prato == 2) {
+           if (file_exists('img/peixe/' . $this->imagem)) {
+               unlink('img/peixe/' . $this->imagem);
+           }
+       }
+       else if ($this->id_tipo_prato == 3) {
+           if (file_exists('img/vegetariano/' . $this->imagem)) {
+               unlink('img/vegetariano/' . $this->imagem);
+           }
+       }
+       else{
+           if (file_exists('img/vegan/' . $this->imagem)) {
+               unlink('img/vegan/' . $this->imagem);
+           }
+       }
+       return parent::delete();
+   }
 
     /**
      * @return \yii\db\ActiveQuery

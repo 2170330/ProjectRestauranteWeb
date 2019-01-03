@@ -32,9 +32,18 @@
     padding-bottom: 20px;
 }
 
+.sidebar-titulo a{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-titulo a:hover{
+    color: #d9d9d9;
+    text-decoration: none;
+}
+
 .sidebar-menu{
     display: block;
-
     cursor: pointer;
  }
 

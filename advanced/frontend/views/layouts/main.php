@@ -40,7 +40,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '../we
         ['label' => 'HOME', 'url' => ['/site/index']],
         ['label' => 'MENU', 'url' => ['/site/menu']],
         ['label' => 'ENCOMENDAS', 'url' => ['/site/encomendas']],
-        ['label' => 'COMENTARIOS', 'url' => ['/site/blog']],
+        ['label' => 'COMENTARIOS', 'url' => ['/site/mensagem']],
         ['label' => 'CONTATO', 'url' => ['/site/contact']],
         '<i class="fa fa-facebook header-icon header-facebook"></i>',
         '<i class="fa fa-twitter header-icon header-twitter" ></i>',

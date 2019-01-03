@@ -1,5 +1,6 @@
 <?php
 
+use backend\models\Utilizador;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -7,16 +8,23 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\UtilizadorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Utilizadors';
-$this->params['breadcrumbs'][] = $this->title;
-?>
-<div class="utilizador-index">
+$this->title = 'Utilizadores';
 
-    <h1><?= Html::encode($this->title) ?></h1>
+$utilizadores = Utilizador::find()->all();
+
+
+
+?>
+
+<?= $this->render('@backend/views/layouts/submenu.php'); ?>
+
+<div class="utilizador-index backend-form">
+
+    <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Utilizador', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Criar Utilizador', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <?= GridView::widget([
@@ -31,7 +39,17 @@ $this->params['breadcrumbs'][] = $this->title;
             //'password_hash',
             //'password_reset_token',
             'email:email',
-            'status',
+            [
+                'attribute'=>'status',
+                'value' => function ($data) {
+                    if($data->status === 10){
+                        $data->status = "Ativado";
+                    } else {
+                        $data->status = "Desativado";
+                    }
+                    return $data->status; // $data['name'] for array data, e.g. using SqlDataProvider.
+                },
+            ],
             //'created_at',
             //'updated_at',
             'nome',
