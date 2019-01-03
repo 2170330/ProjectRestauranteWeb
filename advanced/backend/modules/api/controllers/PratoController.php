@@ -8,12 +8,35 @@
 
 namespace backend\modules\api\controllers;
 
+use common\models\User;
 use Yii;
+use yii\filters\auth\HttpBasicAuth;
 use yii\rest\ActiveController;
 
 class PratoController extends ActiveController
 {
     public $modelClass = 'backend\models\Prato';
+
+    //Utilizadores com admin podem mexer na api
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['authenticator'] = [
+            'class' => HttpBasicAuth::className(),
+            'auth' => [$this, 'auth']
+        ];
+        return $behaviors;
+    }
+
+    //Autenticacao do utilizador
+    public function auth($username, $password)
+    {
+        $user = User::findByUsername($username);
+        if ($user && $user->validatePassword($password))
+        {
+            return $user;
+        }
+    }
 
     //conta o total de Pratos que existe
     public function actionTotal()

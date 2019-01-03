@@ -22,7 +22,7 @@ return [
             //'csrfParam' => '_csrf-backend',
             'cookieValidationKey' => 'Km1b7NlL-xtVxYKBXSb0NIdMuEmnWgoQ',
             'parsers' => [
-                'application/json' => 'yii\web\JsonParser',
+                'application/json' => 'yii\web\JsonParser', //PARSER DO JSON
             ],
         ],
         'user' => [
