@@ -12,8 +12,7 @@ import android.view.ViewGroup;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.SubremensasRecyclerViewAdapter;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent.DummyItem;
+import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.Prato;
 
 public class SubremensasFragment extends Fragment {
 
@@ -53,7 +52,7 @@ public class SubremensasFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new SubremensasRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new SubremensasRecyclerViewAdapter(Prato.ITEMS, mListener));
         }
         return view;
     }

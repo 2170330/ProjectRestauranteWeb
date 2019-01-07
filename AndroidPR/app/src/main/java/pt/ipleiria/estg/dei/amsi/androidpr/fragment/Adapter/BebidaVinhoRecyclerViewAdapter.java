@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import pt.ipleiria.estg.dei.amsi.androidpr.Model.Prato;
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.BebidaVinhoFragment.OnListFragmentInteractionListener;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent.DummyItem;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import java.util.List;
  */
 public class BebidaVinhoRecyclerViewAdapter extends RecyclerView.Adapter<BebidaVinhoRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Prato> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public BebidaVinhoRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public BebidaVinhoRecyclerViewAdapter(List<ListaPratoAdapter> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
