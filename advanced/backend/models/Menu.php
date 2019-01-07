@@ -2,6 +2,9 @@
 
 namespace backend\models;
 
+use backend\mosquitto\phpMQTT;
+use ErrorException;
+use stdClass;
 use Yii;
 
 /**
@@ -100,4 +103,57 @@ class Menu extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Pedido::className(), ['id_menu' => 'id']);
     }
+
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        //Obter dados do registo em causa
+        $id = $this->id;
+        $prato = $this->id_prato;
+        $bebida = $this->id_bebida;
+        $sobremesa = $this->id_sobremesa;
+        $preco = $this->preco;
+        $imagem = $this->imagem;
+
+        $myObj = new stdClass();
+        $myObj->id = $id;
+        $myObj->prato = $prato;
+        $myObj->bebida = $bebida;
+        $myObj->sobremesa = $sobremesa;
+        $myObj->preco = $preco;
+        $myObj->imagem = $imagem;
+        $myJSON = json_encode($myObj);
+
+        if($insert) $this->FazPublish("INSERT",$myJSON);
+        else $this->FazPublish("UPDATE",$myJSON);
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+        $id = $this->id;
+        $myObj = new stdClass();
+        $myObj->id=$id;
+        $myJSON = json_encode($myObj);
+        $this->FazPublish("DELETE",$myJSON);
+    }
+
+    public function FazPublish($canal,$msg)
+    {
+        $server = "127.0.0.1";
+        $port = 1883;
+        $username = ""; // set your username
+        $password = ""; // set your password
+        $client_id = "Menu"; // unique!
+        $mqtt = new phpMQTT($server, $port, $client_id);
+        try{
+            $mqtt->connect(true, NULL, $username, $password);
+            $mqtt->publish($canal, $msg, 0);
+            $mqtt->close();
+        }catch (ErrorException $e){
+
+        }
+    }
+
 }

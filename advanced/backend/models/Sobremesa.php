@@ -2,8 +2,10 @@
 
 namespace backend\models;
 
+use ErrorException;
+use stdClass;
 use Yii;
-
+use backend\mosquitto\phpMQTT;
 /**
  * This is the model class for table "sobremesa".
  *
@@ -65,5 +67,52 @@ class Sobremesa extends \yii\db\ActiveRecord
     public function getItens()
     {
         return $this->hasMany(Itens::className(), ['id_sobremesa' => 'id']);
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        //Obter dados do registo em causa
+        $id = $this->id;
+        $descricao = $this->descricao;
+        $preco = $this->preco;
+        $imagem = $this->imagem;
+
+        $myObj = new stdClass();
+        $myObj->id = $id;
+        $myObj->descricao = $descricao;
+        $myObj->preco = $preco;
+        $myObj->imagem = $imagem;
+        $myJSON = json_encode($myObj);
+
+        if($insert) $this->FazPublish("INSERT",$myJSON);
+        else $this->FazPublish("UPDATE",$myJSON);
+    }
+
+    public function afterDelete()
+    {
+        parent::afterDelete();
+        $id = $this->id;
+        $myObj = new stdClass();
+        $myObj->id=$id;
+        $myJSON = json_encode($myObj);
+        $this->FazPublish("DELETE",$myJSON);
+    }
+
+    public function FazPublish($canal,$msg)
+    {
+        $server = "127.0.0.1";
+        $port = 1883;
+        $username = ""; // set your username
+        $password = ""; // set your password
+        $client_id = "Sobremesa"; // unique!
+        $mqtt = new phpMQTT($server, $port, $client_id);
+        try{
+            $mqtt->connect(true, NULL, $username, $password);
+            $mqtt->publish($canal, $msg, 0);
+            $mqtt->close();
+        }catch (ErrorException $e){
+
+        }
     }
 }

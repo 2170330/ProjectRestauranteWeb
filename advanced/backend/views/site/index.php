@@ -16,7 +16,7 @@ $this->title = 'C.D.R.';
 
 <div class="row col-lg-9 index">
     <h1 class="index-titulo"> C.D.R. </h1>
-    <div class="borders">
+    <!--<div class="borders">
         <div class="border-index col-lg-4">
             <h1 class="index-sub-titulo"> Utilizadores </h1>
             <button class="index-button"><i class="fas fa-users"></i></button>
@@ -47,4 +47,5 @@ $this->title = 'C.D.R.';
             <button class="index-button"><i class="fas fa-chair"></i></button>
         </div>
     </div>
+    -->
 </div>
