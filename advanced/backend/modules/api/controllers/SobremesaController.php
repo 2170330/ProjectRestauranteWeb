@@ -2,7 +2,9 @@
 
 namespace backend\modules\api\controllers;
 
+
 use common\models\User;
+use stdClass;
 use Yii;
 use yii\filters\auth\HttpBasicAuth;
 use yii\rest\ActiveController;
@@ -14,7 +16,6 @@ class SobremesaController extends ActiveController
 {
     public $modelClass = 'backend\models\Sobremesa';
 
-    //Utilizadores com admin podem mexer na api
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -25,14 +26,18 @@ class SobremesaController extends ActiveController
         return $behaviors;
     }
 
-    //Autenticacao do utilizador
+    //Utilizadores com admin podem mexer na api
     public function auth($username, $password)
     {
         $user = User::findByUsername($username);
-        if ($user && $user->validatePassword($password))
+        if ($user && $user->validatePassword($password) && key(Yii::$app->authManager->getRolesByUser($user->id)) == 'admin')
         {
             return $user;
         }
+        else{
+            throw new \yii\web\NotFoundHttpException("Utilizador não encontrado ou não tem permissões");
+        }
+
     }
 
     //conta o total de Sobremesas que existe

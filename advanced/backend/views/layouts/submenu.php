@@ -30,7 +30,7 @@ $pratos = Prato::find()->all();
                 <li><a href=""> <i class="fas fa-beer"></i> </a> <?= Html::a('Outros', ['/bebida/index', 'id' => 3], ['class'=>'']) ?> </li>
             </ul>
         <li class="sidebar-menu"> <i class="fas fa-cookie"></i> <?= Html::a('Sobremesas', ['/sobremesa/index'], ['class'=>'']) ?>
-        <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>
+        <!--<li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a> -->
     </ul>
 </div>
 
