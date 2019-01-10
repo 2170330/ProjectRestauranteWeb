@@ -32,12 +32,9 @@ class BebidaController extends ActiveController
     public function auth($username, $password)
     {
         $user = User::findByUsername($username);
-        if ($user && $user->validatePassword($password) && key(Yii::$app->authManager->getRolesByUser($user->id)) == 'admin')
+        if ($user && $user->validatePassword($password))
         {
             return $user;
-        }
-        else{
-            throw new \yii\web\NotFoundHttpException("Utilizador não encontrado ou não tem permissões");
         }
     }
 
@@ -59,7 +56,7 @@ class BebidaController extends ActiveController
     //Mostra todos as Bebidas que tenham o tipo de bebida, dependendo do tipo que escolheu (id_tipo_bebida)
     public function actionTipo($id) {
         $Bebida = new $this->modelClass;
-        $recordBebidas = $Bebida::find()->where(['id_tipo_bebida' => $id])->all();
+        $recordBebidas = $Bebida::find()->where(['id_tipo_prato' => $id])->all();
         return ['tipo' => $id, 'Records' => $recordBebidas];
     }
 

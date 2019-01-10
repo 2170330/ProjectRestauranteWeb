@@ -45,7 +45,7 @@ $sobremesas = Sobremesa::find()->all();
     });
 </script>
 
-<div class="site-menu row menu-image">
+<div class="site-menu row">
     <div class="site-menu-1 col-lg-3">
         <ul class="site-menu-bar">
             <li class="site-menu-bar-li"><a href="#menu">Menu</a></li>

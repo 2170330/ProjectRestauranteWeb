@@ -1,4 +1,4 @@
-#Wed Dec 19 12:57:39 GMT 2018
-base.0=C\:\\wamp64\\www\\AndroidPR\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Thu Jan 10 16:12:14 GMT 2019
+base.0=C\:\\wamp64\\www\\ProjectRestauranteWeb\\AndroidPR\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

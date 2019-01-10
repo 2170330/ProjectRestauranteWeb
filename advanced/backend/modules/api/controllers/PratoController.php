@@ -32,12 +32,9 @@ class PratoController extends ActiveController
     public function auth($username, $password)
     {
         $user = User::findByUsername($username);
-        if ($user && $user->validatePassword($password) && key(Yii::$app->authManager->getRolesByUser($user->id)) == 'admin')
+        if ($user && $user->validatePassword($password))
         {
             return $user;
-        }
-        else{
-            throw new \yii\web\NotFoundHttpException("Utilizador não encontrado ou não tem permissões");
         }
     }
 

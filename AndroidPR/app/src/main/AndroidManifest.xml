@@ -30,8 +30,8 @@
             android:name=".ativity.SideBarMenuActivity"
             android:label="@string/title_activity_side_bar_menu"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ativity.PratoDoDIa" />
-        <activity android:name=".ativity.MenuCarneActivity"></activity>
+        <activity android:name=".ativity.MenuCarneActivity" />
+        <activity android:name=".ativity.PratoDiaActivity"></activity>
     </application>
 
 </manifest>

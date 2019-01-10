@@ -12,7 +12,11 @@ use yii\log;
 
 $this->title = 'Pratos';
 
-if (isset($_GET['id'])) {
+$pratos = Prato::find()->all();
+
+
+if(isset($_GET['id'])) {
+
     $tipo_id = $_GET['id'];
 
     if ($tipo_id != 0) {
@@ -48,11 +52,7 @@ if (isset($_GET['id'])) {
                     'attribute' => 'tipoPrato.descricao',
 
                 ],
-                [
-                    'header' => 'Preço (€)',
-                    'attribute' => 'preco',
-
-                ],
+                'preco',
                 'imagem',
                 [
                     'header' => 'Prato do dia',

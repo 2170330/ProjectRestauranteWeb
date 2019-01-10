@@ -132,14 +132,14 @@ ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidMan
 		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:32:13-44
 	android:name
 		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:30:13-56
-activity#pt.ipleiria.estg.dei.amsi.androidpr.ativity.PratoDoDIa
-ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:33:9-56
-	android:name
-		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:33:19-53
 activity#pt.ipleiria.estg.dei.amsi.androidpr.ativity.MenuCarneActivity
-ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:34:9-72
+ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:33:9-63
 	android:name
-		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:34:19-60
+		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:33:19-60
+activity#pt.ipleiria.estg.dei.amsi.androidpr.ativity.PratoDiaActivity
+ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:34:9-71
+	android:name
+		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:34:19-59
 uses-sdk
 INJECTED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml

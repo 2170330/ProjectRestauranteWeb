@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Thu Dec 06 16:38:12 GMT 2018
+#Thu Jan 10 16:12:14 GMT 2019
 0.baseType=DIRECTORY
-0.base=C\:\\wamp64\\www\\AndroidPR\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.base=C\:\\wamp64\\www\\ProjectRestauranteWeb\\AndroidPR\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.path=classes.dex
 0.set=DEX
 count=1

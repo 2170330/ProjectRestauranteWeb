@@ -24,17 +24,13 @@ $this->title = 'Sobremesas';
     <div class="backend-cores">
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
-            //'filterModel' => $searchModel,
+            'filterModel' => $searchModel,
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
 
                 'id',
                 'descricao',
-                [
-                    'header' => 'Preço (€)',
-                    'attribute' => 'preco',
-
-                ],
+                'preco',
                 'imagem',
 
                 ['class' => 'yii\grid\ActionColumn'],

@@ -44,11 +44,7 @@ if(isset($_GET['id'])) {
                     'header' => 'Tipo',
                     'attribute' => 'tipoBebida.descricao',
                 ],
-                [
-                    'header' => 'Preço (€)',
-                    'attribute' => 'preco',
-
-                ],
+                'preco',
                 'imagem',
 
                 ['class' => 'yii\grid\ActionColumn'],

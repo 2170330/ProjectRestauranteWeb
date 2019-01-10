@@ -2,9 +2,6 @@
 
 namespace backend\models;
 
-use backend\mosquitto\phpMQTT;
-use ErrorException;
-use stdClass;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
@@ -243,6 +240,39 @@ class Utilizador extends ActiveRecord implements IdentityInterface
         return parent::beforeSave($insert);
     }
 
+    public function afterSave($insert, $changedAttributes)
+    {
+        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
+
+        if ($insert) {
+            if ($this->admin == 1) {
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('admin');
+                $auth->assign($authorRole, $this->getId());
+            }
+            else{
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('author');
+                $auth->assign($authorRole, $this->getId());
+            }
+        }
+        else {
+            if ($this->admin == 1) {
+                $model->delete();
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('admin');
+                $auth->assign($authorRole, $this->id);
+            } else {
+                $model->delete();
+                $auth = \Yii::$app->authManager;
+                $authorRole = $auth->getRole('author');
+                $auth->assign($authorRole, $this->id);
+            }
+        }
+
+        return parent::afterSave($insert, $changedAttributes);
+    }
+
     public function delete()
     {
         $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
@@ -263,91 +293,4 @@ class Utilizador extends ActiveRecord implements IdentityInterface
         $this->password_hash = Yii::$app->security->generatePasswordHash($password);
         //$this->password_hash = $password;
     }
-
-    public function afterSave($insert, $changedAttributes)
-    {
-
-        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
-
-        //Obter dados do registo em causa
-        $id = $this->id;
-        $username = $this->username;
-        $password = $this->password;
-        $email = $this->email;
-        $status = $this->status;
-        $nome = $this->nome;
-        $morada = $this->morada;
-        $nif = $this->nif;
-
-        $myObj = new stdClass();
-        $myObj->username = $username;
-        $myObj->password = $password;
-        $myObj->email= $email;
-        $myObj->status = $status;
-        $myObj->nome = $nome;
-        $myObj->morada = $morada;
-        $myObj->nif = $nif;
-        $myJSON = json_encode($myObj);
-
-
-        if ($insert) {
-            if ($this->admin == 1) {
-                $auth = \Yii::$app->authManager;
-                $authorRole = $auth->getRole('admin');
-                $auth->assign($authorRole, $this->getId());
-            }
-            else{
-                $auth = \Yii::$app->authManager;
-                $authorRole = $auth->getRole('author');
-                $auth->assign($authorRole, $this->getId());
-            }
-
-            $this->FazPublish("INSERT",$myJSON);
-        }
-        else {
-            if ($this->admin == 1) {
-                $model->delete();
-                $auth = \Yii::$app->authManager;
-                $authorRole = $auth->getRole('admin');
-                $auth->assign($authorRole, $this->id);
-            } else {
-                $model->delete();
-                $auth = \Yii::$app->authManager;
-                $authorRole = $auth->getRole('author');
-                $auth->assign($authorRole, $this->id);
-            }
-
-            $this->FazPublish("UPDATE",$myJSON);
-        }
-
-        return parent::afterSave($insert, $changedAttributes);
-    }
-
-    public function afterDelete()
-    {
-        parent::afterDelete();
-        $id = $this->id;
-        $myObj = new stdClass();
-        $myObj->id=$id;
-        $myJSON = json_encode($myObj);
-        $this->FazPublish("DELETE",$myJSON);
-    }
-
-    public function FazPublish($canal,$msg)
-    {
-        $server = "127.0.0.1";
-        $port = 1883;
-        $username = ""; // set your username
-        $password = ""; // set your password
-        $client_id = "Utilizador"; // unique!
-        $mqtt = new phpMQTT($server, $port, $client_id);
-        try{
-            $mqtt->connect(true, NULL, $username, $password);
-            $mqtt->publish($canal, $msg, 0);
-            $mqtt->close();
-        }catch (ErrorException $e){
-
-        }
-    }
-
 }

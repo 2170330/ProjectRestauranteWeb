@@ -16,14 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.ComentariosFragment;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.ContaFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.HomeFragment;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.MenuCarneFragment;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.PratoDiaFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubMenuBebidasFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubMenuComidaFragment;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubremensasFragment;
 
 public class MenuCarneActivity extends AppCompatActivity {
     private NavigationView navigationView;
@@ -200,15 +195,15 @@ public class MenuCarneActivity extends AppCompatActivity {
     }
 
     private Fragment getHomeFragment() {
-        switch (navItemIndex){
+        switch (navItemIndex) {
             case 0:
                 /** Página Inicial */
                 HomeFragment homeFragment = new HomeFragment();
                 return homeFragment;
             case 1:
                 /** Conta */
-                ContaFragment contaFragment = new ContaFragment();
-                return contaFragment;
+                // ContaFragment contaFragment = new ContaFragment();
+                // return contaFragment;
             case 2:
                 /** Menus */
                 SubMenuComidaFragment subMenuComidaFragmentMenus = new SubMenuComidaFragment();
@@ -223,17 +218,19 @@ public class MenuCarneActivity extends AppCompatActivity {
                 return subMenuBebidasFragment;
             case 5:
                 /** Subremensas */
-                SubremensasFragment subremensasFragment = new SubremensasFragment();
-                return subremensasFragment;
+                //SubremensasFragment subremensasFragment = new SubremensasFragment();
+                //return subremensasFragment;
             case 6:
                 /** Comentários */
-                ComentariosFragment comentariosFragment = new ComentariosFragment();
-                return comentariosFragment;
+                // ComentariosFragment comentariosFragment = new ComentariosFragment();
+                //  return comentariosFragment;
             case 10:
-                MenuCarneFragment menuCarneFragment = new MenuCarneFragment();
-                return menuCarneFragment;
+                //  MenuCarneFragment menuCarneFragment = new MenuCarneFragment();
+                // return menuCarneFragment;
             default:
-                return new PratoDiaFragment();
+                //   return new PratoDiaFragment();
+                HomeFragment homeFragment1 = new HomeFragment();
+                return homeFragment1;
         }
     }
 

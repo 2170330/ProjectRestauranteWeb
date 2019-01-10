@@ -62,6 +62,7 @@ class UtilizadorSearch extends Utilizador
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'nif' => $this->nif,
         ]);
 
         $query->andFilterWhere(['like', 'username', $this->username])
@@ -70,8 +71,8 @@ class UtilizadorSearch extends Utilizador
             ->andFilterWhere(['like', 'password_reset_token', $this->password_reset_token])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'nome', $this->nome])
-            ->andFilterWhere(['like', 'morada', $this->morada])
-            ->andFilterWhere(['like', 'NIF', $this->nif]);
+            ->andFilterWhere(['like', 'morada', $this->morada]);
+
         return $dataProvider;
     }
 }

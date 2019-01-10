@@ -1,6 +1,5 @@
 package pt.ipleiria.estg.dei.amsi.androidpr.ativity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -17,13 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.ComentariosFragment;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.ContaFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.HomeFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubMenuBebidasFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubMenuComidaFragment;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubPratoComidaFragment;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.SubremensasFragment;
 
 public class SideBarMenuActivity extends AppCompatActivity {
 
@@ -203,8 +199,8 @@ public class SideBarMenuActivity extends AppCompatActivity {
                 return homeFragment;
             case 1:
                 /** Conta */
-                ContaFragment contaFragment = new ContaFragment();
-                return contaFragment;
+                //ContaFragment contaFragment = new ContaFragment();
+               // return contaFragment;
             case 2:
                 /** Menus */
                 SubMenuComidaFragment subMenuComidaFragment = new SubMenuComidaFragment();
@@ -219,12 +215,12 @@ public class SideBarMenuActivity extends AppCompatActivity {
                 return subMenuBebidasFragment;
             case 5:
                 /** Subremensas */
-                SubremensasFragment subremensasFragment = new SubremensasFragment();
-                return subremensasFragment;
+               // SubremensasFragment subremensasFragment = new SubremensasFragment();
+               // return subremensasFragment;
             case 6:
                 /** Comentários */
-                ComentariosFragment comentariosFragment = new ComentariosFragment();
-                return comentariosFragment;
+              //  ComentariosFragment comentariosFragment = new ComentariosFragment();
+                //return comentariosFragment;
             default:
                 return new HomeFragment();
         }

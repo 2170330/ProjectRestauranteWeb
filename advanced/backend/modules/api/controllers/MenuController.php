@@ -8,7 +8,6 @@
 
 namespace backend\modules\api\controllers;
 
-use backend\models\AuthAssignment;
 use common\models\User;
 use Yii;
 use yii\filters\auth\HttpBasicAuth;
@@ -21,31 +20,21 @@ class MenuController extends ActiveController
     //Utilizadores com admin podem mexer na api
     public function behaviors()
     {
-        $model = AuthAssignment::find()->where(['user_id' => $this->id])->one();
-        
         $behaviors = parent::behaviors();
-
         $behaviors['authenticator'] = [
             'class' => HttpBasicAuth::className(),
-            'auth' => [$this, 'auth'],
-
+            'auth' => [$this, 'auth']
         ];
-
         return $behaviors;
-
-
     }
 
     //Autenticacao do utilizador
     public function auth($username, $password)
     {
         $user = User::findByUsername($username);
-        if ($user && $user->validatePassword($password) && key(Yii::$app->authManager->getRolesByUser($user->id)) == 'admin')
+        if ($user && $user->validatePassword($password))
         {
             return $user;
-        }
-        else{
-            throw new \yii\web\NotFoundHttpException("Utilizador não encontrado ou não tem permissões");
         }
     }
 

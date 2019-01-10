@@ -2,7 +2,6 @@ package pt.ipleiria.estg.dei.amsi.androidpr.fragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -15,26 +14,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.ativity.PratoDoDIa;
-import pt.ipleiria.estg.dei.amsi.androidpr.ativity.ViewPagerAdapter;
+import pt.ipleiria.estg.dei.amsi.androidpr.Adapter.ViewPagerAdapter;
+import pt.ipleiria.estg.dei.amsi.androidpr.ativity.PratoDiaActivity;
 
 public class HomeFragment extends Fragment{
 
-    private OnFragmentInteractionListener mListener;
     private ViewPager viewPager;
-    LinearLayout sliderDotspanel;
     private int dotscount;
     private ImageView[] dots;
     private View view;
+    private Context context;
 
-    public HomeFragment() {
-        // Required empty public constructor
-    }
+    LinearLayout sliderDotspanel;
+
+
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
-
         return fragment;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -72,9 +70,13 @@ public class HomeFragment extends Fragment{
             public void onPageSelected(int position) {
                 for(int i = 0; i< dotscount; i++){
                     dots[i].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.non_active_dot));
+                    Intent intent = new Intent(context, PratoDiaActivity.class);
+                    startActivity(intent);
                 }
 
                 dots[position].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.active_dot));
+
+
 
             }
 
@@ -84,23 +86,5 @@ public class HomeFragment extends Fragment{
             }
         });
         return this.view;
-    }
-
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
     }
 }
