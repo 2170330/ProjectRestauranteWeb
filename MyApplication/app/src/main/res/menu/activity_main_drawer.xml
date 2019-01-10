@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Página Inicial" />
+        <item
+            android:id="@+id/nav_conta"
+            android:icon="@drawable/imgemailuser"
+            android:title="Conta" />
+        <item
+            android:id="@+id/nav_menus"
+            android:icon="@drawable/ic_restaurant"
+            android:title="Menus" />
+        <item
+            android:id="@+id/nav_pratos"
+            android:icon="@drawable/ic_plate"
+            android:title="Pratos" />
+        <item
+            android:id="@+id/nav_bebidas"
+            android:icon="@drawable/ic_drink"
+            android:title="Bebidas" />
+        <item
+            android:id="@+id/nav_subremensas"
+            android:icon="@drawable/ic_candy"
+            android:title="Subremensas" />
+        <item
+            android:id="@+id/nav_comentarios"
+            android:icon="@drawable/ic_comment"
+            android:title="Comentários" />
+    </group>
+</menu>
