@@ -16,7 +16,7 @@ $this->title = 'Mensagens';
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Criar Mensagem', ['create'], ['class' => 'backend-button']) ?>
+        <?= Html::a('Criara Mensagem', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <div class="backend-cores">
