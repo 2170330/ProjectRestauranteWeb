@@ -1,17 +1,19 @@
 <?php
 use kartik\datetime\DateTimePicker;
+use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
 
 /* @var $this yii\web\View */
 
+/* @var $form yii\widgets\ActiveForm */
+
 $this->title = 'C.D.R';
 ?>
 
-<head>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/v4-shims.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <div class="inicio">
     <div class="informacao">
@@ -33,34 +35,42 @@ $this->title = 'C.D.R';
     <br><br>
 
     <div class="reservas row">
+        <?php $form = ActiveForm::begin(); ?>
 
         <div class="btn-reservar-datepicker col-spaced col-lg-4">
-            <?php
-            echo DateTimePicker::widget([
-                'name' => 'datetime_10',
-                'options' => ['placeholder' => 'Seleciona a hora de reserva ...', 'class' => 'datepickerCSS'],
-                'convertFormat' => true,
-                'pluginOptions' => [
-                    'format' => 'yyyy-dd-mm HH:MM:ss',
-                    'todayHighlight' => true,
-                    'minDate' => '-1969/12/31',
-                ]
-            ]);
+            <?= $form->field($model, 'data')->widget(DateTimePicker::className(),
+                [
+                    'name' => 'datetime_10',
+                    'id' => 'datetime_10',
+                    'options' => ['placeholder' => 'Seleciona a hora de reserva ...', 'class' => 'datepickerCSS'],
+                    'convertFormat' => true,
+                    'pluginOptions' => [
+                        'format' => 'yyyy-dd-mm HH:MM:ss',
+                        'todayHighlight' => true,
+                        'minDate' => '-1969/12/31',
+                    ]
+                ])->label(false);
             ?>
         </div>
 
-        <select class="btn-reservar-npessoas col-spaced col-lg-4">
-            <option value="" disabled selected hidden>&#xf1ae; Número de pessoas</option>
-            <option value="pessoa1">1 pessoa</option>
-            <option value="pessoa2">2 pessoas</option>
-            <option value="pessoa3">3 pessoas</option>
-            <option value="pessoa4">4 pessoas</option>
-            <option value="pessoa5">5 pessoas</option>
-            <option value="pessoa6">6 pessoas</option>
-        </select>
+        <div class=" col-spaced col-lg-4">
+            <?= $form->field($model, 'nPessoas')->dropDownList(
+                array(['1' => '1 pessoa',
+                       '2' => '2 pessoas',
+                       '3' => '3 pessoas',
+                       '4' => '4 pessoas',
+                       '5' => '5 pessoas',
+                       '6' => '6 pessoas']), ['class' => 'btn-reservar-npessoas'])->label(false) ?>
+        </div>
 
+        <?php $model->id_user = Yii::$app->user->getId(); ?>
+        <?= $form->field($model, 'id_user')->hiddenInput(['value' => $model->id_user])->label(false) ?>
 
-        <a class="btn-reservar col-spaced col-lg-4" href="http://www.yiiframework.com">Reserve já</a>
+        <div class="col-spaced col-lg-4">
+            <?= Html::submitButton('Comentar', ['class' => 'btn-reservar']) ?>
+        </div>
+
+        <?php ActiveForm::end(); ?>
 
         <br><br><br><br><br>
     </div>

@@ -3,6 +3,9 @@ i.fa{
     color: black;
 }
 
+.star-full{
+    color: #ffdb4d!important;
+}
 
 .comentarios{
     font-size: 300%;
@@ -37,25 +40,11 @@ i.fa{
     color: #ffdb4d;
 }
 
-.star1:hover ~ i{
+.star i:hover ~ i{
     color: #ffdb4d;
 }
 
-.star2:hover ~ i{
-    color: #ffdb4d;
-}
 
-.star3:hover ~ i{
-    color: #ffdb4d;
-}
-
-.star4:hover ~ i{
-    color: #ffdb4d;
-}
-
-.star5:hover ~ i{
-    color: #ffdb4d;
-}
 
 
 

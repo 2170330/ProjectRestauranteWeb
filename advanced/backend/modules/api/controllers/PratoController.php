@@ -71,6 +71,7 @@ class PratoController extends ActiveController
         return ['tipo' => $id, 'Records' => $recordUtilizador];
     }
 
+    /*
     //Cria um Prato
     public function actionCriar() {
         $descricao=Yii::$app->request->post('descricao');
@@ -130,5 +131,5 @@ class PratoController extends ActiveController
             Yii::$app->response->statusCode = 404;
             return ['code' => 'erro'];
         }
-    }
+    }*/
 }

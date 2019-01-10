@@ -4,21 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\SobremesaSearch */
+/* @var $searchModel backend\models\MensagemSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sobremesas';
-
+$this->title = 'Mensagens';
 ?>
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
-
-<div class="sobremesa-index, backend-form">
+<div class="mensagem-index, backend-form">
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Criar Sobremesa', ['create'], ['class' => 'backend-button']) ?>
+        <?= Html::a('Criar Mensagem', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <div class="backend-cores">
@@ -29,13 +27,16 @@ $this->title = 'Sobremesas';
                 ['class' => 'yii\grid\SerialColumn'],
 
                 'id',
-                'descricao',
+                'avaliacao',
+                'mensagem',
+                'assunto',
+                //'created_at',
+                //'updated_at',
                 [
-                    'header' => 'Preço (€)',
-                    'attribute' => 'preco',
+                    'header' => 'Utilizador',
+                    'attribute' => 'user.username',
 
                 ],
-                'imagem',
 
                 ['class' => 'yii\grid\ActionColumn'],
             ],

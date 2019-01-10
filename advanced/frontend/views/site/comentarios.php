@@ -22,11 +22,11 @@ else{
 
     <div class="comentario-center">
         <div class="star">
-            <i id="1" class="fa fa-star star1" onclick="ratingValue()"></i>
-            <i id="2" class="fa fa-star star2" onclick="ratingValue()"></i>
-            <i id="3" class="fa fa-star star3" onclick="ratingValue()"></i>
-            <i id="4" class="fa fa-star star4" onclick="ratingValue()"></i>
-            <i id="5" class="fa fa-star star5" onclick="ratingValue()"></i>
+            <i class="fa fa-star" value="5" onclick="rate(this)"></i>
+            <i class="fa fa-star" value="4" onclick="rate(this)"></i>
+            <i class="fa fa-star" value="3" onclick="rate(this)"></i>
+            <i class="fa fa-star" value="2" onclick="rate(this)"></i>
+            <i class="fa fa-star" value="1" onclick="rate(this)"></i>
         </div>
 
         <h1 class="comentario-titulo"> Escreva aqui o seu comentário </h1>
@@ -34,16 +34,13 @@ else{
         <div class="comentarios-div">
             <?php $form = ActiveForm::begin(); ?>
 
-            <?php $model->avaliacao = $star ?>
-
-            <?= $form->field($model, 'avaliacao')->textInput() ?>
+            <?= $form->field($model, 'avaliacao')->hiddenInput()->label(false) ?>
 
             <?= $form->field($model, 'mensagem')->textInput(['maxlength' => true]) ?>
 
             <?= $form->field($model, 'assunto')->textInput(['maxlength' => true]) ?>
 
             <?php $model->id_user = Yii::$app->user->getId(); ?>
-
             <?= $form->field($model, 'id_user')->hiddenInput(['value' => $model->id_user])->label(false) ?>
 
             <div class="form-group">

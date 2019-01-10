@@ -62,6 +62,7 @@ class UtilizadorController extends ActiveController
         return ['limite' => $id, 'Records' => $recordUtilizador];
     }
 
+    /*
     //Cria um utilizador
     public function actionCriar() {
         $username=Yii::$app->request->post('username');
@@ -127,5 +128,5 @@ class UtilizadorController extends ActiveController
             Yii::$app->response->statusCode = 404;
             return ['code' => 'erro'];
         }
-    }
+    }*/
 }

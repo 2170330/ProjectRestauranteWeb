@@ -59,9 +59,9 @@ return [
                         'GET total' => 'total', // 'total' é 'actionTotal'
                         'GET ativos' => 'ativos', // 'ativos' é 'actionAtivos'
                         'GET set/{id}' => 'set', // 'set' é 'actionSet'
-                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
-                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
-                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                        //'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        //'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        //'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
                     ],
                 ],
                 [
@@ -73,9 +73,9 @@ return [
                         'GET tipo/{id}' => 'tipo', // 'tipo' é 'actionTipo'
                         'GET semana/{id}' => 'semana', // 'semana' é 'actionSemana'
                         'GET set/{id}' => 'set', // 'set' é 'actionSet'
-                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
-                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
-                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                        //'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        //'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        //'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
                     ],
                 ],
                 [
@@ -86,9 +86,9 @@ return [
                         'GET total' => 'total', // 'total' é 'actionTotal
                         'GET tipo/{id}' => 'tipo', // 'tipo' é 'actionTipo'
                         'GET set/{id}' => 'set', // 'set' é 'actionSet'
-                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
-                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
-                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                        //'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        //'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        //'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
                     ],
                 ],
                 [
@@ -99,9 +99,9 @@ return [
                         'GET total' => 'total', // 'total' é 'actionTotal
                         'GET barato' => 'barato', // 'barato' é 'actionBarato
                         'GET set/{id}' => 'set', // 'set' é 'actionSet'
-                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
-                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
-                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                        //'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        //'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        //'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
                     ],
                 ],
                 [
@@ -111,9 +111,9 @@ return [
                     'extraPatterns' => [
                         'GET total' => 'total', // 'total' é 'actionTotal
                         'GET set/{id}' => 'set', // 'set' é 'actionSet'
-                        'POST criar' => 'criar', // 'criar' é 'actionCriar'
-                        'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
-                        'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
+                        //'POST criar' => 'criar', // 'criar' é 'actionCriar'
+                        //'PUT atualizar/{id}' => 'atualizar', // 'atualizar' é 'actionAtualizar'
+                        //'DELETE apagar/{id}' => 'apagar', // 'apagar' é 'actionApagar'
                     ],
                 ],
             ],

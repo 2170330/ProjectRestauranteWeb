@@ -4,21 +4,20 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\SobremesaSearch */
+/* @var $searchModel backend\models\ReservaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sobremesas';
-
+$this->title = 'Reservas';
 ?>
 <?= $this->render('@backend/views/layouts/submenu.php'); ?>
 
-<div class="sobremesa-index, backend-form">
+<div class="reserva-index, backend-form">
 
     <h1 class="backend-titulo"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Criar Sobremesa', ['create'], ['class' => 'backend-button']) ?>
+        <?= Html::a('Criar Reserva', ['create'], ['class' => 'backend-button']) ?>
     </p>
 
     <div class="backend-cores">
@@ -29,13 +28,9 @@ $this->title = 'Sobremesas';
                 ['class' => 'yii\grid\SerialColumn'],
 
                 'id',
-                'descricao',
-                [
-                    'header' => 'Preço (€)',
-                    'attribute' => 'preco',
-
-                ],
-                'imagem',
+                'nPessoas',
+                'data',
+                'id_user',
 
                 ['class' => 'yii\grid\ActionColumn'],
             ],

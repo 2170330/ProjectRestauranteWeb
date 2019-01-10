@@ -71,6 +71,7 @@ class PratoController extends Controller
     {
         $model = new Prato();
 
+
         if ($model->load(Yii::$app->request->post())) {
             //recebe a instância da imagem
             $img = UploadedFile::getInstance($model, 'imagem');

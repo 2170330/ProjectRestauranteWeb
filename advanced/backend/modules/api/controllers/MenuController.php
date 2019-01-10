@@ -65,6 +65,7 @@ class MenuController extends ActiveController
     }
 
 
+    /*
     //Cria um Menu
     public function actionCriar() {
         $tipo_prato=Yii::$app->request->post('id_prato');
@@ -124,4 +125,5 @@ class MenuController extends ActiveController
             return ['code' => 'erro'];
         }
     }
+    */
 }

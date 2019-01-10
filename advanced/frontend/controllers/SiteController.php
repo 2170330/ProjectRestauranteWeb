@@ -4,6 +4,7 @@ namespace frontend\controllers;
 use common\models\User;
 use frontend\models\ComentarioForm;
 use frontend\models\MensagemForm;
+use frontend\models\Reserva;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -75,7 +76,20 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new Reserva();
+        $user = Yii::$app->user->getId();
+
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user == $model->id_user) {
+                if($model->save())
+                    return $this->redirect(['index', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('index', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -149,7 +163,7 @@ class SiteController extends Controller
             }
         }
 
-        return $this->render('_form', [
+        return $this->render('comentarios', [
             'model' => $model,
         ]);
     }
@@ -162,6 +176,24 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionReserva()
+    {
+        $model = new Reserva();
+        $user = Yii::$app->user->getId();
+
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user == $model->id_user) {
+                if($model->save())
+                    return $this->redirect(['index', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('reserva', [
+            'model' => $model,
+        ]);
     }
 
     public function actionMenu()

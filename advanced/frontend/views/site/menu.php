@@ -6,6 +6,7 @@ use yii\helpers\Html;
 use backend\models\Prato;
 use backend\models\Sobremesa;
 use backend\models\Bebida;
+use backend\models\Menu;
 use backend\controllers\PratoController;
 
 $this->title = 'Menu';
@@ -22,6 +23,7 @@ $this->params['breadcrumbs']=array('prato',);
 ?>
 
 <?php
+$menus =  Menu::find()->all();
 $pratos = Prato::find()->all();
 $bebidas = Bebida::find()->all();
 $sobremesas = Sobremesa::find()->all();
@@ -58,31 +60,25 @@ $sobremesas = Sobremesa::find()->all();
         </ul>
     </div>
 
-    <div class="site-menu-2 col-lg-9">
-        <p id="menu" class="titulo-menu"> Menus </p>
+    <div class="site-menu-2 clearfix col-lg-9">
+        <p id="sobremesas" class="titulo-menu"> Sobremesas </p>
         <p class="line"> _____</p>
-
-        <div class="site-menu-2-1 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> CARNI MAX </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 9.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> Salmão refogado com batatas</h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 15.00 € </p>
-        </div>
-        <div class="site-menu-2-2 col-lg-4">
-            <img class="site-menu-2-image" src="../../web/img/mistura_comida.jpg">
-            <h1 class="site-menu-2-titulo"> 12 Alimentos </h1>
-            <p class="line-grey"> ____________</p>
-            <p class="site-menu-2-paragrafo"> Esse é um item do seu menu. Adicione uma breve descrição </p>
-            <p class="site-menu-2-preco"> 11.99 € </p>
-        </div>
+        <?php
+        $count = 1;
+        foreach ($menus as $menu): ?>
+            <?= ($count % 3 == 0) ? '<div class="row">' : ''; ?>
+            <div class="site-menu-2-1 col-lg-4">
+                <img class="site-menu-2-image"
+                     src="<?php echo Yii::getAlias('@pratoImgUrlSobremesas') . '/' . $menu->imagem; ?>">
+                <h1 class="site-menu-2-titulo"> <?= $menu->prato->descricao ?> </h1>
+                <p class="line-grey"> ____________</p>
+                <p class="site-menu-2-paragrafo"> <?= 'Bebida: '.$menu->bebida->descricao ?> </p>
+                <p class="site-menu-2-paragrafo"> <?= 'Sobremesa: '.$menu->sobremesa->descricao ?> </p>
+                <p class="site-menu-2-preco"> <?= $menu->preco ?> €</p>
+            </div>
+            <?= ($count % 3 == 0) ? '</div>' : ''; ?>
+            <?php $count++; ?>
+        <?php endforeach; ?>
     </div>
 
 

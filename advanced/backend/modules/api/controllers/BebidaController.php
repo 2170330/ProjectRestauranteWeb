@@ -63,6 +63,7 @@ class BebidaController extends ActiveController
         return ['tipo' => $id, 'Records' => $recordBebidas];
     }
 
+    /*
     //Cria uma Bebida
     public function actionCriar() {
         $descricao=Yii::$app->request->post('descricao');
@@ -118,4 +119,5 @@ class BebidaController extends ActiveController
             return ['code' => 'erro'];
         }
     }
+    */
 }

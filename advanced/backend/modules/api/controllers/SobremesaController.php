@@ -70,7 +70,7 @@ class SobremesaController extends ActiveController
         return ['limite' => $id, 'Records' => $recordSobremesas];
     }
 
-
+    /*
     //Cria uma Sobremesa
     public function actionCriar() {
         $descricao=Yii::$app->request->post('descricao');
@@ -121,5 +121,5 @@ class SobremesaController extends ActiveController
             Yii::$app->response->statusCode = 404;
             return ['code' => 'erro'];
         }
-    }
+    }*/
 }
