@@ -32,9 +32,13 @@ $pratos = Prato::find()->all();
         <li class="sidebar-menu"> <i class="fas fa-cookie"></i> <?= Html::a('Sobremesas', ['/sobremesa/index'], ['class'=>'']) ?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <li class="sidebar-menu"> <i class="fas fa-comments"></i> <?= Html::a('Comentários', ['/mensagem/index'], ['class'=>'']) ?>
         <li class="sidebar-menu"> <i class="fas fa-address-book"></i> <?= Html::a('Reservas', ['/reserva/index'], ['class'=>'']) ?>
 
+=======
+        <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>
+>>>>>>> parent of 582d48f... Merge branch 'master' of https://github.com/2170330/ProjectRestauranteWeb
 =======
         <li class="sidebar-menu"> <i class="fas fa-chair"></i> <a href="">Mesas</a>
 >>>>>>> parent of 582d48f... Merge branch 'master' of https://github.com/2170330/ProjectRestauranteWeb
