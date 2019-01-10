@@ -130,6 +130,7 @@ ADDED from C:\wamp64\www\AndroidPR\app\src\main\AndroidManifest.xml:29:9-32:47
 	android:name
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:30:13-56
 activity#pt.ipleiria.estg.dei.amsi.androidpr.ativity.MenuCarneActivity
 ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidManifest.xml:33:9-63
@@ -142,6 +143,8 @@ ADDED from C:\wamp64\www\ProjectRestauranteWeb\AndroidPR\app\src\main\AndroidMan
 =======
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
 		ADDED from C:\wamp64\www\AndroidPR\app\src\main\AndroidManifest.xml:30:13-56
 activity#pt.ipleiria.estg.dei.amsi.androidpr.ativity.PratoDoDIa
 ADDED from C:\wamp64\www\AndroidPR\app\src\main\AndroidManifest.xml:33:9-56
@@ -152,6 +155,9 @@ ADDED from C:\wamp64\www\AndroidPR\app\src\main\AndroidManifest.xml:34:9-72
 	android:name
 		ADDED from C:\wamp64\www\AndroidPR\app\src\main\AndroidManifest.xml:34:19-60
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android

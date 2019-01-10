@@ -4910,6 +4910,9 @@ public final class R {
     public static final int imageView10=0x7f09006e;
     public static final int imageView11=0x7f09006f;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -4923,6 +4926,7 @@ public final class R {
     public static final int imageView7=0x7f090077;
     public static final int imageView8=0x7f090078;
     public static final int imageView9=0x7f090079;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public static final int imgBtnCarneM=0x7f09007a;
@@ -5035,6 +5039,8 @@ public final class R {
 =======
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
     public static final int imageViewPD=0x7f09007a;
     public static final int imgBtnCarneM=0x7f09007b;
     public static final int imgBtnCarneP=0x7f09007c;
@@ -5143,6 +5149,9 @@ public final class R {
     public static final int spinner3=0x7f0900e3;
     public static final int spinnerNumMesa=0x7f0900e4;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -5169,6 +5178,7 @@ public final class R {
     public static final int textSpacerNoTitle=0x7f0900f9;
     public static final int textStart=0x7f0900fa;
     public static final int textView=0x7f0900fb;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public static final int textView3=0x7f0900fc;
@@ -5203,6 +5213,8 @@ public final class R {
 =======
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
     public static final int textView4=0x7f0900fc;
     public static final int textView5=0x7f0900fd;
     public static final int text_input_password_toggle=0x7f0900fe;
@@ -5233,6 +5245,9 @@ public final class R {
     public static final int tvPratos=0x7f090117;
     public static final int tvPrecoPD=0x7f090118;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -5240,6 +5255,7 @@ public final class R {
     public static final int tvSobremensas=0x7f09011a;
     public static final int tvTitulo=0x7f09011b;
     public static final int tvUser=0x7f09011c;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public static final int uniform=0x7f09011d;
@@ -5255,6 +5271,8 @@ public final class R {
 =======
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
     public static final int txtAutor=0x7f09011d;
     public static final int txtSerie=0x7f09011e;
     public static final int uniform=0x7f09011f;
@@ -5268,6 +5286,9 @@ public final class R {
     public static final int wrap=0x7f090127;
     public static final int wrap_content=0x7f090128;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
