@@ -759,6 +759,9 @@ public final class R {
         public static final int shortcut = 0x7f0900d8;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -783,6 +786,7 @@ public final class R {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int time = 0x7f090103;
         public static final int title = 0x7f090104;
         public static final int titleDividerNoCustom = 0x7f090105;
@@ -793,6 +797,8 @@ public final class R {
         public static final int up = 0x7f09011f;
         public static final int wrap_content = 0x7f090126;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
 =======
@@ -808,6 +814,9 @@ public final class R {
         public static final int wrap_content = 0x7f090128;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android

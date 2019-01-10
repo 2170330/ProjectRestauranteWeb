@@ -77,6 +77,7 @@ public final class R {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int end = 0x7f09004e;
         public static final int gone = 0x7f090062;
         public static final int invisible = 0x7f090087;
@@ -91,6 +92,8 @@ public final class R {
         public static final int top = 0x7f090108;
         public static final int wrap = 0x7f090125;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
 =======
@@ -110,6 +113,9 @@ public final class R {
         public static final int wrap = 0x7f090127;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android

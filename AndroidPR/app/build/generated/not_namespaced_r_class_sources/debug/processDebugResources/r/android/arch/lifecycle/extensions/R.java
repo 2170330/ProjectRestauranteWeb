@@ -88,6 +88,7 @@ public final class R {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int chronometer = 0x7f090034;
         public static final int forever = 0x7f09005e;
         public static final int icon = 0x7f090067;
@@ -107,6 +108,8 @@ public final class R {
         public static final int time = 0x7f090103;
         public static final int title = 0x7f090104;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
 =======
@@ -131,6 +134,9 @@ public final class R {
         public static final int title = 0x7f090103;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android

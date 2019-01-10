@@ -149,6 +149,9 @@ public final class R {
         public static final int right_side = 0x7f0900c2;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -164,9 +167,15 @@ public final class R {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int time = 0x7f090103;
         public static final int title = 0x7f090104;
         public static final int top = 0x7f090108;
+=======
+        public static final int time = 0x7f090102;
+        public static final int title = 0x7f090103;
+        public static final int top = 0x7f090107;
+>>>>>>> parent of 67b85b8... android
 =======
         public static final int time = 0x7f090102;
         public static final int title = 0x7f090103;

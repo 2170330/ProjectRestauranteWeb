@@ -1128,8 +1128,11 @@ id chains
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 id checkBox
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
 =======
@@ -1362,10 +1365,13 @@ id tvMeusPratos
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 id tvName
 id tvPratos
 id tvPreco
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
 =======

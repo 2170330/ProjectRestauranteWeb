@@ -1263,6 +1263,9 @@ int id imageView10 0x7f09006e
 int id imageView11 0x7f09006f
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -1278,6 +1281,7 @@ int id imageView6 0x7f090076
 int id imageView7 0x7f090077
 int id imageView8 0x7f090078
 int id imageView9 0x7f090079
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1393,6 +1397,8 @@ int id spinnerQuantidade 0x7f0900e4
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
 int id imageViewPD 0x7f09007a
 int id imgBtnCarneM 0x7f09007b
 int id imgBtnCarneP 0x7f09007c
@@ -1502,6 +1508,9 @@ int id spinner3 0x7f0900e3
 int id spinnerNumMesa 0x7f0900e4
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -1530,6 +1539,7 @@ int id textSpacerNoButtons 0x7f0900f8
 int id textSpacerNoTitle 0x7f0900f9
 int id textStart 0x7f0900fa
 int id textView 0x7f0900fb
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1567,6 +1577,8 @@ int id tvPreco 0x7f090118
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
 int id textView4 0x7f0900fc
 int id textView5 0x7f0900fd
 int id text_input_password_toggle 0x7f0900fe
@@ -1598,6 +1610,9 @@ int id tvPratos 0x7f090117
 int id tvPrecoPD 0x7f090118
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -1607,6 +1622,7 @@ int id tvSNumMesa 0x7f090119
 int id tvSobremensas 0x7f09011a
 int id tvTitulo 0x7f09011b
 int id tvUser 0x7f09011c
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1625,6 +1641,8 @@ int id wrap_content 0x7f090126
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
 int id txtAutor 0x7f09011d
 int id txtSerie 0x7f09011e
 int id uniform 0x7f09011f
@@ -1639,6 +1657,9 @@ int id wrap 0x7f090127
 int id wrap_content 0x7f090128
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android

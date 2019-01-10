@@ -88,6 +88,7 @@ public final class R {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int chronometer = 0x7f090034;
         public static final int forever = 0x7f09005e;
         public static final int ghost_view = 0x7f090061;
@@ -108,6 +109,8 @@ public final class R {
         public static final int save_non_transition_alpha = 0x7f0900c5;
         public static final int save_scale_type = 0x7f0900c6;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
 =======
@@ -133,6 +136,9 @@ public final class R {
         public static final int save_scale_type = 0x7f0900c5;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
@@ -143,6 +149,7 @@ public final class R {
         public static final int tag_unhandled_key_listeners = 0x7f0900f5;
         public static final int text = 0x7f0900f6;
         public static final int text2 = 0x7f0900f7;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +165,8 @@ public final class R {
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
+=======
+>>>>>>> parent of 67b85b8... android
         public static final int time = 0x7f090102;
         public static final int title = 0x7f090103;
         public static final int transition_current_scene = 0x7f09010a;
@@ -167,6 +176,9 @@ public final class R {
         public static final int transition_transform = 0x7f09010e;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 =======
 >>>>>>> parent of 67b85b8... android
