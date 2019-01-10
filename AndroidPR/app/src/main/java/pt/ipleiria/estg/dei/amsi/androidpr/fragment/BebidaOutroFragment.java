@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.BebidaOutroRecyclerViewAdapter;
 
 /**
  * A fragment representing a list of Items.
@@ -57,7 +56,7 @@ public class BebidaOutroFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new BebidaOutroRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+
         }
         return view;
     }
@@ -74,6 +73,6 @@ public class BebidaOutroFragment extends Fragment {
     }
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(PratoCarneFragment item);
     }
 }

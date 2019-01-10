@@ -3,6 +3,7 @@
     package="pt.ipleiria.estg.dei.amsi.androidpr">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -31,7 +32,8 @@
             android:label="@string/title_activity_side_bar_menu"
             android:theme="@style/AppTheme" />
         <activity android:name=".ativity.PratoDoDIa" />
-        <activity android:name=".ativity.MenuCarneActivity"></activity>
+        <activity android:name=".ativity.MenuCarneActivity" />
+        <activity android:name=".ativity.PratoDetalhes"></activity>
     </application>
 
 </manifest>

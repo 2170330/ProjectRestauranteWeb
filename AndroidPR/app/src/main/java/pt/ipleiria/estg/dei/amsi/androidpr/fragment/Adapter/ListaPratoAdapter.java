@@ -5,6 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.ArrayList;
 
@@ -45,6 +50,43 @@ public class ListaPratoAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.fragment_pratocarne_list, null);
         }
 
-        return null;
+        ViewHolderLista viewHolderLista = (ViewHolderLista) convertView.getTag();
+        if (viewHolderLista == null){
+            viewHolderLista = new ViewHolderLista(convertView);
+            convertView.setTag(viewHolderLista);
+        }
+
+        viewHolderLista.update(pratos.get(position));
+
+
+        return convertView;
+    }
+
+    private class ViewHolderLista{
+        private TextView textViewDescricao;
+        private ImageView textViewImagem;
+        private TextView textViewPreco;
+
+        public ViewHolderLista(View convertWiew){
+            textViewDescricao = convertWiew.findViewById(R.id.tvNamePC);
+            textViewPreco = convertWiew.findViewById(R.id.tvPrecoPC);
+            textViewImagem = convertWiew.findViewById(R.id.imagePC);
+        }
+
+        public void update(Prato prato){
+            textViewDescricao.setText(prato.getDescricao());
+            textViewPreco.setText(prato.getPreco());
+            Glide.with(context)
+                .load(prato.getImage())
+                .placeholder(R.drawable.carne)
+                .fitCenter()
+                .thumbnail(0f)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(textViewImagem);
+        }
+    }
+    public void refresh(ArrayList<Prato> pratos){
+        this.pratos = pratos;
+        notifyDataSetChanged();
     }
 }

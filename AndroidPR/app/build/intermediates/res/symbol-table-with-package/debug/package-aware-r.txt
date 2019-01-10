@@ -1188,10 +1188,10 @@ id icon_group
 id ifRoom
 id image
 id imageButton
+id imagePC
 id imageView
 id imageView10
 id imageView11
-id imageView12
 id imageView13
 id imageView14
 id imageView2
@@ -1359,11 +1359,11 @@ id tvConta
 id tvDate
 id tvMenusPreFeitos
 id tvMeusPratos
-id tvName
+id tvNamePC
 id tvNomePD
 id tvNomeProdutoPratoDia
 id tvPratos
-id tvPreco
+id tvPrecoPC
 id tvPrecoPD
 id tvSNumMesa
 id tvSobremensas
@@ -1431,6 +1431,7 @@ layout abc_tooltip
 layout activity_login
 layout activity_menu_carne
 layout activity_num_mesa
+layout activity_prato_detalhes
 layout activity_prato_do_dia
 layout activity_register
 layout activity_side_bar_menu

@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import pt.ipleiria.estg.dei.amsi.androidpr.Model.Prato;
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.PratoVeganRecyclerViewAdapter;
 
 /**
  * A fragment representing a list of Items.
@@ -59,7 +59,6 @@ public class PratoVeganFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new PratoVeganRecyclerViewAdapter(DummyContent.ITEMS, mListener));
         }
         return view;
     }
@@ -78,6 +77,6 @@ public class PratoVeganFragment extends Fragment {
 
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Prato item);
     }
 }

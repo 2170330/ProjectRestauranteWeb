@@ -10,9 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import pt.ipleiria.estg.dei.amsi.androidpr.Model.Prato;
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.SubremensasRecyclerViewAdapter;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.Prato;
 
 public class SubremensasFragment extends Fragment {
 
@@ -52,7 +51,6 @@ public class SubremensasFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new SubremensasRecyclerViewAdapter(Prato.ITEMS, mListener));
         }
         return view;
     }
@@ -71,6 +69,6 @@ public class SubremensasFragment extends Fragment {
 
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Prato item);
     }
 }

@@ -8,15 +8,16 @@ public class Prato {
     private int idTipoPrato;
     private String image;
     private int idDiaSemana;
-    private DecimalFormat preco;
+    private String preco;
 
-    public Prato(int id, String descricao, int idTipoPrato, String image, int idDiaSemana, DecimalFormat preco){
+    public Prato(int id, String descricao, int idTipoPrato, String preco, String image, int idDiaSemana ){
         this.id = id;
         this.descricao = descricao;
         this.idTipoPrato = idTipoPrato;
+        this.preco = preco;
         this.image = image;
         this.idDiaSemana = idDiaSemana;
-        this.preco = preco;
+
     }
 
 
@@ -58,11 +59,11 @@ public class Prato {
         this.idTipoPrato = idTipoPrato;
     }
 
-    public DecimalFormat getPreco() {
+    public String getPreco() {
         return preco;
     }
 
-    public void setPreco(DecimalFormat preco) {
+    public void setPreco(String preco) {
         this.preco = preco;
     }
 }

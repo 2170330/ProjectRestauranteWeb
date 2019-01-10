@@ -1,26 +1,43 @@
 package pt.ipleiria.estg.dei.amsi.androidpr.fragment;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
+import java.util.ArrayList;
+
+import pt.ipleiria.estg.dei.amsi.androidpr.Listener.PratoListener;
+import pt.ipleiria.estg.dei.amsi.androidpr.Model.Prato;
+import pt.ipleiria.estg.dei.amsi.androidpr.Model.SingletonGestorPratos;
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.PratoCarneRecyclerViewAdapter;
+import pt.ipleiria.estg.dei.amsi.androidpr.ativity.PratoDetalhes;
+import pt.ipleiria.estg.dei.amsi.androidpr.ativity.SideBarMenuActivity;
+import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.ListaPratoAdapter;
+import pt.ipleiria.estg.dei.amsi.androidpr.util.PratoJsonParser;
 
-public class PratoCarneFragment extends Fragment {
+public class PratoCarneFragment extends Fragment implements PratoListener {
 
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    private int mColumnCount = 1;
-    private OnListFragmentInteractionListener mListener;
+    private ListView lvLista;
+    private ArrayList<Prato> listaPratos;
+    private ListaPratoAdapter listaPratoAdapter;
 
-    public PratoCarneFragment() {
-    }
+    final static String PRATO_DETALHES = "Prato";
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
+
 
     @SuppressWarnings("unused")
     public static PratoCarneFragment newInstance(int columnCount) {
@@ -29,37 +46,31 @@ public class PratoCarneFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pratocarne_list, container, false);
 
-        // Set the adapter
-        if (view instanceof RecyclerView) {
-            Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
+        sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        SingletonGestorPratos.getInstance(getActivity().getApplicationContext()).setPratoListener(this);
+        SingletonGestorPratos.getInstance(getActivity().getApplicationContext()).getAllPratosApi(getActivity().getApplicationContext(), PratoJsonParser.isConnectionInternet(getActivity().getApplicationContext()));
+        lvLista = (ListView) view.findViewById(R.id.frame_prato_cane);
+
+        lvLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Prato tempPrato = (Prato) parent.getItemAtPosition(position);
+                Intent intent = new Intent(getActivity().getApplicationContext(), PratoDetalhes.class);
+                intent.putExtra(PRATO_DETALHES, tempPrato.getId());
+                startActivity(intent);
+
             }
-            recyclerView.setAdapter(new PratoCarneRecyclerViewAdapter(DummyContent.ITEMS, mListener));
-        }
+        });
+
+
         return view;
     }
 
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
 
     @Override
     public void onDetach() {
@@ -67,8 +78,14 @@ public class PratoCarneFragment extends Fragment {
         mListener = null;
     }
 
-    public interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+    @Override
+    public void onRefreshListaPratos(ArrayList<Prato> listaPrato) {
+        if (!listaPratos.isEmpty()){
+            ListaPratoAdapter listaPratoAdapter = new ListaPratoAdapter(getContext(), listaPratos);
+            lvLista.setAdapter(listaPratoAdapter);
+            listaPratoAdapter.refresh(listaPratos);
+        }
+        SingletonGestorPratos.getInstance(getActivity().getApplicationContext()).getAllPratosApi(getActivity().getApplicationContext(), PratoJsonParser.isConnectionInternet(getActivity().getApplicationContext()));
     }
+
 }

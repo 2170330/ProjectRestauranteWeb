@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import pt.ipleiria.estg.dei.amsi.androidpr.Model.Prato;
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.MenuVegetarianoRecyclerViewAdapter;
 
 public class MenuVegetarianoFragment extends Fragment {
 
@@ -50,7 +50,6 @@ public class MenuVegetarianoFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MenuVegetarianoRecyclerViewAdapter(DummyContent.ITEMS, mListener));
         }
         return view;
     }
@@ -69,6 +68,6 @@ public class MenuVegetarianoFragment extends Fragment {
 
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Prato item);
     }
 }
