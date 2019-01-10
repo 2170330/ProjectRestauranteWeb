@@ -12,8 +12,6 @@ import android.view.ViewGroup;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.Adapter.PratoCarneRecyclerViewAdapter;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent.DummyItem;
 
 public class PratoCarneFragment extends Fragment {
 

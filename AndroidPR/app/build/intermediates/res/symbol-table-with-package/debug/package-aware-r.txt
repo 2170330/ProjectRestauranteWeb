@@ -1027,6 +1027,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable email
 drawable gradient_background
+drawable ic_add_10dp
+drawable ic_add_dp
 drawable ic_bebidas
 drawable ic_candy
 drawable ic_comment
@@ -1126,6 +1128,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id checkBox
 id checkBoxPD
 id checkbox
 id chronometer
@@ -1184,9 +1187,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton
 id imageView
 id imageView10
 id imageView11
+id imageView12
 id imageView13
 id imageView14
 id imageView2
@@ -1304,6 +1309,7 @@ id space1
 id spacer
 id spinner3
 id spinnerNumMesa
+id spinnerQuantidade
 id split_action_bar
 id spread
 id spread_inside
@@ -1327,6 +1333,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView3
 id textView4
 id textView5
 id text_input_password_toggle
@@ -1352,9 +1359,11 @@ id tvConta
 id tvDate
 id tvMenusPreFeitos
 id tvMeusPratos
+id tvName
 id tvNomePD
 id tvNomeProdutoPratoDia
 id tvPratos
+id tvPreco
 id tvPrecoPD
 id tvSNumMesa
 id tvSobremensas

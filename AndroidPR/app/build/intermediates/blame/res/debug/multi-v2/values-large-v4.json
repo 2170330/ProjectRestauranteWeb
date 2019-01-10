@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\wamp64\\www\\AndroidPR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "C:\\wamp64\\www\\ProjectRestauranteWeb\\AndroidPR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\CrazyMan\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\050c146cb865963caa2db37e98b8e13e\\res\\values-large-v4\\values-large-v4.xml",

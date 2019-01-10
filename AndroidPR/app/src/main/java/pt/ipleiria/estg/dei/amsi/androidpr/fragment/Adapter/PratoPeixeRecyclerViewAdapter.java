@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.PratoPeixeFragment.OnListFragmentInteractionListener;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent.DummyItem;
 
 import java.util.List;
 

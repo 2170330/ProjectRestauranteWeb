@@ -4,12 +4,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
 import pt.ipleiria.estg.dei.amsi.androidpr.fragment.MenuCarneFragment.OnListFragmentInteractionListener;
-import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.DummyContent.DummyItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +20,10 @@ import java.util.List;
  * TODO: Replace the implementation with code for your data type.
  */
 public class MenuCarneRecyclerViewAdapter extends RecyclerView.Adapter<MenuCarneRecyclerViewAdapter.ViewHolder> {
+
+    private ListView listView;
+    private ArrayAdapter<String>;
+    private ArrayList<String> list = new ArrayList<String>();
 
     private final List<DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
@@ -31,6 +37,8 @@ public class MenuCarneRecyclerViewAdapter extends RecyclerView.Adapter<MenuCarne
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_menucarne, parent, false);
+        listView = view.findViewById(R.id.frame_prato_cane);
+        list.add()
         return new ViewHolder(view);
     }
 
