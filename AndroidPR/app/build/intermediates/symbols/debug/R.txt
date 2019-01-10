@@ -1261,6 +1261,9 @@ int id image 0x7f09006c
 int id imageView 0x7f09006d
 int id imageView10 0x7f09006e
 int id imageView11 0x7f09006f
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 int id imageView13 0x7f090070
 int id imageView14 0x7f090071
@@ -1272,6 +1275,7 @@ int id imageView6 0x7f090076
 int id imageView7 0x7f090077
 int id imageView8 0x7f090078
 int id imageView9 0x7f090079
+<<<<<<< HEAD
 <<<<<<< HEAD
 int id imgBtnCarneM 0x7f09007a
 int id imgBtnCarneP 0x7f09007b
@@ -1381,6 +1385,8 @@ int id spacer 0x7f0900e2
 int id spinnerNumMesa 0x7f0900e3
 int id spinnerQuantidade 0x7f0900e4
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 int id imageViewPD 0x7f09007a
 int id imgBtnCarneM 0x7f09007b
 int id imgBtnCarneP 0x7f09007c
@@ -1488,6 +1494,9 @@ int id space1 0x7f0900e1
 int id spacer 0x7f0900e2
 int id spinner3 0x7f0900e3
 int id spinnerNumMesa 0x7f0900e4
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 int id split_action_bar 0x7f0900e5
 int id spread 0x7f0900e6
@@ -1512,6 +1521,7 @@ int id textSpacerNoButtons 0x7f0900f8
 int id textSpacerNoTitle 0x7f0900f9
 int id textStart 0x7f0900fa
 int id textView 0x7f0900fb
+<<<<<<< HEAD
 <<<<<<< HEAD
 int id textView3 0x7f0900fc
 int id textView4 0x7f0900fd
@@ -1543,6 +1553,8 @@ int id tvName 0x7f090116
 int id tvPratos 0x7f090117
 int id tvPreco 0x7f090118
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 int id textView4 0x7f0900fc
 int id textView5 0x7f0900fd
 int id text_input_password_toggle 0x7f0900fe
@@ -1572,11 +1584,15 @@ int id tvNomePD 0x7f090115
 int id tvNomeProdutoPratoDia 0x7f090116
 int id tvPratos 0x7f090117
 int id tvPrecoPD 0x7f090118
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 int id tvSNumMesa 0x7f090119
 int id tvSobremensas 0x7f09011a
 int id tvTitulo 0x7f09011b
 int id tvUser 0x7f09011c
+<<<<<<< HEAD
 <<<<<<< HEAD
 int id uniform 0x7f09011d
 int id unlabeled 0x7f09011e
@@ -1589,6 +1605,8 @@ int id withText 0x7f090124
 int id wrap 0x7f090125
 int id wrap_content 0x7f090126
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 int id txtAutor 0x7f09011d
 int id txtSerie 0x7f09011e
 int id uniform 0x7f09011f
@@ -1601,6 +1619,9 @@ int id visible 0x7f090125
 int id withText 0x7f090126
 int id wrap 0x7f090127
 int id wrap_content 0x7f090128
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
 int integer abc_config_activityDefaultDur 0x7f0a0000
 int integer abc_config_activityShortDur 0x7f0a0001

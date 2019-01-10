@@ -1204,6 +1204,9 @@ public final class R {
         public static final int smallLabel = 0x7f0900dc;
         public static final int snackbar_action = 0x7f0900dd;
         public static final int snackbar_text = 0x7f0900de;
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
         public static final int spacer = 0x7f0900e2;
         public static final int split_action_bar = 0x7f0900e5;
@@ -1222,6 +1225,7 @@ public final class R {
         public static final int text2 = 0x7f0900f7;
         public static final int textSpacerNoButtons = 0x7f0900f8;
         public static final int textSpacerNoTitle = 0x7f0900f9;
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int text_input_password_toggle = 0x7f0900ff;
         public static final int textinput_counter = 0x7f090100;
@@ -1246,6 +1250,8 @@ public final class R {
         public static final int visible = 0x7f090123;
         public static final int wrap_content = 0x7f090126;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
         public static final int text_input_password_toggle = 0x7f0900fe;
         public static final int textinput_counter = 0x7f0900ff;
         public static final int textinput_error = 0x7f090100;
@@ -1268,6 +1274,9 @@ public final class R {
         public static final int view_offset_helper = 0x7f090124;
         public static final int visible = 0x7f090125;
         public static final int wrap_content = 0x7f090128;
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
     }
     public static final class integer {

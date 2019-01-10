@@ -1126,8 +1126,11 @@ id center_horizontal
 id center_vertical
 id chains
 <<<<<<< HEAD
+<<<<<<< HEAD
 id checkBox
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 id checkBoxPD
 >>>>>>> parent of 67b85b8... android
 id checkbox
@@ -1354,10 +1357,13 @@ id tvDate
 id tvMenusPreFeitos
 id tvMeusPratos
 <<<<<<< HEAD
+<<<<<<< HEAD
 id tvName
 id tvPratos
 id tvPreco
 =======
+=======
+>>>>>>> parent of 67b85b8... android
 id tvNomePD
 id tvNomeProdutoPratoDia
 id tvPratos

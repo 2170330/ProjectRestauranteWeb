@@ -96,6 +96,7 @@ public final class R {
         public static final int blocking = 0x7f090025;
         public static final int bottom = 0x7f090026;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int chronometer = 0x7f090034;
         public static final int end = 0x7f09004e;
         public static final int forever = 0x7f09005e;
@@ -115,6 +116,8 @@ public final class R {
         public static final int right_icon = 0x7f0900c2;
         public static final int right_side = 0x7f0900c3;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
         public static final int chronometer = 0x7f090035;
         public static final int end = 0x7f09004f;
         public static final int forever = 0x7f09005f;
@@ -133,6 +136,9 @@ public final class R {
         public static final int right = 0x7f0900c0;
         public static final int right_icon = 0x7f0900c1;
         public static final int right_side = 0x7f0900c2;
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
         public static final int start = 0x7f0900ed;
         public static final int tag_transition_group = 0x7f0900f3;
@@ -141,9 +147,15 @@ public final class R {
         public static final int text = 0x7f0900f6;
         public static final int text2 = 0x7f0900f7;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int time = 0x7f090103;
         public static final int title = 0x7f090104;
         public static final int top = 0x7f090108;
+=======
+        public static final int time = 0x7f090102;
+        public static final int title = 0x7f090103;
+        public static final int top = 0x7f090107;
+>>>>>>> parent of 67b85b8... android
 =======
         public static final int time = 0x7f090102;
         public static final int title = 0x7f090103;

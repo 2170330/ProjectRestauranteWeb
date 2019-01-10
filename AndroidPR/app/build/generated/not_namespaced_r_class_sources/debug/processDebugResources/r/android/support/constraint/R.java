@@ -75,6 +75,7 @@ public final class R {
 
         public static final int bottom = 0x7f090026;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int end = 0x7f09004e;
         public static final int gone = 0x7f090062;
         public static final int invisible = 0x7f090087;
@@ -89,6 +90,8 @@ public final class R {
         public static final int top = 0x7f090108;
         public static final int wrap = 0x7f090125;
 =======
+=======
+>>>>>>> parent of 67b85b8... android
         public static final int end = 0x7f09004f;
         public static final int gone = 0x7f090064;
         public static final int invisible = 0x7f090088;
@@ -102,6 +105,9 @@ public final class R {
         public static final int start = 0x7f0900ed;
         public static final int top = 0x7f090107;
         public static final int wrap = 0x7f090127;
+<<<<<<< HEAD
+>>>>>>> parent of 67b85b8... android
+=======
 >>>>>>> parent of 67b85b8... android
     }
     public static final class styleable {
