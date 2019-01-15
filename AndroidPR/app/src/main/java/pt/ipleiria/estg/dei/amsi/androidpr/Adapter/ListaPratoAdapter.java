@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
-
-import pt.ipleiria.estg.dei.amsi.androidpr.Model.Prato;
 import pt.ipleiria.estg.dei.amsi.androidpr.R;
+import pt.ipleiria.estg.dei.amsi.androidpr.fragment.modelo.Prato;
 
 public class ListaPratoAdapter extends BaseAdapter {
     private Context context;
