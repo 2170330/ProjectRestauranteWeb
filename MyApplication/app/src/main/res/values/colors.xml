@@ -1,3 +1,7 @@
+<<<<<<< HEAD:MyApplication/app/src/main/res/values/colors.xml
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 15f43fa... #update:ProjectAndroidRestaurante/app/src/main/res/values/colors.xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
@@ -7,7 +11,23 @@
     <color name="ButtonYellowPrimary">#cccc00</color>
     <color name="ButtonGrayAccent">#A4A4A4</color>
     <color name="ButtonGrayPrimary">#585858</color>
+<<<<<<< HEAD:MyApplication/app/src/main/res/values/colors.xml
     <color name="dividerColor">#80CBC4</color>
     <color name="list_item_title">#AAAAAA</color>
     <color name="list_group_title">#DD808080</color>
 </resources>
+=======
+</resources>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="ButtonGreenAccent">#09F440</color>
+    <color name="ButtonGreenPrimary">#0f8029</color>
+    <color name="ButtonGrayAccent">#A4A4A4</color>
+    <color name="ButtonGrayPrimary">#585858</color>
+</resources>
+>>>>>>> ba7b66e4b25c3e1fedfe7dcca4f02f5811505159
+>>>>>>> parent of 15f43fa... #update:ProjectAndroidRestaurante/app/src/main/res/values/colors.xml

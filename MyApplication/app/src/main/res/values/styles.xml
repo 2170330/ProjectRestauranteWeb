@@ -1,3 +1,7 @@
+<<<<<<< HEAD:MyApplication/app/src/main/res/values/styles.xml
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 15f43fa... #update:ProjectAndroidRestaurante/app/src/main/res/values/styles.xml
 <resources>
 
     <!-- Base application theme. -->
@@ -7,6 +11,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+<<<<<<< HEAD:MyApplication/app/src/main/res/values/styles.xml
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -17,10 +22,19 @@
     <style name="ButtonYellow" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/ButtonYellowAccent</item>
         <item name="colorButtonNormal">@color/ButtonYellowPrimary</item>
+=======
+    
+
+
+    <style name="ButtonYellow" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/ButtonYellowAccent</item>
+        <item name="colorButtonNormal" >@color/ButtonYellowPrimary</item>
+>>>>>>> parent of 15f43fa... #update:ProjectAndroidRestaurante/app/src/main/res/values/styles.xml
     </style>
 
     <style name="ButtonGray" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/ButtonGrayAccent</item>
+<<<<<<< HEAD:MyApplication/app/src/main/res/values/styles.xml
         <item name="colorButtonNormal">@color/ButtonGrayPrimary</item>
     </style>
 
@@ -29,3 +43,30 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
+=======
+        <item name="colorButtonNormal" >@color/ButtonGrayPrimary</item>
+    </style>
+</resources>
+=======
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+    <style name="ButtonGreen" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/ButtonGreenAccent</item>
+        <item name="colorButtonNormal" >@color/ButtonGreenPrimary</item>
+    </style>
+    <style name="ButtonGray" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/ButtonGrayAccent</item>
+        <item name="colorButtonNormal" >@color/ButtonGrayPrimary</item>
+    </style>
+</resources>
+>>>>>>> ba7b66e4b25c3e1fedfe7dcca4f02f5811505159
+>>>>>>> parent of 15f43fa... #update:ProjectAndroidRestaurante/app/src/main/res/values/styles.xml

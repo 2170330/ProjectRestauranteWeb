@@ -1,0 +1,27 @@
+<<<<<<< HEAD:ProjectAndroidRestaurante/app/src/main/res/drawable/oval.xml
+<?xml version="1.0" encoding="utf-8"?>
+
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" android:padding="30dp">
+        <solid android:color="#FFF"/>
+            <corners
+                android:bottomRightRadius="20dp"
+                android:bottomLeftRadius="20dp"
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"/>
+    </shape>
+
+=======
+<?xml version="1.0" encoding="utf-8"?>
+
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" android:padding="30dp">
+        <solid android:color="#FFFFFF"/>
+            <corners
+                android:bottomRightRadius="20dp"
+                android:bottomLeftRadius="20dp"
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"/>
+    </shape>
+
+>>>>>>> ba7b66e4b25c3e1fedfe7dcca4f02f5811505159:ProjectAndroidRestaurante/app/src/main/res/drawable/oval_edittext.xml
