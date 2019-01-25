@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_menus) {
 
         } else if (id == R.id.nav_pratos) {
+            Intent tipoPrato = new Intent(getApplicationContext(), PratoEscolhaActivity.class);
+            startActivity(tipoPrato);
 
         } else if (id == R.id.nav_bebidas) {
 

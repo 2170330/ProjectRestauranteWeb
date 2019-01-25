@@ -20,18 +20,18 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import pt.ipleiria.estg.dei.amsi.myapplication.Adapter.ListaPratoDiaAdapter;
-import pt.ipleiria.estg.dei.amsi.myapplication.Modelo.PratoDia;
-import pt.ipleiria.estg.dei.amsi.myapplication.Modelo.SingletonGestorPratoDia;
-import pt.ipleiria.estg.dei.amsi.myapplication.listeners.PratoDiaListener;
-import pt.ipleiria.estg.dei.amsi.myapplication.utils.PratoDiaJsonParser;
+import pt.ipleiria.estg.dei.amsi.myapplication.Adapter.ListaPratoAdapter;
+import pt.ipleiria.estg.dei.amsi.myapplication.Modelo.Prato;
+import pt.ipleiria.estg.dei.amsi.myapplication.Modelo.SingletonGestorPrato;
+import pt.ipleiria.estg.dei.amsi.myapplication.listeners.PratoListener;
+import pt.ipleiria.estg.dei.amsi.myapplication.utils.PratoJsonParser;
 
-public class PratoDiaActivity  extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, PratoDiaListener{
+public class PratoDiaActivity  extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, PratoListener {
 
     private ListView lvListView;
-    private ArrayList<PratoDia> listaPratoDias;
+    private ArrayList<Prato> listaPratos;
     final static String DETALHES_PRATO_DIA = "Pratos";
-    final static String LISTA_PRATO_DIA = "Lista Pratos";
+    final static String LISTA_PRATO = "Lista Pratos";
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
@@ -55,16 +55,16 @@ public class PratoDiaActivity  extends AppCompatActivity implements NavigationVi
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        SingletonGestorPratoDia.getInstance(getApplicationContext()).setPratoDiaListener(this);
-        SingletonGestorPratoDia.getInstance(getApplicationContext()).getAllPratoDiaAPI(getApplicationContext(), PratoDiaJsonParser.isConnectionInternet(getApplicationContext()));
+        SingletonGestorPrato.getInstance(getApplicationContext()).setPratoListener(this);
+        SingletonGestorPrato.getInstance(getApplicationContext()).getAllPratoAPI(getApplicationContext(), PratoJsonParser.isConnectionInternet(getApplicationContext()));
         lvListView = (ListView) findViewById(R.id.listviewListaPratosDia);
 
         lvListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                PratoDia tempPratoDia = (PratoDia) parent.getItemAtPosition(position);
-                //Intent intent = new Intent(getApplicationContext(), DetalhesPratoDiaActivity.class);
-                //intent.putExtra(DETALHES_PRATO_DIA, tempPratoDia.getId());
+                Prato tempPrato = (Prato) parent.getItemAtPosition(position);
+                //Intent intent = new Intent(getApplicationContext(), DetalhesPratoActivity.class);
+                //intent.putExtra(DETALHES_PRATO_DIA, tempPrato.getId());
                 //startActivity(intent);
             }
         });
@@ -73,7 +73,7 @@ public class PratoDiaActivity  extends AppCompatActivity implements NavigationVi
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                SingletonGestorPratoDia.getInstance(getApplicationContext()).getAllPratoDiaAPI(getApplicationContext(), PratoDiaJsonParser.isConnectionInternet(getApplicationContext()));
+                SingletonGestorPrato.getInstance(getApplicationContext()).getAllPratoAPI(getApplicationContext(), PratoJsonParser.isConnectionInternet(getApplicationContext()));
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
@@ -103,12 +103,16 @@ public class PratoDiaActivity  extends AppCompatActivity implements NavigationVi
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_home) {
+            Intent home = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(home);
 
         } else if (id == R.id.nav_conta) {
 
         } else if (id == R.id.nav_menus) {
 
         } else if (id == R.id.nav_pratos) {
+            Intent tipoPrato = new Intent(getApplicationContext(), PratoEscolhaActivity.class);
+            startActivity(tipoPrato);
 
         } else if (id == R.id.nav_bebidas) {
 
@@ -125,22 +129,22 @@ public class PratoDiaActivity  extends AppCompatActivity implements NavigationVi
 
 
     @Override
-    public void onRefreshListaPratoDia(ArrayList<PratoDia> listaPratoDia) {
-        if (!listaPratoDia.isEmpty()){
-            ListaPratoDiaAdapter listaPratoDiaAdapter = new ListaPratoDiaAdapter(this, listaPratoDia);
-            lvListView.setAdapter(listaPratoDiaAdapter);
-            listaPratoDiaAdapter.refresh(listaPratoDia);
+    public void onRefreshListaPrato(ArrayList<Prato> listaPrato) {
+        if (!listaPrato.isEmpty()){
+            ListaPratoAdapter listaPratoAdapter = new ListaPratoAdapter(this, listaPrato);
+            lvListView.setAdapter(listaPratoAdapter);
+            listaPratoAdapter.refresh(listaPrato);
         }
     }
 
     @Override
-    public void onUpdateListaPratoDiaBD(PratoDia pratoDia, int operacao) {
+    public void onUpdateListaPratoBD(Prato prato, int operacao) {
 
     }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        SingletonGestorPratoDia.getInstance(getApplicationContext()).getAllPratoDiaAPI(getApplicationContext(), PratoDiaJsonParser.isConnectionInternet(getApplicationContext()));
+        SingletonGestorPrato.getInstance(getApplicationContext()).getAllPratoAPI(getApplicationContext(), PratoJsonParser.isConnectionInternet(getApplicationContext()));
     }
 }

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\wamp64\\www\\AndroidPR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "C:\\wamp64\\www\\ProjectRestauranteWeb\\AndroidPR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\CrazyMan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b1e86189d6867e6aaaf858ccf2bfa3b1\\res\\values-fr-rCA\\values-fr-rCA.xml",

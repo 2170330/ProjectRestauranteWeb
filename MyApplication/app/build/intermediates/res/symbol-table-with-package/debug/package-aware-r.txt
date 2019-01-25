@@ -1122,6 +1122,7 @@ id direct
 id disableHome
 id drawer_layout
 id drawer_layout_prato_dia
+id drawer_layout_prato_escolha
 id edit_query
 id end
 id enterAlways
@@ -1275,6 +1276,7 @@ id titleDividerNoCustom
 id title_template
 id toolbar
 id toolbarPratoDia
+id toolbarPratoEscolha
 id top
 id topPanel
 id touch_outside
@@ -1349,10 +1351,13 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_prato_dia
+layout activity_prato_escolha
 layout app_bar_main
 layout app_bar_prato_dia
+layout app_bar_prato_escolha
 layout content_main
 layout content_prato_dia
+layout content_prato_escolha
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

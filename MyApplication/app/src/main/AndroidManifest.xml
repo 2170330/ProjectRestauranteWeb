@@ -3,6 +3,8 @@
     package="pt.ipleiria.estg.dei.amsi.myapplication">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,8 +25,11 @@
         <activity
             android:name=".PratoDiaActivity"
             android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".PratoEscolhaActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
     </application>
 

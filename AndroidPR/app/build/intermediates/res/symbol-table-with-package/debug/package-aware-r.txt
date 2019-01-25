@@ -1125,20 +1125,6 @@ id center
 id center_horizontal
 id center_vertical
 id chains
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-id checkBox
-=======
-=======
->>>>>>> parent of 67b85b8... android
-=======
->>>>>>> parent of 67b85b8... android
-=======
->>>>>>> parent of 67b85b8... android
-id checkBoxPD
->>>>>>> parent of 67b85b8... android
 id checkbox
 id chronometer
 id clip_horizontal
@@ -1223,6 +1209,7 @@ id imgvPass
 id info
 id invisible
 id italic
+id item_number
 id item_touch_helper_previous_elevation
 id ivEmailAL
 id ivImgALUser
@@ -1362,25 +1349,7 @@ id tvConta
 id tvDate
 id tvMenusPreFeitos
 id tvMeusPratos
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-id tvName
 id tvPratos
-id tvPreco
-=======
-=======
->>>>>>> parent of 67b85b8... android
-=======
->>>>>>> parent of 67b85b8... android
-=======
->>>>>>> parent of 67b85b8... android
-id tvNomePD
-id tvNomeProdutoPratoDia
-id tvPratos
-id tvPrecoPD
->>>>>>> parent of 67b85b8... android
 id tvSNumMesa
 id tvSobremensas
 id tvTitulo
@@ -1445,7 +1414,6 @@ layout abc_tooltip
 layout activity_login
 layout activity_menu_carne
 layout activity_num_mesa
-layout activity_prato_detalhes
 layout activity_prato_dia
 layout activity_register
 layout activity_side_bar_menu
